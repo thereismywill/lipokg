@@ -1,0 +1,49 @@
+protein,particle,component_type,evidence_source,notes
+APOB,Chylomicron,structural,UniProt/Reactome,APOB-48 isoform (RNA editing of APOB mRNA)
+APOB,VLDL,structural,UniProt/Reactome,APOB-100 isoform; single copy per particle
+APOB,IDL,structural,UniProt/Reactome,APOB-100 isoform
+APOB,LDL,structural,UniProt/Reactome,APOB-100 isoform; sole protein component
+APOB,Lp(a),structural,UniProt/Reactome,APOB-100 isoform linked to apo(a) via disulfide
+APOA1,Chylomicron,exchangeable,UniProt/Reactome,Acquired during lymphatic transport
+APOA1,HDL,structural,UniProt/Reactome,Principal structural protein; ~70% of HDL protein
+APOA2,HDL,structural,UniProt/Reactome,Second most abundant HDL apolipoprotein
+APOA4,Chylomicron,exchangeable,UniProt/Reactome,Intestine-specific; satiety signaling
+APOA4,HDL,exchangeable,UniProt/Reactome,Transfers to HDL postprandially
+APOC1,VLDL,exchangeable,UniProt/Reactome,LPL and HL inhibitor
+APOC1,HDL,exchangeable,UniProt/Reactome,CETP inhibitor
+APOC2,Chylomicron,exchangeable,UniProt/Reactome,LPL cofactor (activator)
+APOC2,VLDL,exchangeable,UniProt/Reactome,LPL cofactor (activator)
+APOC2,HDL,exchangeable,UniProt/Reactome,Transfers to TG-rich particles postprandially
+APOC3,Chylomicron,exchangeable,UniProt/Reactome,LPL inhibitor
+APOC3,VLDL,exchangeable,UniProt/Reactome,LPL inhibitor
+APOC3,HDL,exchangeable,UniProt/Reactome,Transfers to TG-rich particles postprandially
+APOE,Chylomicron,exchangeable,UniProt/Reactome,Acquired from HDL; remnant clearance ligand
+APOE,VLDL,exchangeable,UniProt/Reactome,Acquired from HDL
+APOE,IDL,exchangeable,UniProt/Reactome,Essential for remnant clearance via LRP1/LDLR
+APOE,HDL,exchangeable,UniProt/Reactome,Source pool for TG-rich particle acquisition
+APOE,Remnant,exchangeable,UniProt/Reactome,Critical for hepatic clearance
+LPA,Lp(a),structural,UniProt/Reactome,Apo(a) linked to APOB-100 via Cys4057 disulfide
+ABCA1,HDL,assembly,UniProt/Reactome,Mediates lipid efflux to lipid-poor APOA1 (nascent HDL biogenesis)
+LCAT,HDL,modification,UniProt/Reactome,Esterifies surface FC to CE (HDL maturation)
+CETP,HDL,modification,UniProt/Reactome,CE/TG exchange between HDL and apoB-containing particles
+CETP,VLDL,modification,UniProt/Reactome,CE/TG exchange acceptor
+CETP,LDL,modification,UniProt/Reactome,CE/TG exchange acceptor
+PLTP,HDL,modification,UniProt/Reactome,Phospholipid transfer; HDL conversion
+PLTP,VLDL,modification,UniProt/Reactome,Phospholipid transfer from VLDL to HDL
+SCARB1,HDL,receptor,UniProt/Reactome,Selective CE uptake receptor
+LDLR,LDL,receptor,UniProt/Reactome,LDL clearance receptor
+LDLR,IDL,receptor,UniProt/Reactome,Remnant clearance receptor
+LDLR,Remnant,receptor,UniProt/Reactome,APOE-mediated remnant clearance
+LRP1,Chylomicron,receptor,UniProt/Reactome,Hepatic remnant clearance
+LRP1,Remnant,receptor,UniProt/Reactome,APOE-mediated remnant clearance
+APOA5,Chylomicron,exchangeable,UniProt/Reactome,LPL activator; low abundance
+APOA5,VLDL,exchangeable,UniProt/Reactome,LPL activator; low abundance
+GPIHBP1,Chylomicron,anchoring,UniProt/Reactome,Endothelial LPL platform
+GPIHBP1,VLDL,anchoring,UniProt/Reactome,Endothelial LPL platform
+ANGPTL3,VLDL,regulator,UniProt/Reactome,LPL inhibitor (with ANGPTL8)
+ANGPTL4,Chylomicron,regulator,UniProt/Reactome,Adipose LPL inhibitor
+ANGPTL4,VLDL,regulator,UniProt/Reactome,Adipose LPL inhibitor
+ANGPTL8,VLDL,regulator,UniProt/Reactome,Forms complex with ANGPTL3 for LPL inhibition
+APOH,VLDL,exchangeable,UniProt/Reactome,Beta-2-glycoprotein I
+SAA1,HDL,exchangeable,UniProt/Reactome,Acute-phase; displaces APOA1 during inflammation
+ANGPTL3,Chylomicron,regulator,UniProt/Reactome,LPL inhibitor (with ANGPTL8)

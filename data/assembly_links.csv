@@ -1,0 +1,9 @@
+particle,assembly_protein,assembly_stage,tissue,biological_role
+VLDL,MTTP,lipid loading,Liver,"Microsomal triglyceride transfer protein loads APOB-100 with TG during co-translational assembly"
+VLDL,APOB,scaffold,Liver,"APOB-100 provides structural scaffold for VLDL particle assembly"
+VLDL,SAR1B,ER export,Liver,"COPII vesicle component mediating VLDL export from ER"
+VLDL,TM6SF2,ER-to-Golgi,Liver,"Facilitates VLDL lipidation and secretion; GWAS locus for plasma TG"
+Chylomicron,MTTP,lipid loading,Intestine,"MTTP loads APOB-48 with TG in enterocyte ER"
+Chylomicron,APOB,scaffold,Intestine,"APOB-48 provides structural scaffold (RNA editing of APOB mRNA in intestine)"
+Chylomicron,SAR1B,ER export,Intestine,"COPII component; mutations cause chylomicron retention disease (CMRD)"
+Lp(a),LPA,particle coupling,Liver,"Apo(a) covalently coupled to APOB-100 of LDL-like particle via Cys4057 disulfide"

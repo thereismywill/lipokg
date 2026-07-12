@@ -1,0 +1,16 @@
+name,source,pathway_id
+Lipid and atherosclerosis,KEGG,hsa04979
+Plasma lipoprotein assembly remodeling and clearance,Reactome,R-HSA-174824
+HDL-mediated lipid transport,Reactome,R-HSA-8963743
+Chylomicron-mediated lipid transport,Reactome,R-HSA-171052
+Intestinal lipid absorption,Reactome,R-HSA-8963888
+Lipoprotein metabolism,Reactome,R-HSA-174824.1
+Triglyceride biosynthesis,Reactome,R-HSA-1483249
+HDL assembly,Reactome,R-HSA-174739
+HDL remodeling,Reactome,R-HSA-174752
+LDL clearance,Reactome,R-HSA-174802
+Lipoprotein(a) assembly,Reactome,R-HSA-8963901
+Lipid metabolism pathway,WikiPathways,WP5242
+Statin pathway,WikiPathways,WP4842
+ACE inhibitor pathway,WikiPathways,WP5243
+Fatty acid omega-oxidation,WikiPathways,WP5244

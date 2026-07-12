@@ -1,0 +1,24 @@
+enzyme,particle,modification_type,biological_effect,evidence_source
+LPL,Chylomicron,hydrolysis,"Hydrolyzes core triglycerides; generates chylomicron remnants; releases FFA for tissue uptake",UniProt/Reactome
+LPL,VLDL,hydrolysis,"Hydrolyzes core triglycerides; generates IDL and VLDL remnants; releases FFA",UniProt/Reactome
+LIPC,IDL,hydrolysis,"Hepatic lipase hydrolyzes TG and phospholipids; converts IDL to LDL",UniProt/Reactome
+LIPC,HDL,hydrolysis,"Remodels HDL2 to HDL3; phospholipase and triglyceride lipase activities",UniProt/Reactome
+LIPC,LDL,hydrolysis,"Generates small dense LDL from buoyant LDL",UniProt/Reactome
+LCAT,HDL,esterification,"Esterifies free cholesterol to cholesteryl ester; drives HDL maturation from discoidal to spherical",UniProt/Reactome
+CETP,HDL,exchange,"Transfers CE from HDL to apoB-containing particles in exchange for TG",UniProt/Reactome
+CETP,VLDL,exchange,"Receives CE from HDL; donates TG to HDL",UniProt/Reactome
+CETP,LDL,exchange,"Receives CE from HDL; donates TG to HDL",UniProt/Reactome
+CETP,IDL,exchange,"Receives CE from HDL; donates TG to HDL",UniProt/Reactome
+PLTP,HDL,transfer,"Transfers phospholipids from TG-rich particles; mediates HDL particle conversion",UniProt/Reactome
+PLTP,VLDL,transfer,"Donor of phospholipids to HDL during LPL-mediated lipolysis",UniProt/Reactome
+EL (LIPG),HDL,hydrolysis,"Endothelial lipase hydrolyzes HDL phospholipids; modulates HDL-C levels",UniProt/Reactome
+EL (LIPG),LDL,hydrolysis,"Minor phospholipase activity on LDL",UniProt/Reactome
+ACAT2,Chylomicron,esterification,"Intestinal ACAT2 esterifies cholesterol for chylomicron assembly",UniProt/Reactome
+DGAT1,Chylomicron,esterification,"Final step in TG synthesis for chylomicron assembly",UniProt/Reactome
+DGAT2,VLDL,esterification,"Hepatic TG synthesis for VLDL assembly",UniProt/Reactome
+PCSK9,LDL,degradation,"Mediates LDLR degradation; reduces LDL clearance",UniProt/Reactome
+ANGPTL3,Chylomicron,inhibition,"Inhibits LPL activity on chylomicrons",UniProt/Reactome
+ANGPTL4,VLDL,inhibition,"Adipose-derived LPL inhibitor; prevents TG hydrolysis in adipose depot",UniProt/Reactome
+ANGPTL4,Chylomicron,inhibition,"Adipose-derived LPL inhibitor",UniProt/Reactome
+APOC3,Chylomicron,inhibition,"Inhibits LPL and hepatic uptake of remnants",UniProt/Reactome
+APOC3,VLDL,inhibition,"Inhibits LPL and hepatic uptake of remnants",UniProt/Reactome

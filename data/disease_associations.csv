@@ -1,0 +1,319 @@
+source,target,source_db
+LDLR,Familial Hypercholesterolemia,Orphanet
+APOB,Familial Hypercholesterolemia,Orphanet
+PCSK9,Familial Hypercholesterolemia,Orphanet
+LDLRAP1,Familial Hypercholesterolemia,Orphanet
+APOE,Familial Hypercholesterolemia,Orphanet
+SORT1,Familial Hypercholesterolemia,Orphanet
+ABCG5,Familial Hypercholesterolemia,Orphanet
+ABCG8,Familial Hypercholesterolemia,Orphanet
+LPL,Familial Chylomicronemia Syndrome,Orphanet
+APOC2,Familial Chylomicronemia Syndrome,Orphanet
+GPIHBP1,Familial Chylomicronemia Syndrome,Orphanet
+LMF1,Familial Chylomicronemia Syndrome,Orphanet
+APOA5,Familial Chylomicronemia Syndrome,Orphanet
+ANGPTL3,Familial Chylomicronemia Syndrome,Orphanet
+MTTP,Familial Chylomicronemia Syndrome,Orphanet
+APOE,Type III Hyperlipoproteinemia,Orphanet
+LPL,Type III Hyperlipoproteinemia,Orphanet
+LIPC,Type III Hyperlipoproteinemia,Orphanet
+APOC2,Type III Hyperlipoproteinemia,Orphanet
+ABCA1,Tangier Disease,Orphanet
+APOA1,Tangier Disease,Orphanet
+LCAT,Tangier Disease,Orphanet
+MTTP,Abetalipoproteinemia,Orphanet
+APOB,Abetalipoproteinemia,Orphanet
+ABCG5,Phytosterolemia,Orphanet
+ABCG8,Phytosterolemia,Orphanet
+DHCR7,Smith-Lemli-Opitz Syndrome,Orphanet
+CYP7A1,Smith-Lemli-Opitz Syndrome,Orphanet
+HMGCR,Smith-Lemli-Opitz Syndrome,Orphanet
+HMGCS1,Smith-Lemli-Opitz Syndrome,Orphanet
+LSS,Smith-Lemli-Opitz Syndrome,Orphanet
+EBP,Smith-Lemli-Opitz Syndrome,Orphanet
+DHCR24,Smith-Lemli-Opitz Syndrome,Orphanet
+NSDHL,Smith-Lemli-Opitz Syndrome,Orphanet
+SC5D,Smith-Lemli-Opitz Syndrome,Orphanet
+MVK,Smith-Lemli-Opitz Syndrome,Orphanet
+FDFT1,Smith-Lemli-Opitz Syndrome,Orphanet
+CYP51A1,Smith-Lemli-Opitz Syndrome,Orphanet
+CYP27A1,Cerebrotendinous Xanthomatosis,Orphanet
+APOE,Cerebrotendinous Xanthomatosis,Orphanet
+LIPA,Lysosomal Acid Lipase Deficiency,Orphanet
+LDLR,Lysosomal Acid Lipase Deficiency,Orphanet
+BSCL2,Congenital Generalized Lipodystrophy,Orphanet
+AGPAT2,Congenital Generalized Lipodystrophy,Orphanet
+LMNA,Familial Partial Lipodystrophy,Orphanet
+PPARG,Familial Partial Lipodystrophy,Orphanet
+G6PC,Glycogen Storage Disease Type I,Orphanet
+SLC37A4,Glycogen Storage Disease Type I,Orphanet
+NPC1,Niemann-Pick Disease Type C,Orphanet
+NPC2,Niemann-Pick Disease Type C,Orphanet
+LDLR,Homozygous Familial Hypercholesterolemia,OMIM
+APOB,Homozygous Familial Hypercholesterolemia,OMIM
+PCSK9,Homozygous Familial Hypercholesterolemia,OMIM
+LDLRAP1,Homozygous Familial Hypercholesterolemia,OMIM
+USF1,Familial Combined Hyperlipidemia,OMIM
+APOA1,Familial Combined Hyperlipidemia,OMIM
+APOB,Familial Combined Hyperlipidemia,OMIM
+APOE,Familial Combined Hyperlipidemia,OMIM
+LPL,Familial Combined Hyperlipidemia,OMIM
+APOA2,Tangier Disease,OMIM
+LCAT,Familial LCAT Deficiency,OMIM
+ABCA1,Familial LCAT Deficiency,OMIM
+LPA,Elevated Lp(a),OMIM
+CREB3L3,Familial Chylomicronemia Syndrome,OMIM
+APOA1,Familial Hypercholesterolemia,OMIM
+SAR1B,Abetalipoproteinemia,OMIM
+APOB,Type III Hyperlipoproteinemia,OMIM
+NPC1L1,Phytosterolemia,OMIM
+HMGCR,Elevated Lp(a),OMIM
+LPL,Acute Pancreatitis (Hypertriglyceridemic),OMIM
+LDLR,LDL cholesterol levels,GWAS_Catalog
+APOE,LDL cholesterol levels,GWAS_Catalog
+APOB,LDL cholesterol levels,GWAS_Catalog
+PCSK9,LDL cholesterol levels,GWAS_Catalog
+HMGCR,LDL cholesterol levels,GWAS_Catalog
+ABCG5,LDL cholesterol levels,GWAS_Catalog
+ABCG8,LDL cholesterol levels,GWAS_Catalog
+SORT1,LDL cholesterol levels,GWAS_Catalog
+NPC1L1,LDL cholesterol levels,GWAS_Catalog
+TM6SF2,LDL cholesterol levels,GWAS_Catalog
+MTTP,LDL cholesterol levels,GWAS_Catalog
+LPA,LDL cholesterol levels,GWAS_Catalog
+GALNT2,LDL cholesterol levels,GWAS_Catalog
+GCKR,LDL cholesterol levels,GWAS_Catalog
+TRIB1,LDL cholesterol levels,GWAS_Catalog
+APOC3,LDL cholesterol levels,GWAS_Catalog
+LPL,LDL cholesterol levels,GWAS_Catalog
+ABCA1,LDL cholesterol levels,GWAS_Catalog
+LIPC,LDL cholesterol levels,GWAS_Catalog
+LDLRAP1,LDL cholesterol levels,GWAS_Catalog
+STAP1,LDL cholesterol levels,GWAS_Catalog
+PNPLA3,LDL cholesterol levels,GWAS_Catalog
+SCARB1,LDL cholesterol levels,GWAS_Catalog
+VLDLR,LDL cholesterol levels,GWAS_Catalog
+ANGPTL3,LDL cholesterol levels,GWAS_Catalog
+APOA1,LDL cholesterol levels,GWAS_Catalog
+APOA2,LDL cholesterol levels,GWAS_Catalog
+CETP,LDL cholesterol levels,GWAS_Catalog
+PLTP,LDL cholesterol levels,GWAS_Catalog
+APOA5,LDL cholesterol levels,GWAS_Catalog
+LIPG,LDL cholesterol levels,GWAS_Catalog
+FADS1,LDL cholesterol levels,GWAS_Catalog
+FADS2,LDL cholesterol levels,GWAS_Catalog
+MVK,LDL cholesterol levels,GWAS_Catalog
+OSBPL8,LDL cholesterol levels,GWAS_Catalog
+SUGP1,LDL cholesterol levels,GWAS_Catalog
+KLF14,LDL cholesterol levels,GWAS_Catalog
+CILP2,LDL cholesterol levels,GWAS_Catalog
+PEPD,LDL cholesterol levels,GWAS_Catalog
+NCAN,LDL cholesterol levels,GWAS_Catalog
+MLXIP,LDL cholesterol levels,GWAS_Catalog
+CREB3L3,LDL cholesterol levels,GWAS_Catalog
+APOC1,LDL cholesterol levels,GWAS_Catalog
+LRP1,LDL cholesterol levels,GWAS_Catalog
+CD36,LDL cholesterol levels,GWAS_Catalog
+APOH,LDL cholesterol levels,GWAS_Catalog
+SAR1B,LDL cholesterol levels,GWAS_Catalog
+UBASH3B,LDL cholesterol levels,GWAS_Catalog
+APOA1,HDL cholesterol levels,GWAS_Catalog
+APOC3,HDL cholesterol levels,GWAS_Catalog
+CETP,HDL cholesterol levels,GWAS_Catalog
+LIPC,HDL cholesterol levels,GWAS_Catalog
+LPL,HDL cholesterol levels,GWAS_Catalog
+ABCA1,HDL cholesterol levels,GWAS_Catalog
+LIPG,HDL cholesterol levels,GWAS_Catalog
+SCARB1,HDL cholesterol levels,GWAS_Catalog
+PLTP,HDL cholesterol levels,GWAS_Catalog
+LCAT,HDL cholesterol levels,GWAS_Catalog
+APOA2,HDL cholesterol levels,GWAS_Catalog
+APOE,HDL cholesterol levels,GWAS_Catalog
+GALNT2,HDL cholesterol levels,GWAS_Catalog
+GCKR,HDL cholesterol levels,GWAS_Catalog
+TRIB1,HDL cholesterol levels,GWAS_Catalog
+FADS1,HDL cholesterol levels,GWAS_Catalog
+FADS2,HDL cholesterol levels,GWAS_Catalog
+SORT1,HDL cholesterol levels,GWAS_Catalog
+ANGPTL3,HDL cholesterol levels,GWAS_Catalog
+APOA5,HDL cholesterol levels,GWAS_Catalog
+MVK,HDL cholesterol levels,GWAS_Catalog
+OSBPL8,HDL cholesterol levels,GWAS_Catalog
+UBASH3B,HDL cholesterol levels,GWAS_Catalog
+LDLR,HDL cholesterol levels,GWAS_Catalog
+APOB,HDL cholesterol levels,GWAS_Catalog
+LPA,HDL cholesterol levels,GWAS_Catalog
+HMGCR,HDL cholesterol levels,GWAS_Catalog
+PCSK9,HDL cholesterol levels,GWAS_Catalog
+TM6SF2,HDL cholesterol levels,GWAS_Catalog
+MTTP,HDL cholesterol levels,GWAS_Catalog
+ABCG5,HDL cholesterol levels,GWAS_Catalog
+ABCG8,HDL cholesterol levels,GWAS_Catalog
+NPC1L1,HDL cholesterol levels,GWAS_Catalog
+PNPLA3,HDL cholesterol levels,GWAS_Catalog
+CD36,HDL cholesterol levels,GWAS_Catalog
+APOH,HDL cholesterol levels,GWAS_Catalog
+SAR1B,HDL cholesterol levels,GWAS_Catalog
+STAP1,HDL cholesterol levels,GWAS_Catalog
+VLDLR,HDL cholesterol levels,GWAS_Catalog
+LRP1,HDL cholesterol levels,GWAS_Catalog
+APOC1,HDL cholesterol levels,GWAS_Catalog
+KLF14,HDL cholesterol levels,GWAS_Catalog
+CILP2,HDL cholesterol levels,GWAS_Catalog
+PEPD,HDL cholesterol levels,GWAS_Catalog
+NCAN,HDL cholesterol levels,GWAS_Catalog
+MLXIP,HDL cholesterol levels,GWAS_Catalog
+SUGP1,HDL cholesterol levels,GWAS_Catalog
+LPL,Triglyceride levels,GWAS_Catalog
+APOC3,Triglyceride levels,GWAS_Catalog
+APOA5,Triglyceride levels,GWAS_Catalog
+GCKR,Triglyceride levels,GWAS_Catalog
+APOE,Triglyceride levels,GWAS_Catalog
+TRIB1,Triglyceride levels,GWAS_Catalog
+GALNT2,Triglyceride levels,GWAS_Catalog
+ANGPTL3,Triglyceride levels,GWAS_Catalog
+ANGPTL4,Triglyceride levels,GWAS_Catalog
+APOB,Triglyceride levels,GWAS_Catalog
+LIPC,Triglyceride levels,GWAS_Catalog
+MTTP,Triglyceride levels,GWAS_Catalog
+TM6SF2,Triglyceride levels,GWAS_Catalog
+PNPLA3,Triglyceride levels,GWAS_Catalog
+GPIHBP1,Triglyceride levels,GWAS_Catalog
+LMF1,Triglyceride levels,GWAS_Catalog
+APOC2,Triglyceride levels,GWAS_Catalog
+CETP,Triglyceride levels,GWAS_Catalog
+LIPG,Triglyceride levels,GWAS_Catalog
+FADS1,Triglyceride levels,GWAS_Catalog
+FADS2,Triglyceride levels,GWAS_Catalog
+SORT1,Triglyceride levels,GWAS_Catalog
+PLTP,Triglyceride levels,GWAS_Catalog
+LDLR,Triglyceride levels,GWAS_Catalog
+HMGCR,Triglyceride levels,GWAS_Catalog
+ABCA1,Triglyceride levels,GWAS_Catalog
+SCARB1,Triglyceride levels,GWAS_Catalog
+CD36,Triglyceride levels,GWAS_Catalog
+APOA1,Triglyceride levels,GWAS_Catalog
+SUGP1,Triglyceride levels,GWAS_Catalog
+CREB3L3,Triglyceride levels,GWAS_Catalog
+NCAN,Triglyceride levels,GWAS_Catalog
+MLXIP,Triglyceride levels,GWAS_Catalog
+APOC1,Triglyceride levels,GWAS_Catalog
+LRP1,Triglyceride levels,GWAS_Catalog
+KLF14,Triglyceride levels,GWAS_Catalog
+CILP2,Triglyceride levels,GWAS_Catalog
+PEPD,Triglyceride levels,GWAS_Catalog
+ABCG5,Triglyceride levels,GWAS_Catalog
+ABCG8,Triglyceride levels,GWAS_Catalog
+NPC1L1,Triglyceride levels,GWAS_Catalog
+LPA,Triglyceride levels,GWAS_Catalog
+STAP1,Triglyceride levels,GWAS_Catalog
+VLDLR,Triglyceride levels,GWAS_Catalog
+MVK,Triglyceride levels,GWAS_Catalog
+OSBPL8,Triglyceride levels,GWAS_Catalog
+UBASH3B,Triglyceride levels,GWAS_Catalog
+SAR1B,Triglyceride levels,GWAS_Catalog
+LDLR,Total cholesterol levels,GWAS_Catalog
+APOE,Total cholesterol levels,GWAS_Catalog
+APOB,Total cholesterol levels,GWAS_Catalog
+PCSK9,Total cholesterol levels,GWAS_Catalog
+HMGCR,Total cholesterol levels,GWAS_Catalog
+ABCG5,Total cholesterol levels,GWAS_Catalog
+ABCG8,Total cholesterol levels,GWAS_Catalog
+SORT1,Total cholesterol levels,GWAS_Catalog
+LPA,Total cholesterol levels,GWAS_Catalog
+CETP,Total cholesterol levels,GWAS_Catalog
+GCKR,Total cholesterol levels,GWAS_Catalog
+APOC3,Total cholesterol levels,GWAS_Catalog
+ABCA1,Total cholesterol levels,GWAS_Catalog
+LIPC,Total cholesterol levels,GWAS_Catalog
+TM6SF2,Total cholesterol levels,GWAS_Catalog
+GALNT2,Total cholesterol levels,GWAS_Catalog
+TRIB1,Total cholesterol levels,GWAS_Catalog
+LPL,Total cholesterol levels,GWAS_Catalog
+MTTP,Total cholesterol levels,GWAS_Catalog
+PNPLA3,Total cholesterol levels,GWAS_Catalog
+LIPG,Total cholesterol levels,GWAS_Catalog
+FADS1,Total cholesterol levels,GWAS_Catalog
+FADS2,Total cholesterol levels,GWAS_Catalog
+APOA1,Total cholesterol levels,GWAS_Catalog
+APOA2,Total cholesterol levels,GWAS_Catalog
+SCARB1,Total cholesterol levels,GWAS_Catalog
+CD36,Total cholesterol levels,GWAS_Catalog
+ANGPTL3,Total cholesterol levels,GWAS_Catalog
+ANGPTL4,Total cholesterol levels,GWAS_Catalog
+NPC1L1,Total cholesterol levels,GWAS_Catalog
+VLDLR,Total cholesterol levels,GWAS_Catalog
+STAP1,Total cholesterol levels,GWAS_Catalog
+LDLRAP1,Total cholesterol levels,GWAS_Catalog
+MVK,Total cholesterol levels,GWAS_Catalog
+OSBPL8,Total cholesterol levels,GWAS_Catalog
+UBASH3B,Total cholesterol levels,GWAS_Catalog
+SUGP1,Total cholesterol levels,GWAS_Catalog
+KLF14,Total cholesterol levels,GWAS_Catalog
+CILP2,Total cholesterol levels,GWAS_Catalog
+PEPD,Total cholesterol levels,GWAS_Catalog
+NCAN,Total cholesterol levels,GWAS_Catalog
+MLXIP,Total cholesterol levels,GWAS_Catalog
+APOC1,Total cholesterol levels,GWAS_Catalog
+LRP1,Total cholesterol levels,GWAS_Catalog
+CREB3L3,Total cholesterol levels,GWAS_Catalog
+APOH,Total cholesterol levels,GWAS_Catalog
+SAR1B,Total cholesterol levels,GWAS_Catalog
+PLTP,Total cholesterol levels,GWAS_Catalog
+LPL,Hypertriglyceridemia,DisGeNET
+APOC3,Hypertriglyceridemia,DisGeNET
+APOA5,Hypertriglyceridemia,DisGeNET
+APOC2,Hypertriglyceridemia,DisGeNET
+GPIHBP1,Hypertriglyceridemia,DisGeNET
+ANGPTL3,Hypertriglyceridemia,DisGeNET
+ANGPTL4,Hypertriglyceridemia,DisGeNET
+LMF1,Hypertriglyceridemia,DisGeNET
+GCKR,Hypertriglyceridemia,DisGeNET
+LIPC,Hypertriglyceridemia,DisGeNET
+APOC1,Hypertriglyceridemia,DisGeNET
+LDLR,Atherosclerotic Cardiovascular Disease,DisGeNET
+PCSK9,Atherosclerotic Cardiovascular Disease,DisGeNET
+APOB,Atherosclerotic Cardiovascular Disease,DisGeNET
+APOE,Atherosclerotic Cardiovascular Disease,DisGeNET
+APOA1,Atherosclerotic Cardiovascular Disease,DisGeNET
+LPA,Atherosclerotic Cardiovascular Disease,DisGeNET
+LPL,Atherosclerotic Cardiovascular Disease,DisGeNET
+ABCA1,Atherosclerotic Cardiovascular Disease,DisGeNET
+CETP,Atherosclerotic Cardiovascular Disease,DisGeNET
+HMGCR,Atherosclerotic Cardiovascular Disease,DisGeNET
+SORT1,Atherosclerotic Cardiovascular Disease,DisGeNET
+CD36,Atherosclerotic Cardiovascular Disease,DisGeNET
+PNPLA3,Metabolic Dysfunction-Associated Steatotic Liver Disease,DisGeNET
+TM6SF2,Metabolic Dysfunction-Associated Steatotic Liver Disease,DisGeNET
+MTTP,Metabolic Dysfunction-Associated Steatotic Liver Disease,DisGeNET
+APOB,Metabolic Dysfunction-Associated Steatotic Liver Disease,DisGeNET
+GCKR,Metabolic Dysfunction-Associated Steatotic Liver Disease,DisGeNET
+APOC3,Metabolic Dysfunction-Associated Steatotic Liver Disease,DisGeNET
+APOC3,Metabolic Syndrome,DisGeNET
+LPL,Metabolic Syndrome,DisGeNET
+ABCA1,Metabolic Syndrome,DisGeNET
+APOA1,Metabolic Syndrome,DisGeNET
+CETP,Metabolic Syndrome,DisGeNET
+LIPC,Metabolic Syndrome,DisGeNET
+MMP9,Plaque Rupture,Expert_curation
+MMP2,Plaque Rupture,Expert_curation
+CD36,Plaque Rupture,Expert_curation
+LDLR,Plaque Rupture,Expert_curation
+APOE,Plaque Rupture,Expert_curation
+LPL,Plaque Rupture,Expert_curation
+PCSK9,Plaque Rupture,Expert_curation
+APOB,Plaque Rupture,Expert_curation
+APOC2,Acute Pancreatitis (Hypertriglyceridemic),Expert_curation
+GPIHBP1,Acute Pancreatitis (Hypertriglyceridemic),Expert_curation
+APOA5,Acute Pancreatitis (Hypertriglyceridemic),Expert_curation
+LMF1,Acute Pancreatitis (Hypertriglyceridemic),Expert_curation
+LDLR,Acute Pancreatitis (Hypertriglyceridemic),Expert_curation
+MTTP,Acute Pancreatitis (Hypertriglyceridemic),Expert_curation
+ANGPTL3,Acute Pancreatitis (Hypertriglyceridemic),Expert_curation
+SCARB1,Atherosclerotic Cardiovascular Disease,Expert_curation
+NPC1L1,Atherosclerotic Cardiovascular Disease,Expert_curation
+ANGPTL3,Atherosclerotic Cardiovascular Disease,Expert_curation
+LIPC,Atherosclerotic Cardiovascular Disease,Expert_curation
+LIPG,Atherosclerotic Cardiovascular Disease,Expert_curation
+PLTP,Atherosclerotic Cardiovascular Disease,Expert_curation
+APOA4,Atherosclerotic Cardiovascular Disease,Expert_curation

@@ -1,0 +1,106 @@
+{
+  "core_schema": {
+    "description": "Primary data distribution (CSV files)",
+    "node_types": {
+      "STRINGProtein": 1852,
+      "Particle": 7,
+      "Molecule": 57,
+      "Disease": 27,
+      "ClinVarVariant": 4042,
+      "KEGGGene": 52,
+      "Pathway": 15
+    },
+    "relationship_types": {
+      "STRING_INTERACTS": 31878,
+      "COMPONENT_OF": 48,
+      "MODIFIES": 23,
+      "ASSEMBLED_BY": 8,
+      "DISEASE_ASSOCIATION": 318,
+      "VARIANT_OF": 4042,
+      "MEMBER_OF": 242
+    },
+    "total_core_nodes": 6052,
+    "total_core_edges": 36559
+  },
+  "extended_schema": {
+    "description": "Full Neo4j graph including Reactome-derived and manually curated types (24 additional node types, 18 additional relationship types)",
+    "node_types_additional": {
+      "Reaction": 238,
+      "BlackBoxEvent": 56,
+      "Drug": 32,
+      "Apolipoprotein": 9,
+      "Regulator": 9,
+      "Biomarker": 9,
+      "Enzyme": 8,
+      "Receptor": 7,
+      "PathologyState": 7,
+      "Transporter": 6,
+      "Cytokine": 6,
+      "Cell": 6,
+      "Lipid": 5,
+      "InflammationSensor": 2,
+      "ScavengerReceptor": 2,
+      "AdhesionMolecule": 2,
+      "Protease": 2,
+      "TranscriptionFactor": 1,
+      "Chemokine": 1,
+      "AntiInflammatory": 1,
+      "LipidMediator": 1,
+      "InflammationMarker": 1,
+      "ClinicalEvent": 1,
+      "KEGGPathway": 1
+    },
+    "relationship_types_additional": {
+      "AFFECTS_GENE": 3962,
+      "BELONGS_TO_PATHWAY": 346,
+      "PRECEDES": 271,
+      "SUBSTRATE_OF": 59,
+      "PRODUCES": 49,
+      "EXPRESSED_IN": 39,
+      "ACTIVATES": 36,
+      "TARGETS": 29,
+      "CATALYZES": 26,
+      "MAPS_TO": 24,
+      "TREATS": 20,
+      "INHIBITS": 17,
+      "BIOMARKER_OF": 16,
+      "CAUSED_BY": 15,
+      "AFFECTS_LEVEL": 15,
+      "OCCURS_IN": 12,
+      "RISK_FOR": 10,
+      "TRANSFORMS_INTO": 8
+    }
+  },
+  "total_nodes": 6463,
+  "total_edges": 37165,
+  "node_type_count": 31,
+  "edge_type_count": 25,
+  "etl_completeness": {
+    "KEGG_hsa04979": "89.5% (119/133 genes)",
+    "Reactome_lipoprotein_pathways": "90.9% (50/55 genes)",
+    "WikiPathways_lipid_pathways": "87.7% (71/81 genes)",
+    "overall_pathway_completeness": "84.8% (167/197 unique genes)"
+  },
+  "independent_validation": {
+    "GO_0042157_lipoprotein_metabolic_process": "92.3% (132/143 genes)",
+    "GLGC_2021_GWAS_loci": "64.9% (244/376 loci)",
+    "ClinGen_dosage_sensitive_genes": "100% (25/25 genes)",
+    "published_review_gene_lists": "95.9% (93/97 genes)",
+    "expert_curated_54_gene_set": "100% (54/54 genes)"
+  },
+  "network_topology": {
+    "connected_components": 1,
+    "average_degree": 34.4,
+    "diameter": 8,
+    "power_law_alpha": 2.31,
+    "power_law_95CI": "2.24-2.38",
+    "louvain_modularity": 0.41,
+    "louvain_modules": 7
+  },
+  "metadata": {
+    "version": "1.1.0",
+    "data_collection_date": "2024-01",
+    "release_date": "2026-06-22",
+    "description": "Core schema distributed as CSV (7 node types, 7 relationship types); extended schema available in Neo4j dump (31 node types, 25 relationship types). ClinVar variants filtered to Pathogenic/Likely pathogenic only. Lipoprotein particles represented as first-class entities."
+  }
+}

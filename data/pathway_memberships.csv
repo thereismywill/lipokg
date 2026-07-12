@@ -1,0 +1,243 @@
+gene,pathway,source
+NPC2,Lipid and atherosclerosis,KEGG
+CETP,Lipid and atherosclerosis,KEGG
+STARD3,Lipid and atherosclerosis,KEGG
+OSBPL5,Lipid and atherosclerosis,KEGG
+CYP7A1,Lipid and atherosclerosis,KEGG
+CYP27A1,Lipid and atherosclerosis,KEGG
+ABCA1,Lipid and atherosclerosis,KEGG
+PCSK9,Lipid and atherosclerosis,KEGG
+LDLRAP1,Lipid and atherosclerosis,KEGG
+CIDEB,Lipid and atherosclerosis,KEGG
+ANGPTL3,Lipid and atherosclerosis,KEGG
+MYLIP,Lipid and atherosclerosis,KEGG
+APOA1,Lipid and atherosclerosis,KEGG
+APOA2,Lipid and atherosclerosis,KEGG
+APOA4,Lipid and atherosclerosis,KEGG
+APOB,Lipid and atherosclerosis,KEGG
+APOC1,Lipid and atherosclerosis,KEGG
+APOC2,Lipid and atherosclerosis,KEGG
+APOC3,Lipid and atherosclerosis,KEGG
+APOE,Lipid and atherosclerosis,KEGG
+APOH,Lipid and atherosclerosis,KEGG
+LCAT,Lipid and atherosclerosis,KEGG
+LDLR,Lipid and atherosclerosis,KEGG
+LIPA,Lipid and atherosclerosis,KEGG
+LIPC,Lipid and atherosclerosis,KEGG
+LPA,Lipid and atherosclerosis,KEGG
+LPL,Lipid and atherosclerosis,KEGG
+LRP1,Lipid and atherosclerosis,KEGG
+LRP2,Lipid and atherosclerosis,KEGG
+LRPAP1,Lipid and atherosclerosis,KEGG
+NPC1,Lipid and atherosclerosis,KEGG
+ANGPTL4,Lipid and atherosclerosis,KEGG
+PLTP,Lipid and atherosclerosis,KEGG
+ANGPTL8,Lipid and atherosclerosis,KEGG
+NCEH1,Lipid and atherosclerosis,KEGG
+SORT1,Lipid and atherosclerosis,KEGG
+ABCG5,Lipid and atherosclerosis,KEGG
+ABCG8,Lipid and atherosclerosis,KEGG
+SOAT1,Lipid and atherosclerosis,KEGG
+STAR,Lipid and atherosclerosis,KEGG
+TSPO,Lipid and atherosclerosis,KEGG
+VDAC1,Lipid and atherosclerosis,KEGG
+VDAC2,Lipid and atherosclerosis,KEGG
+VDAC3,Lipid and atherosclerosis,KEGG
+STARD3NL,Lipid and atherosclerosis,KEGG
+SOAT2,Lipid and atherosclerosis,KEGG
+ABCB11,Lipid and atherosclerosis,KEGG
+VAPB,Lipid and atherosclerosis,KEGG
+VAPA,Lipid and atherosclerosis,KEGG
+LIPG,Lipid and atherosclerosis,KEGG
+CD36,Lipid and atherosclerosis,KEGG
+SCARB1,Lipid and atherosclerosis,KEGG
+APOA1,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOA2,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOA4,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOA5,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOB,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOC1,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOC2,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOC3,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOE,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOH,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LPL,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LIPC,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LIPG,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LCAT,Plasma lipoprotein assembly remodeling and clearance,Reactome
+CETP,Plasma lipoprotein assembly remodeling and clearance,Reactome
+PLTP,Plasma lipoprotein assembly remodeling and clearance,Reactome
+ABCA1,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LRP1,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LRP2,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LDLR,Plasma lipoprotein assembly remodeling and clearance,Reactome
+SCARB1,Plasma lipoprotein assembly remodeling and clearance,Reactome
+PCSK9,Plasma lipoprotein assembly remodeling and clearance,Reactome
+MTTP,Plasma lipoprotein assembly remodeling and clearance,Reactome
+SORT1,Plasma lipoprotein assembly remodeling and clearance,Reactome
+GPIHBP1,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LMF1,Plasma lipoprotein assembly remodeling and clearance,Reactome
+ANGPTL3,Plasma lipoprotein assembly remodeling and clearance,Reactome
+ANGPTL4,Plasma lipoprotein assembly remodeling and clearance,Reactome
+APOBR,Plasma lipoprotein assembly remodeling and clearance,Reactome
+CD36,Plasma lipoprotein assembly remodeling and clearance,Reactome
+LPA,Plasma lipoprotein assembly remodeling and clearance,Reactome
+ABCA1,Digestion of dietary lipid,Reactome
+APOA1,Digestion of dietary lipid,Reactome
+APOA2,Digestion of dietary lipid,Reactome
+APOA4,Digestion of dietary lipid,Reactome
+APOB,Digestion of dietary lipid,Reactome
+APOC1,Digestion of dietary lipid,Reactome
+APOC2,Digestion of dietary lipid,Reactome
+APOC3,Digestion of dietary lipid,Reactome
+MTTP,Digestion of dietary lipid,Reactome
+NPC1L1,Digestion of dietary lipid,Reactome
+ABCG5,Digestion of dietary lipid,Reactome
+ABCG8,Digestion of dietary lipid,Reactome
+SOAT2,Digestion of dietary lipid,Reactome
+SCARB1,Digestion of dietary lipid,Reactome
+APOA1,Chylomicron-mediated lipid transport,Reactome
+APOA4,Chylomicron-mediated lipid transport,Reactome
+APOA5,Chylomicron-mediated lipid transport,Reactome
+APOB,Chylomicron-mediated lipid transport,Reactome
+APOC2,Chylomicron-mediated lipid transport,Reactome
+APOC3,Chylomicron-mediated lipid transport,Reactome
+APOE,Chylomicron-mediated lipid transport,Reactome
+LPL,Chylomicron-mediated lipid transport,Reactome
+GPIHBP1,Chylomicron-mediated lipid transport,Reactome
+LMF1,Chylomicron-mediated lipid transport,Reactome
+LIPC,Chylomicron-mediated lipid transport,Reactome
+LRP1,Chylomicron-mediated lipid transport,Reactome
+LDLR,Chylomicron-mediated lipid transport,Reactome
+MTTP,Chylomicron-mediated lipid transport,Reactome
+APOA1,HDL assembly,Reactome
+APOA2,HDL assembly,Reactome
+APOA4,HDL assembly,Reactome
+ABCA1,HDL assembly,Reactome
+LCAT,HDL assembly,Reactome
+LIPG,HDL assembly,Reactome
+APOA1,HDL remodeling,Reactome
+APOA2,HDL remodeling,Reactome
+APOC1,HDL remodeling,Reactome
+APOC2,HDL remodeling,Reactome
+APOC3,HDL remodeling,Reactome
+APOE,HDL remodeling,Reactome
+CETP,HDL remodeling,Reactome
+PLTP,HDL remodeling,Reactome
+LCAT,HDL remodeling,Reactome
+LIPC,HDL remodeling,Reactome
+LIPG,HDL remodeling,Reactome
+SCARB1,HDL remodeling,Reactome
+ABCA1,HDL remodeling,Reactome
+ABCG1,HDL remodeling,Reactome
+LDLR,LDL clearance,Reactome
+PCSK9,LDL clearance,Reactome
+APOB,LDL clearance,Reactome
+APOE,LDL clearance,Reactome
+LRP1,LDL clearance,Reactome
+LDLRAP1,LDL clearance,Reactome
+ARH,LDL clearance,Reactome
+DAB2,LDL clearance,Reactome
+IDOL,LDL clearance,Reactome
+HGS,LDL clearance,Reactome
+APOB,VLDL assembly,Reactome
+APOE,VLDL assembly,Reactome
+APOC1,VLDL assembly,Reactome
+APOC2,VLDL assembly,Reactome
+APOC3,VLDL assembly,Reactome
+MTTP,VLDL assembly,Reactome
+SOAT1,VLDL assembly,Reactome
+SOAT2,VLDL assembly,Reactome
+ABCA1,VLDL assembly,Reactome
+LPL,Triglyceride-rich lipoprotein clearance,Reactome
+GPIHBP1,Triglyceride-rich lipoprotein clearance,Reactome
+APOC2,Triglyceride-rich lipoprotein clearance,Reactome
+APOC3,Triglyceride-rich lipoprotein clearance,Reactome
+APOA5,Triglyceride-rich lipoprotein clearance,Reactome
+APOE,Triglyceride-rich lipoprotein clearance,Reactome
+LRP1,Triglyceride-rich lipoprotein clearance,Reactome
+LDLR,Triglyceride-rich lipoprotein clearance,Reactome
+VLDLR,Triglyceride-rich lipoprotein clearance,Reactome
+LIPC,Triglyceride-rich lipoprotein clearance,Reactome
+LMF1,Triglyceride-rich lipoprotein clearance,Reactome
+ANGPTL3,Triglyceride-rich lipoprotein clearance,Reactome
+ANGPTL4,Triglyceride-rich lipoprotein clearance,Reactome
+LDLR,Lipid metabolism pathway,WikiPathways
+PCSK9,Lipid metabolism pathway,WikiPathways
+HMGCR,Lipid metabolism pathway,WikiPathways
+HMGCS1,Lipid metabolism pathway,WikiPathways
+HMGCS2,Lipid metabolism pathway,WikiPathways
+ACACA,Lipid metabolism pathway,WikiPathways
+ACACB,Lipid metabolism pathway,WikiPathways
+FASN,Lipid metabolism pathway,WikiPathways
+SCD,Lipid metabolism pathway,WikiPathways
+SREBF1,Lipid metabolism pathway,WikiPathways
+SREBF2,Lipid metabolism pathway,WikiPathways
+PPARA,Lipid metabolism pathway,WikiPathways
+PPARG,Lipid metabolism pathway,WikiPathways
+RXRA,Lipid metabolism pathway,WikiPathways
+LXR,Lipid metabolism pathway,WikiPathways
+ABCA1,Lipid metabolism pathway,WikiPathways
+ABCG1,Lipid metabolism pathway,WikiPathways
+NPC1L1,Lipid metabolism pathway,WikiPathways
+MTTP,Lipid metabolism pathway,WikiPathways
+APOB,Lipid metabolism pathway,WikiPathways
+APOA1,Lipid metabolism pathway,WikiPathways
+LPL,Lipid metabolism pathway,WikiPathways
+LIPC,Lipid metabolism pathway,WikiPathways
+CETP,Lipid metabolism pathway,WikiPathways
+LCAT,Lipid metabolism pathway,WikiPathways
+PLTP,Lipid metabolism pathway,WikiPathways
+FABP1,Lipid metabolism pathway,WikiPathways
+FABP2,Lipid metabolism pathway,WikiPathways
+HMGCR,Statin pathway,WikiPathways
+HMGCS1,Statin pathway,WikiPathways
+LDLR,Statin pathway,WikiPathways
+PCSK9,Statin pathway,WikiPathways
+SREBF2,Statin pathway,WikiPathways
+SCAP,Statin pathway,WikiPathways
+INSIG1,Statin pathway,WikiPathways
+INSIG2,Statin pathway,WikiPathways
+SQLE,Statin pathway,WikiPathways
+FDFT1,Statin pathway,WikiPathways
+FDPS,Statin pathway,WikiPathways
+MVK,Statin pathway,WikiPathways
+PMVK,Statin pathway,WikiPathways
+MVD,Statin pathway,WikiPathways
+CYP51A1,Statin pathway,WikiPathways
+LSS,Statin pathway,WikiPathways
+DHCR7,Statin pathway,WikiPathways
+EBP,Statin pathway,WikiPathways
+NSDHL,Statin pathway,WikiPathways
+MSMO1,Statin pathway,WikiPathways
+IDI1,Statin pathway,WikiPathways
+IDI2,Statin pathway,WikiPathways
+ACE,ACE inhibitor pathway,WikiPathways
+ACE2,ACE inhibitor pathway,WikiPathways
+AGT,ACE inhibitor pathway,WikiPathways
+AGTR1,ACE inhibitor pathway,WikiPathways
+AGTR2,ACE inhibitor pathway,WikiPathways
+REN,ACE inhibitor pathway,WikiPathways
+CMA1,ACE inhibitor pathway,WikiPathways
+CTSG,ACE inhibitor pathway,WikiPathways
+CASP3,ACE inhibitor pathway,WikiPathways
+MMP2,ACE inhibitor pathway,WikiPathways
+MMP9,ACE inhibitor pathway,WikiPathways
+BDKRB1,ACE inhibitor pathway,WikiPathways
+BDKRB2,ACE inhibitor pathway,WikiPathways
+CYP4A11,Fatty acid omega-oxidation,WikiPathways
+CYP4A22,Fatty acid omega-oxidation,WikiPathways
+CYP4F2,Fatty acid omega-oxidation,WikiPathways
+CYP4F3,Fatty acid omega-oxidation,WikiPathways
+CYP4F8,Fatty acid omega-oxidation,WikiPathways
+CYP4F11,Fatty acid omega-oxidation,WikiPathways
+CYP4F12,Fatty acid omega-oxidation,WikiPathways
+CYP4F22,Fatty acid omega-oxidation,WikiPathways
+CYP4V2,Fatty acid omega-oxidation,WikiPathways
+CYP4Z1,Fatty acid omega-oxidation,WikiPathways
+ADH1A,Fatty acid omega-oxidation,WikiPathways
+ADH1B,Fatty acid omega-oxidation,WikiPathways
+ADH1C,Fatty acid omega-oxidation,WikiPathways
+ADH4,Fatty acid omega-oxidation,WikiPathways
+ADH5,Fatty acid omega-oxidation,WikiPathways
+ALDH2,Fatty acid omega-oxidation,WikiPathways

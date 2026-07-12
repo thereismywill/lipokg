@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "title": "LipoKG: A Comprehensive Knowledge Graph Dataset for Lipoprotein Metabolism Research",
+    "upload_type": "dataset",
+    "description": "A comprehensive FAIR-compliant knowledge graph integrating multi-source data for lipoprotein metabolism research. This dataset combines protein-protein interactions (STRING v12.0), genetic variants (ClinVar), disease associations (DisGeNET, OMIM, GWAS Catalog, Orphanet), and pathway information (KEGG, Reactome, WikiPathways) into a unified graph structure. The knowledge graph contains 6,052 core nodes and 36,559 core edges (extended Neo4j schema: 6,463 nodes, 37,165 edges), with 84.8% coverage of reference lipoprotein metabolism genes across three pathway databases. Independent validation achieves 92.3% coverage of GO:0042157 (lipoprotein metabolic process). This dataset is designed to support systematic knowledge gap discovery, drug repurposing research, and precision medicine applications in cardiovascular disease.",
+    "creators": [
+      {
+        "name": "Ke Zhang",
+        "affiliation": "Shandong Provincial Hospital Affiliated to Shandong First Medical University",
+        "orcid": ""
+      },
+      {
+        "name": "Junyi Zhao",
+        "affiliation": "School of Laboratory Animal & Shandong Laboratory Animal Center, Shandong First Medical University & Shandong Academy of Medical Sciences",
+        "orcid": ""
+      },
+      {
+        "name": "Yang Yu",
+        "affiliation": "Shandong Provincial Hospital Affiliated to Shandong First Medical University",
+        "orcid": ""
+      }
+    ],
+    "keywords": [
+      "knowledge graph",
+      "lipoprotein metabolism",
+      "cardiovascular disease",
+      "protein-protein interactions",
+      "genetic variants",
+      "pathway analysis",
+      "FAIR data",
+      "bioinformatics",
+      "systems biology",
+      "data integration"
+    ],
+    "language": "eng",
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "version": "1.1.0",
+    "publication_date": "2026-07-01"
+  },
+  "files": [
+    {
+      "filename": "README.md",
+      "description": "Comprehensive documentation including dataset description, schema, usage examples, and citation information"
+    },
+    {
+      "filename": "QUICKSTART.md",
+      "description": "Quick start guide for using LipoKG with Neo4j and Python"
+    },
+    {
+      "filename": "docs/SCHEMA.md",
+      "description": "Detailed schema documentation describing node types, relationship types, and data model"
+    },
+    {
+      "filename": "docs/lipokg_schema.yaml",
+      "description": "BioLinkML-compliant schema definition file"
+    },
+    {
+      "filename": "docs/CYPHER_EXAMPLES.cypher",
+      "description": "Example Cypher queries for common use cases"
+    },
+    {
+      "filename": "docs/USAGE_TUTORIAL.md",
+      "description": "Tutorial demonstrating four real-world use cases"
+    },
+    {
+      "filename": "data/string_proteins.csv",
+      "description": "1,852 protein nodes from STRING database with Ensembl IDs and descriptions"
+    },
+    {
+      "filename": "data/string_interactions.csv",
+      "description": "31,878 protein-protein interaction edges from STRING with confidence scores"
+    },
+    {
+      "filename": "data/clinvar_variants.csv",
+      "description": "4,042 ClinVar variant nodes with clinical significance information (3-step filtered)"
+    },
+    {
+      "filename": "data/clinvar_relationships.csv",
+      "description": "4,042 variant-gene relationship edges from ClinVar"
+    },
+    {
+      "filename": "data/diseases.csv",
+      "description": "27 disease nodes related to lipoprotein metabolism with MONDO IDs"
+    },
+    {
+      "filename": "data/disease_associations.csv",
+      "description": "318 gene-disease association edges from DisGeNET, OMIM, GWAS Catalog, and Orphanet"
+    },
+    {
+      "filename": "data/molecules.csv",
+      "description": "57 molecule nodes including drugs and metabolites relevant to lipoprotein metabolism"
+    },
+    {
+      "filename": "data/particles.csv",
+      "description": "7 lipoprotein particle nodes (CM, VLDL, IDL, LDL, HDL, Lp(a), Chylomicron Remnant)"
+    },
+    {
+      "filename": "data/particle_protein_links.csv",
+      "description": "48 protein-particle composition edges"
+    },
+    {
+      "filename": "data/assembly_links.csv",
+      "description": "8 protein-particle assembly relationship edges"
+    },
+    {
+      "filename": "data/enzyme_particle_links.csv",
+      "description": "23 enzyme-particle modification edges (MODIFIES relationships)"
+    },
+    {
+      "filename": "data/kegg_genes.csv",
+      "description": "52 gene nodes from KEGG pathway hsa04979"
+    },
+    {
+      "filename": "data/pathways.csv",
+      "description": "15 pathway nodes from KEGG, Reactome, and WikiPathways"
+    },
+    {
+      "filename": "data/pathway_memberships.csv",
+      "description": "242 gene-pathway membership edges"
+    },
+    {
+      "filename": "data/graph_statistics.json",
+      "description": "Comprehensive graph statistics in JSON format"
+    },
+    {
+      "filename": "scripts/figure_scripts/",
+      "description": "Python scripts for reproducing all figures in the manuscript"
+    }
+  ]
+}

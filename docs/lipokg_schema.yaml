@@ -1,0 +1,433 @@
+# LipoKG BioLinkML Schema Definition
+# Draft schema for future RDF migration
+# Version: 1.0.0 (draft)
+# Date: 2026-07-15
+
+id: https://w3id.org/lipokg/schema
+name: LipoKG
+description: BioLinkML schema for LipoKG (Lipoprotein Knowledge Graph)
+license: CC-BY-4.0
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/vocab/
+  lipokg: https://w3id.org/lipokg/
+  MONDO: http://purl.obolibrary.org/obo/MONDO_
+  GO: http://purl.obolibrary.org/obo/GO_
+  HP: http://purl.obolibrary.org/obo/HP_
+  EFO: http://www.ebi.ac.uk/efo/EFO_
+  CHEBI: http://purl.obolibrary.org/obo/CHEBI_
+  HGNC: http://identifiers.org/hgnc/
+  ENSEMBL: http://identifiers.org/ensembl/
+  UniProtKB: http://purl.uniprot.org/uniprot/
+  ClinVar: http://identifiers.org/clinvar/
+  KEGG: http://identifiers.org/kegg/
+  Reactome: http://identifiers.org/reactome/
+  WikiPathways: http://identifiers.org/wikipathways/
+  DrugBank: http://identifiers.org/drugbank/
+  OMIM: http://purl.org/obo/owl/OMIM#
+  Orphanet: http://www.orpha.net/ORDO/Orphanet_
+  GWAS: http://identifiers.org/gwas/
+
+default_prefix: lipokg
+default_range: string
+
+imports:
+  - linkml:types
+
+# ============================================================
+# SLOT DEFINITIONS (Properties)
+# ============================================================
+
+slots:
+  ensembl_id:
+    description: Ensembl protein identifier
+    range: string
+    pattern: "^ENSP[0-9]+$"
+    mappings:
+      - biolink:xref
+
+  gene_symbol:
+    description: HGNC-approved gene symbol
+    range: string
+    mappings:
+      - biolink:symbol
+
+  kegg_id:
+    description: KEGG gene identifier
+    range: string
+    pattern: "^hsa:[0-9]+$"
+
+  string_id:
+    description: STRING database identifier
+    range: string
+    pattern: "^9606\\.ENSP[0-9]+$"
+
+  description:
+    description: Textual description of entity
+    range: string
+
+  variant_id:
+    description: ClinVar variation identifier
+    range: string
+    mappings:
+      - biolink:id
+
+  clinical_significance:
+    description: ClinVar clinical significance classification
+    range: ClinicalSignificance
+
+  review_status:
+    description: ClinVar review status
+    range: string
+
+  mondo_id:
+    description: MONDO Disease Ontology identifier
+    range: string
+    pattern: "^MONDO:[0-9]+$"
+    mappings:
+      - biolink:has_disease
+
+  efo_id:
+    description: Experimental Factor Ontology identifier
+    range: string
+    pattern: "^EFO_[0-9]+$"
+
+  pathway_id:
+    description: Pathway database identifier
+    range: string
+
+  source_database:
+    description: Source database of entity or association
+    range: SourceDatabase
+
+  interaction_score:
+    description: STRING combined interaction score (0-1000)
+    range: float
+    minimum_value: 0
+    maximum_value: 1000
+
+  disgenet_score:
+    description: DisGeNET gene-disease association score (0-1)
+    range: float
+    minimum_value: 0
+    maximum_value: 1
+
+  gwas_p_value:
+    description: GWAS p-value
+    range: float
+    minimum_value: 0
+    maximum_value: 1
+
+  density_class:
+    description: Lipoprotein particle ultracentrifugation density class
+    range: string
+
+  major_lipid:
+    description: Predominant lipid cargo of lipoprotein particle
+    range: LipidType
+
+  component_type:
+    description: Type of protein-particle component relationship
+    range: ComponentType
+
+  modification_type:
+    description: Type of enzymatic modification of particle
+    range: ModificationType
+
+  assembly_stage:
+    description: Stage of particle assembly
+    range: string
+
+  tissue:
+    description: Tissue of biological process
+    range: string
+
+  molecule_type:
+    description: Type of molecule (drug, metabolite, lipid, cytokine)
+    range: MoleculeType
+
+# ============================================================
+# ENUMERATIONS
+# ============================================================
+
+enums:
+  ClinicalSignificance:
+    permissible_values:
+      Pathogenic:
+      Likely_pathogenic:
+      Pathogenic_Likely_pathogenic:
+      VUS:
+      Benign:
+      Likely_benign:
+      Conflicting:
+
+  SourceDatabase:
+    permissible_values:
+      STRING:
+      ClinVar:
+      KEGG:
+      Reactome:
+      WikiPathways:
+      DisGeNET:
+      OMIM:
+      GWAS_Catalog:
+      Orphanet:
+      UniProtKB:
+      DrugBank:
+      HMDB:
+      LIPID_MAPS:
+
+  LipidType:
+    permissible_values:
+      Triglyceride:
+      Cholesteryl_ester:
+      Mixed:
+      Phospholipid:
+
+  ComponentType:
+    permissible_values:
+      structural:
+        description: Protein is a core structural component of particle
+      exchangeable:
+        description: Protein exchanges between particles
+      receptor:
+        description: Receptor that binds the particle
+      anchoring:
+        description: Anchoring protein for particle-associated enzyme
+      assembly:
+        description: Assembly factor
+      modification:
+        description: Modifying enzyme
+      regulator:
+        description: Regulatory protein
+
+  ModificationType:
+    permissible_values:
+      hydrolysis:
+      esterification:
+      exchange:
+      transfer:
+      degradation:
+      inhibition:
+
+  MoleculeType:
+    permissible_values:
+      drug:
+      metabolite:
+      lipid:
+      cytokine:
+      enzyme:
+      receptor:
+      protein:
+
+# ============================================================
+# CLASS DEFINITIONS (Node types)
+# ============================================================
+
+classes:
+  # Core node types (7)
+  STRINGProtein:
+    is_a: Protein
+    description: Protein from STRING database
+    slots:
+      - ensembl_id
+      - gene_symbol
+      - description
+      - string_id
+    mappings:
+      - biolink:Protein
+    id_prefixes:
+      - ENSEMBL
+      - UniProtKB
+
+  Particle:
+    is_a: NamedThing
+    description: Lipoprotein particle entity (core biological abstraction in lipoprotein metabolism)
+    slots:
+      - gene_symbol  # reused as name
+      - description
+      - density_class
+      - major_lipid
+    comments:
+      - "Particles are first-class entities reflecting the biological organization of lipoprotein metabolism"
+      - "Examples: Chylomicron, VLDL, IDL, LDL, HDL, Lp(a), Remnant"
+
+  Molecule:
+    is_a: ChemicalEntity
+    description: Small molecule, drug, metabolite, or cytokine
+    slots:
+      - gene_symbol  # reused as name
+      - molecule_type
+      - source_database
+    mappings:
+      - biolink:ChemicalEntity
+
+  Disease:
+    is_a: Disease
+    description: Disease or trait entity related to lipoprotein metabolism
+    slots:
+      - gene_symbol  # reused as name
+      - source_database
+      - mondo_id
+      - efo_id
+    mappings:
+      - biolink:Disease
+
+  ClinVarVariant:
+    is_a: SequenceVariant
+    description: ClinVar pathogenic or likely pathogenic genetic variant
+    slots:
+      - variant_id
+      - clinical_significance
+      - review_status
+    mappings:
+      - biolink:SequenceVariant
+    id_prefixes:
+      - ClinVar
+
+  KEGGGene:
+    is_a: Gene
+    description: Gene from KEGG pathway
+    slots:
+      - gene_symbol
+      - kegg_id
+    mappings:
+      - biolink:Gene
+    id_prefixes:
+      - KEGG
+
+  Pathway:
+    is_a: Pathway
+    description: Biological pathway from KEGG, Reactome, or WikiPathways
+    slots:
+      - gene_symbol  # reused as name
+      - source_database
+      - pathway_id
+    mappings:
+      - biolink:Pathway
+
+  # Extended node types (examples)
+  Drug:
+    is_a: Molecule
+    description: Pharmaceutical drug
+    mappings:
+      - biolink:Drug
+    id_prefixes:
+      - DrugBank
+
+  Isoform:
+    is_a: Protein
+    description: Protein isoform (e.g., APOB-100, APOB-48)
+    comments:
+      - "Used in extended schema to represent functionally distinct isoforms"
+
+# ============================================================
+# ASSOCIATION (RELATIONSHIP) DEFINITIONS
+# ============================================================
+
+  # Core relationship types (7)
+  StringInteracts:
+    is_a: PairwiseGeneInteraction
+    description: Protein-protein interaction from STRING
+    domain: STRINGProtein
+    range: STRINGProtein
+    slots:
+      - interaction_score
+    mappings:
+      - biolink:interacts_with
+
+  ComponentOf:
+    is_a: RelatedTo
+    description: Protein is a component of a lipoprotein particle
+    domain: STRINGProtein
+    range: Particle
+    slots:
+      - component_type
+    comments:
+      - "Captures the biological reality that apolipoproteins are associated with specific particle types"
+
+  Modifies:
+    is_a: Affects
+    description: Enzyme modifies a lipoprotein particle
+    domain: STRINGProtein
+    range: Particle
+    slots:
+      - modification_type
+    comments:
+      - "Examples: LPL modifies chylomicron via TG hydrolysis; CETP modifies HDL via CE exchange"
+
+  AssembledBy:
+    is_a: RelatedTo
+    description: Particle assembly depends on an assembly protein
+    domain: Particle
+    range: STRINGProtein
+    slots:
+      - assembly_stage
+      - tissue
+    comments:
+      - "Examples: VLDL assembled by MTTP; chylomicron assembled by MTTP in intestine"
+
+  DiseaseAssociation:
+    is_a: GeneToDiseaseAssociation
+    description: Gene-disease or gene-trait association from multiple sources
+    domain: STRINGProtein
+    range: Disease
+    slots:
+      - source_database
+      - disgenet_score
+      - gwas_p_value
+    mappings:
+      - biolink:gene_associated_with_condition
+
+  VariantOf:
+    is_a: SequenceVariantModulatesGene
+    description: ClinVar variant is associated with a gene
+    domain: ClinVarVariant
+    range: STRINGProtein
+    slots:
+      - clinical_significance
+    mappings:
+      - biolink:is_sequence_variant_of
+
+  MemberOf:
+    is_a: RelatedTo
+    description: Gene is a member of a biological pathway
+    domain: STRINGProtein
+    range: Pathway
+    slots:
+      - source_database
+    mappings:
+      - biolink:participates_in
+
+  # Extended relationship types (examples)
+  Targets:
+    is_a: ChemicalToGeneAssociation
+    description: Drug targets a protein
+    domain: Drug
+    range: STRINGProtein
+    mappings:
+      - biolink:interacts_with
+
+  Treats:
+    is_a: ChemicalToDiseaseOrPhenotypicFeatureAssociation
+    description: Drug treats a disease
+    domain: Drug
+    range: Disease
+    mappings:
+      - biolink:treats
+
+  IsoformOf:
+    is_a: RelatedTo
+    description: Protein isoform relationship (e.g., APOB-100 isoform_of APOB)
+    domain: Isoform
+    range: STRINGProtein
+
+# ============================================================
+# SETTINGS
+# ============================================================
+
+settings:
+  license_url: https://creativecommons.org/licenses/by/4.0/
+  repository: https://github.com/sdfmu-lipidomics/lipokg
+  documentation: https://zenodo.org/records/12345678
