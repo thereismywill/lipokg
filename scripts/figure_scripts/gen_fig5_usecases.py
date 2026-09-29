@@ -115,7 +115,10 @@ axD.set_ylabel('Interactor Count', fontsize=9, color='#222222')
 axD.legend(fontsize=7, loc='upper left')
 axD2.legend(fontsize=7, loc='upper right')
 for i, c in enumerate(concordance):
-    axD.text(i, c + 1, f'{c:.1f}%', ha='center', fontsize=8, fontweight='bold', color='#C44E52')
+    # 修：一致度画在副轴 axD2（ylim 70–100），标注也必须挂到 axD2；
+    # 挂到 axD（Interactor Count 轴，ylim≈0–25）会让文字飞到图外顶部，
+    # 并把 tight_layout 撑坏（2026-09-27 实测，已提交的 v5 图即此病）。
+    axD2.text(i, c + 1, f'{c:.1f}%', ha='center', fontsize=8, fontweight='bold', color='#C44E52')
 axD.spines['top'].set_visible(False)
 
 # ═══════════════════════════════════════════════════════
@@ -143,22 +146,57 @@ axE.spines['top'].set_visible(False)
 axE.spines['right'].set_visible(False)
 
 # ═══════════════════════════════════════════════════════
-# Panel F: Summary (Use Case 6 preview → see Figure 6)
+# Panel F: Use Case 6 — Particle-Centric Queries   (v6)
+#   v5 此处是 "See Figure 6" 占位框；Figure 6 已删除，内容并入本面板。
+#   数据来源：沉积包 data/particle_protein_links.csv（APOE 连 5 个粒子，未连 LDL / Lp(a)）
 # ═══════════════════════════════════════════════════════
 axF = axes[1, 2]
 axF.set_title('F  Use Case 6: Particle-Centric Queries', fontsize=12, fontweight='bold', pad=8, color='#222222')
-axF.text(0.5, 0.5, 'See Figure 6\n\nAPOE in 5 particles:\n'
-                   'Chylomicron · VLDL · IDL · HDL · Remnant\n\n'
-                   'Context unavailable from\nprotein-level data alone',
-         ha='center', va='center', fontsize=11, color='#555555',
-         transform=axF.transAxes,
-         bbox=dict(boxstyle='round,pad=0.5', fc='#FFF8E1', ec='#F57F17', alpha=0.9, lw=1.5))
 axF.axis('off')
+# 用轴分数坐标（0–1）绘制：切勿在此用 set_aspect('equal') + 宽数据范围，
+# 那会与 tight_layout 打架，把整张图的 suptitle 挤到中间（2026-09-27 实测踩过）。
+APOE_LINKED = ['Chylomicron', 'VLDL', 'IDL', 'HDL', 'Remnant']   # 已核实
+APOE_UNLINKED = ['LDL', 'Lp(a)']                                 # 已核实：APOE 不连
+_ring = APOE_LINKED + APOE_UNLINKED
+_cx, _cy, _R = 0.5, 0.52, 0.33
+_pos = {n: (_cx + _R * np.cos(np.radians(90 - i * 360.0 / len(_ring))),
+            _cy + _R * np.sin(np.radians(90 - i * 360.0 / len(_ring))))
+        for i, n in enumerate(_ring)}
+for n in _ring:                                   # 连线
+    x, y = _pos[n]
+    linked = n in APOE_LINKED
+    axF.plot([_cx, _cx + (x - _cx) * 0.82], [_cy, _cy + (y - _cy) * 0.82],
+             color='#F57F17' if linked else '#CFCFCF',
+             lw=2.0 if linked else 1.0, ls='-' if linked else ':',
+             zorder=1, solid_capstyle='round', transform=axF.transAxes)
+for n in _ring:                                   # 节点 + 外侧标签
+    x, y = _pos[n]
+    linked = n in APOE_LINKED
+    axF.scatter([x], [y], s=520, c='#FFF8E1' if linked else '#F2F2F2',
+                edgecolors='#F57F17' if linked else '#BDBDBD',
+                linewidths=1.7, zorder=2, transform=axF.transAxes)
+    if x > _cx + 0.06:   ha, lx = 'left', x + 0.055
+    elif x < _cx - 0.06: ha, lx = 'right', x - 0.055
+    else:                ha, lx = 'center', x
+    ly = y - 0.055 if abs(x - _cx) <= 0.06 else y
+    axF.text(lx, ly, n, ha=ha, va='center', fontsize=7.2, zorder=3,
+             color='#333333' if linked else '#A0A0A0',
+             fontweight='bold' if linked else 'normal', transform=axF.transAxes)
+axF.scatter([_cx], [_cy], s=1500, c='#E3F2FD', edgecolors='#1565C0',
+            linewidths=1.9, zorder=4, transform=axF.transAxes)
+axF.text(_cx, _cy, 'APOE', ha='center', va='center', fontsize=9.5,
+         fontweight='bold', color='#1565C0', zorder=5, transform=axF.transAxes)
+axF.text(_cx, 0.02,
+         'APOE participates in 5 of 7 particle nodes\n'
+         '(solid = linked, dotted = not linked); context\n'
+         'unavailable from protein-level data alone',
+         ha='center', va='bottom', fontsize=6.8, color='#555555', style='italic',
+         transform=axF.transAxes)
 
 plt.tight_layout(rect=[0, 0, 1, 0.96])
 
 out_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'figures', 'generated')
 os.makedirs(out_dir, exist_ok=True)
-save_fig(fig, os.path.join(out_dir, 'Figure_5_Use_Cases_v5.tiff'))
+save_fig(fig, os.path.join(out_dir, 'Figure_5_Use_Cases_v6.tiff'))
 plt.close(fig)
 print("Figure 5 done!")

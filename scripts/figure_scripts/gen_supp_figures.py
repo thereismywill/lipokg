@@ -61,7 +61,7 @@ axB.spines['right'].set_visible(False)
 axC = axes_s1[1, 0]
 axC.set_title('C  Core vs Extended Schema', fontsize=12, fontweight='bold')
 categories = ['Node Types', 'Relationship Types', 'Nodes', 'Edges']
-core_vals = [7, 7, 6052, 36559]
+core_vals = [7, 7, 6052, 36479]
 ext_vals = [31, 25, 6463, 37165]
 x = np.arange(len(categories))
 w = 0.35
@@ -85,7 +85,7 @@ axD.axis('off')
 stats_table = [
     ['Metric', 'Value'],
     ['Total core nodes', '6,052'],
-    ['Total core edges', '36,559'],
+    ['Total core edges', '36,479'],
     ['Node types (core)', '7'],
     ['Relationship types (core)', '7'],
     ['Connected components', '1'],

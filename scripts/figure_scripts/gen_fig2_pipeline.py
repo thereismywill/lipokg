@@ -1,13 +1,14 @@
 """
-Figure 2: Data Integration Pipeline + Seed Gene Selection
-Panel A: Multi-source data integration flowchart
-Panel B: PRISMA-style seed gene selection
+Figure 2: Data Integration and Seed Gene Selection
+Panel A: PRISMA-style seed gene selection   ← v6 起为 A（正文先引它）
+Panel B: Multi-source data integration flowchart
 """
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from figure_style import *
 setup_style()
-fig, (axA, axB) = plt.subplots(1, 2, figsize=(18, 8))
+# v6: 轴对象与位置对调 —— 左=PRISMA(axB), 右=整合流程(axA)；字母随内容走
+fig, (axB, axA) = plt.subplots(1, 2, figsize=(18, 8))
 for ax in (axA, axB):
     ax.set_xlim(-6, 6)
     ax.set_ylim(-6, 7.5)            # ← 增加顶部空间，避免A/B与图题重叠
@@ -35,7 +36,7 @@ def draw_arrow(ax, x1, y1, x2, y2, color='#888', lw=1.2):
 # ═══════════════════════════════════════════════════════
 # PANEL A: Data Integration Pipeline
 # ═══════════════════════════════════════════════════════
-axA.text(0, 7.0, 'A', fontsize=18, fontweight='bold', ha='left', va='top', color='#222')   # ← y=6.5→7.0
+axA.text(0, 7.0, 'B', fontsize=18, fontweight='bold', ha='left', va='top', color='#222')   # ← v6: 内容仍在 axA，但位置在右、字母改为 B
 
 # --- Layer 1: Data Sources ---
 axA.text(0, 6.0, 'Data Sources', ha='center', fontsize=12, fontweight='bold', color='#4C72B0')
@@ -80,7 +81,7 @@ draw_arrow(axA, 0, -0.8, 0, -1.5, color='#C62828', lw=1.5)
 draw_box(axA, 0, -2.2, 5.0, 1.2,
          'LipoKG Knowledge Graph',
          fc='#E3F2FD', ec='#1565C0', fontsize=11, bold=True,
-         subtext='6,052 core nodes · 36,559 core edges · 7+7 schema')
+         subtext='6,052 core nodes · 36,479 core edges · 7+7 schema')
 draw_arrow(axA, 0, -2.8, -2.5, -3.7, color='#1565C0', lw=1.2)
 draw_arrow(axA, 0, -2.8, 2.5, -3.7, color='#1565C0', lw=1.2)
 
@@ -93,7 +94,7 @@ draw_box(axA, 2.5, -4.3, 3.5, 0.9,
 # ═══════════════════════════════════════════════════════
 # PANEL B: PRISMA-style Seed Gene Selection
 # ═══════════════════════════════════════════════════════
-axB.text(0, 7.0, 'B', fontsize=18, fontweight='bold', ha='left', va='top', color='#222')   # ← y=6.5→7.0
+axB.text(0, 7.0, 'A', fontsize=18, fontweight='bold', ha='left', va='top', color='#222')   # ← v6: 内容仍在 axB，但位置在左、字母改为 A
 axB.text(0, 6.0, 'Seed Gene Selection (PRISMA-style)', ha='center',
          fontsize=12, fontweight='bold', color='#4C72B0')
 
@@ -141,11 +142,11 @@ axB.text(4.7, 1.65, 'Excluded: n = 15\n(redundant pathways)', ha='center', va='c
 draw_arrow(axB, 2.6, 0.8, 3.4, 1.6, color='#C62828', lw=0.8)
 
 # Figure title
-fig.suptitle('Figure 2: Data Integration Pipeline', fontsize=16, fontweight='bold', y=0.98)
+fig.suptitle('Figure 2: Data Integration and Seed Gene Selection', fontsize=16, fontweight='bold', y=0.98)
 plt.tight_layout(rect=[0, 0, 1, 0.96])
 
 out_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'figures', 'generated')
 os.makedirs(out_dir, exist_ok=True)
-save_fig(fig, os.path.join(out_dir, 'Figure_2_Integration_Pipeline_v5.tiff'))
+save_fig(fig, os.path.join(out_dir, 'Figure_2_Integration_Pipeline_v6.tiff'))
 plt.close(fig)
 print("Figure 2 done!")

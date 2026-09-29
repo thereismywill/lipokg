@@ -8,8 +8,8 @@ sys.path.insert(0, os.path.dirname(__file__))
 from figure_style import *
 from scipy import stats
 setup_style()
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7),
-                                gridspec_kw={'width_ratios': [2.5, 1]})
+fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(21, 7),
+                                   gridspec_kw={'width_ratios': [2.3, 0.85, 1.15]})
 
 # ═══════════════════════════════════════════════════════
 # PANEL A: Validation benchmarks (horizontal bar chart)
@@ -106,12 +106,49 @@ ax2.text(0, -0.25, f'Overall: 89.3%', ha='center', va='center',
 ax2.set_title('B  Coverage Tier Summary', fontsize=14, fontweight='bold',
               loc='left', pad=10)
 
+# ═══════════════════════════════════════════════════════
+# PANEL C: Gene-level annotation depth (added in v6)
+#   每个蛋白节点「除 STRING 边之外还带几层注释」
+#   数据源：Review/gene_level_coverage.csv（由沉积数据实算）
+# ═══════════════════════════════════════════════════════
+n_prot = 1852                                    # 交互图中的蛋白数（分母）
+depth_counts = {4: 22, 3: 14, 2: 24, 1: 57, 0: 1735}   # 非 STRING 层数 -> 基因数
+assert sum(depth_counts.values()) == n_prot, "注释深度分布之和须等于交互图蛋白数"
+
+depth_labels = ['4 layers', '3 layers', '2 layers', '1 layer', 'STRING only']
+depth_vals = [depth_counts[k] for k in (4, 3, 2, 1, 0)]
+depth_cols = ['#2E7D32', '#2E7D32', '#43A047', '#90A4AE', '#CFD8DC']
+dy = np.arange(len(depth_labels))
+
+ax3.barh(dy, depth_vals, color=depth_cols, alpha=0.9,
+         edgecolor='white', linewidth=0.5)
+ax3.set_xscale('log')                 # 1,735 与 14 同图必须用对数轴
+ax3.set_xlim(8, 4000)
+ax3.set_yticks(dy)
+ax3.set_yticklabels(depth_labels, fontsize=10)
+ax3.set_xlabel('Proteins in interaction graph (log scale)', fontsize=11)
+
+for i, v in enumerate(depth_vals):
+    ax3.text(v * 1.15, i, f"{v:,}  ({v / n_prot * 100:.1f}%)",
+             va='center', fontsize=8.5, color='#333')
+
+ax3.text(0.98, 0.06,
+         "117 of 1,852 (6.3%) carry ≥1 non-STRING layer\n"
+         "82-gene curated core: 68.3% ≥1 layer, 25.6% all four",
+         transform=ax3.transAxes, ha='right', va='bottom', fontsize=8.5,
+         color='#555', bbox=dict(boxstyle='round,pad=0.4',
+                                 fc='#F5F5F5', ec='#BDBDBD', lw=0.6))
+ax3.set_title('C  Gene-Level Annotation Depth', fontsize=14, fontweight='bold',
+              loc='left', pad=10)
+ax3.spines['top'].set_visible(False)
+ax3.spines['right'].set_visible(False)
+
 fig.suptitle('Figure 3: Coverage and Validation Analysis', fontsize=16,
              fontweight='bold', y=1.02)
 plt.tight_layout()
 
 out_dir = os.path.join(os.path.dirname(__file__), '..', '..', 'figures', 'generated')
 os.makedirs(out_dir, exist_ok=True)
-save_fig(fig, os.path.join(out_dir, 'Figure_3_Coverage_Analysis_v5.tiff'))
+save_fig(fig, os.path.join(out_dir, 'Figure_3_Coverage_Analysis_v6.tiff'))
 plt.close(fig)
 print("Figure 3 done!")

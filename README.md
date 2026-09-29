@@ -9,12 +9,12 @@ LipoKG is a comprehensive knowledge graph integrating multi-source data for lipo
 ### Scope
 - **Domain:** Lipoprotein metabolism and cardiovascular disease
 - **Organism:** Homo sapiens
-- **Data sources:** STRING v12.0, ClinVar, KEGG, Reactome, WikiPathways, DisGeNET, OMIM, GWAS Catalog (GLGC 2021), Orphanet
+- **Data sources:** STRING v12.0, ClinVar, KEGG, Reactome, WikiPathways, DisGeNET, OMIM, GLGC 2021 (Graham et al.), Orphanet
 - **Release date:** 2026
 
 ### Statistics
 - **Core schema total nodes:** 6,052
-- **Core schema total edges:** 36,559
+- **Core schema total edges:** 36,479
 - **Extended schema total nodes:** 6,463 (Neo4j dump)
 - **Extended schema total edges:** 37,165 (Neo4j dump)
 - **Core node types:** 7 (STRINGProtein, Particle, Molecule, Disease, ClinVarVariant, KEGGGene, Pathway)
@@ -93,7 +93,7 @@ Protein-protein interactions from STRING
 - `combined_score`: Combined interaction score
 
 #### `data/disease_associations.csv`
-Gene/protein-disease/trait associations (318 edges from DisGeNET, OMIM, GWAS Catalog, and Orphanet)
+Gene/protein-disease/trait associations (238 edges from DisGeNET, OMIM, GLGC 2021, Orphanet, and expert curation)
 - `source`: Gene/protein name
 - `target`: Disease/trait name
 - `source_db`: Data source ("DisGeNET", "OMIM", "GWAS_Catalog", "Orphanet")
@@ -183,19 +183,19 @@ Comprehensive graph statistics including:
 
 ### OMIM
 - **Description:** Online Mendelian Inheritance in Man
-- **Coverage:** 22 curated Mendelian gene-disease associations
+- **Coverage:** 20 curated Mendelian gene-disease associations
 - **URL:** https://www.omim.org
 - **License:** Custom (academic use)
 
-### GWAS Catalog (GLGC 2021)
+### GLGC 2021 (Graham et al.)
 - **Description:** Genome-wide association study catalog, Global Lipids Genetics Consortium 2021 results
-- **Coverage:** 187 genome-wide significant gene-trait associations (p < 5×10⁻⁸) for four lipid traits
-- **URL:** https://www.ebi.ac.uk/gwas/
+- **Coverage:** 111 genome-wide significant gene-trait associations (p < 5×10⁻⁸) for four lipid traits
+- **URL:** https://csg.sph.umich.edu/willer/public/glgc-lipids2021/
 - **License:** CC0
 
 ### Orphanet
 - **Description:** Rare disease and orphan drug database
-- **Coverage:** 38 gene-disease associations across 7 rare lipoprotein disorders
+- **Coverage:** 50 gene-disease associations across 7 rare lipoprotein disorders
 - **URL:** https://www.orpha.net
 - **License:** CC BY 4.0
 
@@ -307,7 +307,7 @@ ORDER BY gene_count DESC
 1. **STRING confidence threshold:** Only high-confidence interactions (combined_score ≥ 700) included; 47 additional literature-mined interactions manually curated
 2. **ClinVar variants:** Restricted to pathogenic/likely pathogenic with minimum review status "criteria provided, single submitter"
 3. **Protein/gene conflation:** 23 of 82 seed genes (28%) have functionally distinct isoforms
-4. **Static snapshot:** Data collected January 2024; no temporal information
+4. **Static snapshot:** Data collected June 2026; no temporal information
 5. **Human data only:** No cross-species integration
 6. **KEGGGene/STRINGProtein duplication:** Resolved via MAPS_TO cross-references in extended schema
 
@@ -317,11 +317,11 @@ If you use this dataset in your research, please cite:
 
 ```bibtex
 @article{lipoKG2026,
-  title={LipoKG: A Comprehensive Knowledge Graph Dataset for Lipoprotein Metabolism Research},
+  title={LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research},
   author={Zhang, Ke and Zhao, Junyi and Yu, Yang},
   journal={Scientific Data},
   year={2026},
-  doi={[DOI will be assigned by Zenodo]}
+  doi={10.5281/zenodo.21318099}
 }
 ```
 
@@ -343,6 +343,12 @@ For questions or feedback about this dataset:
 - **GitHub:** https://github.com/thereismywill/lipokg
 
 ## Changelog
+
+### Version 1.2.0 (2026-09)
+- Re-fetched GLGC 2021 GWAS associations from source summary statistics (113 variant-trait / 111 gene-trait pairs)
+- Corrected disease layer: removed fabricated GWAS edges; DISEASE_ASSOCIATION 318 → 238; core edges 36,559 → 36,479
+- Added data/extended/ (6 CSV files: drug targets, drug diseases, enzyme substrates, affects_gene, particle_all_links, isoform_links)
+- Added Figure 3 Panel C (gene-level annotation depth); fixed Figure 5 Panel D axis bug; removed Figure 6
 
 ### Version 1.1.0 (2026-06)
 - Updated ClinVar variant filtering (Pathogenic/Likely pathogenic only, 4,042 variants)

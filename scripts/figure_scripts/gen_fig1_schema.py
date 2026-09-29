@@ -61,7 +61,7 @@ relationships = [
     ('Molecule',      'Particle',       'MODIFIES',            23,    0.0),
     ('Particle',      'Molecule',       'ASSEMBLED_BY',         8,    0.3),
     ('STRINGProtein', 'STRINGProtein',  'STRING_INTERACTS', 31878,    0.0),  # self-loop
-    ('STRINGProtein', 'Disease',        'DISEASE_ASSOCIATION', 318,   0.0),
+    ('STRINGProtein', 'Disease',        'DISEASE_ASSOCIATION', 238,   0.0),
     ('ClinVarVariant','KEGGGene',       'VARIANT_OF',        4042,    0.0),
     ('STRINGProtein', 'Pathway',        'MEMBER_OF',          242,    0.0),
 ]
@@ -134,7 +134,7 @@ for from_t, to_t, rel_name, count, curve in relationships:
 # ── Title and summary box ──
 ax.text(0, 5.6, "LipoKG Core Schema", ha='center', va='center',
         fontsize=18, fontweight='bold', color='#222222')
-ax.text(0, 5.2, "7 Node Types  ·  7 Relationship Types  ·  6,052 Nodes  ·  36,559 Edges",
+ax.text(0, 5.2, "7 Node Types  ·  7 Relationship Types  ·  6,052 Nodes  ·  36,479 Edges",
         ha='center', va='center', fontsize=10, color='#555555')
 
 # ── Legend: Particles as first-class entities ──

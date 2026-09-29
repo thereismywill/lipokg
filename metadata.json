@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "LipoKG: A Comprehensive Knowledge Graph Dataset for Lipoprotein Metabolism Research",
+    "title": "LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research",
     "upload_type": "dataset",
     "description": "A comprehensive FAIR-compliant knowledge graph integrating multi-source data for lipoprotein metabolism research. This dataset combines protein-protein interactions (STRING v12.0), genetic variants (ClinVar), disease associations (DisGeNET, OMIM, GWAS Catalog, Orphanet), and pathway information (KEGG, Reactome, WikiPathways) into a unified graph structure. The knowledge graph contains 6,052 core nodes and 36,559 core edges (extended Neo4j schema: 6,463 nodes, 37,165 edges), with 84.8% coverage of reference lipoprotein metabolism genes across three pathway databases. Independent validation achieves 92.3% coverage of GO:0042157 (lipoprotein metabolic process). This dataset is designed to support systematic knowledge gap discovery, drug repurposing research, and precision medicine applications in cardiovascular disease.",
     "creators": [
@@ -35,8 +35,8 @@
     "language": "eng",
     "access_right": "open",
     "license": "cc-by-4.0",
-    "version": "1.1.0",
-    "publication_date": "2026-07-01"
+    "version": "1.2.0",
+    "publication_date": "2026-09-29"
   },
   "files": [
     {
