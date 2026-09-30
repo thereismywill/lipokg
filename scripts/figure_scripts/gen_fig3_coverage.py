@@ -84,10 +84,14 @@ ax1.spines['right'].set_visible(False)
 # ═══════════════════════════════════════════════════════
 # PANEL B: Summary donut chart
 # ═══════════════════════════════════════════════════════
-# Group by coverage tier
-high = 4    # >= 90%
-med = 2     # 80-90%
-low = 1     # < 80%
+# Group by coverage tier —— **从 VALIDATION 实算**，不再写死
+#   2026-10-01 实测：此处原写死 high=4/med=2/low=1，连改前的 7 个基准都对不上
+#   （≥90% 只有 GO/ClinGen/Expert = 3 个）。写死的分档会随基准值变动而静默失效。
+_pcts = [v['pct'] for v in VALIDATION.values()]
+high = sum(1 for _p in _pcts if _p >= 90)
+med = sum(1 for _p in _pcts if 80 <= _p < 90)
+low = sum(1 for _p in _pcts if _p < 80)
+assert high + med + low == len(_pcts), '分档之和须等于基准数'
 sizes = [high, med, low]
 labels_donut = [f'High (≥90%)\nn={high}', f'Medium (80-90%)\nn={med}',
                 f'Below 80%\nn={low}']
@@ -99,9 +103,9 @@ for t in texts:
     t.set_fontsize(9)
 
 # Center text
-ax2.text(0, 0, f'7\nBenchmarks', ha='center', va='center',
+ax2.text(0, 0, f'{len(_pcts)}\nBenchmarks', ha='center', va='center',
          fontsize=14, fontweight='bold', color='#333')
-ax2.text(0, -0.25, f'Overall: 89.3%', ha='center', va='center',
+ax2.text(0, -0.25, f'Overall: {sum(_pcts) / len(_pcts):.1f}%', ha='center', va='center',
          fontsize=10, color='#555')
 ax2.set_title('B  Coverage Tier Summary', fontsize=14, fontweight='bold',
               loc='left', pad=10)
@@ -111,9 +115,22 @@ ax2.set_title('B  Coverage Tier Summary', fontsize=14, fontweight='bold',
 #   每个蛋白节点「除 STRING 边之外还带几层注释」
 #   数据源：Review/gene_level_coverage.csv（由沉积数据实算）
 # ═══════════════════════════════════════════════════════
-n_prot = 1852                                    # 交互图中的蛋白数（分母）
-depth_counts = {4: 22, 3: 14, 2: 24, 1: 57, 0: 1735}   # 非 STRING 层数 -> 基因数
+#   2026-10-01 改为**读 Table_S24 实算**（原先写死 {4:22,3:14,2:24,1:57,0:1735}，
+#   移除伪造的 WikiPathways 层后这里必须跟着变，写死就会与表/正文脱节）。
+import csv as _csv
+_S24 = os.path.join(resolve_supp_dir(), 'Table_S24_Gene_Level_Coverage.csv')
+_S1 = os.path.join(resolve_supp_dir(), 'Table_S1_Seed_Genes.csv')
+_rows24 = list(_csv.DictReader(open(_S24, encoding='utf-8-sig')))
+_in_graph = [r for r in _rows24 if r['in_string_graph'] == '1']
+n_prot = len(_in_graph)                          # 交互图中的蛋白数（分母）
+depth_counts = {k: sum(1 for r in _in_graph if int(r['n_non_string_layers']) == k)
+                for k in range(5)}               # 非 STRING 层数 -> 基因数
 assert sum(depth_counts.values()) == n_prot, "注释深度分布之和须等于交互图蛋白数"
+_seed = {r['symbol'] for r in _csv.DictReader(open(_S1, encoding='utf-8-sig'))}
+_core = [r for r in _rows24 if r['gene'] in _seed]
+_core_ge1 = sum(1 for r in _core if int(r['n_non_string_layers']) >= 1)
+_core_eq4 = sum(1 for r in _core if int(r['n_non_string_layers']) == 4)
+_ge1 = sum(v for k, v in depth_counts.items() if k >= 1)
 
 depth_labels = ['4 layers', '3 layers', '2 layers', '1 layer', 'STRING only']
 depth_vals = [depth_counts[k] for k in (4, 3, 2, 1, 0)]
@@ -133,8 +150,9 @@ for i, v in enumerate(depth_vals):
              va='center', fontsize=8.5, color='#333')
 
 ax3.text(0.98, 0.06,
-         "117 of 1,852 (6.3%) carry ≥1 non-STRING layer\n"
-         "82-gene curated core: 68.3% ≥1 layer, 25.6% all four",
+         f"{_ge1:,} of {n_prot:,} ({_ge1 / n_prot * 100:.1f}%) carry ≥1 non-STRING layer\n"
+         f"{len(_core)}-gene curated core: {_core_ge1 / len(_core) * 100:.1f}% ≥1 layer, "
+         f"{_core_eq4 / len(_core) * 100:.1f}% all four",
          transform=ax3.transAxes, ha='right', va='bottom', fontsize=8.5,
          color='#555', bbox=dict(boxstyle='round,pad=0.4',
                                  fc='#F5F5F5', ec='#BDBDBD', lw=0.6))
