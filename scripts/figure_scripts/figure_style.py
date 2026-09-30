@@ -156,7 +156,7 @@ NODE_COUNTS = {
     'Molecule':       57,
     'Disease':        27,
     'ClinVarVariant': 4042,
-    'KEGGGene':       52,
+    'KEGGGene':       216,
     'Pathway':        13,
 }
 
@@ -167,17 +167,17 @@ REL_COUNTS = {
     'ASSEMBLED_BY':        8,
     'DISEASE_ASSOCIATION': 238,
     'VARIANT_OF':          4042,
-    'MEMBER_OF':           167,
+    'MEMBER_OF':           331,
 }
 
-TOTAL_CORE_NODES = 6050
-TOTAL_CORE_EDGES = 36404
+TOTAL_CORE_NODES = 6214
+TOTAL_CORE_EDGES = 36568
 TOTAL_NODES = 6475
 TOTAL_EDGES = 37177
 
 # Validation benchmarks
 VALIDATION = {
-    'KEGG hsa04979':          {'pct': 88.5, 'num': 46,  'den': 52},
+    'KEGG hsa05417':          {'pct': 72.7, 'num': 157, 'den': 216},
     'Reactome pathways':      {'pct': 85.9, 'num': 61,  'den': 71},
     'WikiPathways lipid':     {'pct': 79.3, 'num': 73,  'den': 92},
     'GO lipoprotein process': {'pct': 92.3, 'num': 132, 'den': 143},

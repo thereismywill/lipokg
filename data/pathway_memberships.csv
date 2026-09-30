@@ -1,78 +1,220 @@
 ﻿gene,pathway,source
-NPC2,Cholesterol metabolism,KEGG
-CETP,Cholesterol metabolism,KEGG
-STARD3,Cholesterol metabolism,KEGG
-OSBPL5,Cholesterol metabolism,KEGG
-CYP7A1,Cholesterol metabolism,KEGG
-CYP27A1,Cholesterol metabolism,KEGG
-ABCA1,Cholesterol metabolism,KEGG
-PCSK9,Cholesterol metabolism,KEGG
-LDLRAP1,Cholesterol metabolism,KEGG
-CIDEB,Cholesterol metabolism,KEGG
-ANGPTL3,Cholesterol metabolism,KEGG
-MYLIP,Cholesterol metabolism,KEGG
-APOA1,Cholesterol metabolism,KEGG
-APOA2,Cholesterol metabolism,KEGG
-APOA4,Cholesterol metabolism,KEGG
-APOB,Cholesterol metabolism,KEGG
-APOC1,Cholesterol metabolism,KEGG
-APOC2,Cholesterol metabolism,KEGG
-APOC3,Cholesterol metabolism,KEGG
-APOE,Cholesterol metabolism,KEGG
-APOH,Cholesterol metabolism,KEGG
-LCAT,Cholesterol metabolism,KEGG
-LDLR,Cholesterol metabolism,KEGG
-LIPA,Cholesterol metabolism,KEGG
-LIPC,Cholesterol metabolism,KEGG
-LPA,Cholesterol metabolism,KEGG
-LPL,Cholesterol metabolism,KEGG
-LRP1,Cholesterol metabolism,KEGG
-LRP2,Cholesterol metabolism,KEGG
-LRPAP1,Cholesterol metabolism,KEGG
-NPC1,Cholesterol metabolism,KEGG
-ANGPTL4,Cholesterol metabolism,KEGG
-PLTP,Cholesterol metabolism,KEGG
-ANGPTL8,Cholesterol metabolism,KEGG
-NCEH1,Cholesterol metabolism,KEGG
-SORT1,Cholesterol metabolism,KEGG
-ABCG5,Cholesterol metabolism,KEGG
-ABCG8,Cholesterol metabolism,KEGG
-SOAT1,Cholesterol metabolism,KEGG
-STAR,Cholesterol metabolism,KEGG
-TSPO,Cholesterol metabolism,KEGG
-VDAC1,Cholesterol metabolism,KEGG
-VDAC2,Cholesterol metabolism,KEGG
-VDAC3,Cholesterol metabolism,KEGG
-STARD3NL,Cholesterol metabolism,KEGG
-SOAT2,Cholesterol metabolism,KEGG
-ABCB11,Cholesterol metabolism,KEGG
-VAPB,Cholesterol metabolism,KEGG
-VAPA,Cholesterol metabolism,KEGG
-LIPG,Cholesterol metabolism,KEGG
-CD36,Cholesterol metabolism,KEGG
-SCARB1,Cholesterol metabolism,KEGG
-APOA1,Chylomicron assembly,Reactome
-APOA2,Chylomicron assembly,Reactome
-APOA4,Chylomicron assembly,Reactome
-APOB,Chylomicron assembly,Reactome
-APOC2,Chylomicron assembly,Reactome
-APOC3,Chylomicron assembly,Reactome
-APOE,Chylomicron assembly,Reactome
-MTTP,Chylomicron assembly,Reactome
-P4HB,Chylomicron assembly,Reactome
-SAR1B,Chylomicron assembly,Reactome
-APOB,VLDL assembly,Reactome
-APOC1,VLDL assembly,Reactome
-APOC4,VLDL assembly,Reactome
-MTTP,VLDL assembly,Reactome
-P4HB,VLDL assembly,Reactome
-A2M,HDL assembly,Reactome
-ABCA1,HDL assembly,Reactome
-APOA1,HDL assembly,Reactome
-PRKACA,HDL assembly,Reactome
-PRKACB,HDL assembly,Reactome
-PRKACG,HDL assembly,Reactome
-ZDHHC8,HDL assembly,Reactome
+ABCA1,Lipid and atherosclerosis,KEGG
+ABCG1,Lipid and atherosclerosis,KEGG
+AGER,Lipid and atherosclerosis,KEGG
+AKT1,Lipid and atherosclerosis,KEGG
+AKT2,Lipid and atherosclerosis,KEGG
+AKT3,Lipid and atherosclerosis,KEGG
+APAF1,Lipid and atherosclerosis,KEGG
+APOA1,Lipid and atherosclerosis,KEGG
+APOA4,Lipid and atherosclerosis,KEGG
+APOB,Lipid and atherosclerosis,KEGG
+ARHGEF1,Lipid and atherosclerosis,KEGG
+ATF4,Lipid and atherosclerosis,KEGG
+ATF6,Lipid and atherosclerosis,KEGG
+BAD,Lipid and atherosclerosis,KEGG
+BAX,Lipid and atherosclerosis,KEGG
+BCL2,Lipid and atherosclerosis,KEGG
+BCL2L1,Lipid and atherosclerosis,KEGG
+BID,Lipid and atherosclerosis,KEGG
+CALM1,Lipid and atherosclerosis,KEGG
+CALM2,Lipid and atherosclerosis,KEGG
+CALM3,Lipid and atherosclerosis,KEGG
+CALML3,Lipid and atherosclerosis,KEGG
+CALML4,Lipid and atherosclerosis,KEGG
+CALML5,Lipid and atherosclerosis,KEGG
+CALML6,Lipid and atherosclerosis,KEGG
+CAMK2A,Lipid and atherosclerosis,KEGG
+CAMK2B,Lipid and atherosclerosis,KEGG
+CAMK2D,Lipid and atherosclerosis,KEGG
+CAMK2G,Lipid and atherosclerosis,KEGG
+CASP1,Lipid and atherosclerosis,KEGG
+CASP3,Lipid and atherosclerosis,KEGG
+CASP6,Lipid and atherosclerosis,KEGG
+CASP7,Lipid and atherosclerosis,KEGG
+CASP8,Lipid and atherosclerosis,KEGG
+CASP9,Lipid and atherosclerosis,KEGG
+CCL2,Lipid and atherosclerosis,KEGG
+CCL3,Lipid and atherosclerosis,KEGG
+CCL3L1,Lipid and atherosclerosis,KEGG
+CCL3L3,Lipid and atherosclerosis,KEGG
+CCL5,Lipid and atherosclerosis,KEGG
+CD14,Lipid and atherosclerosis,KEGG
+CD36,Lipid and atherosclerosis,KEGG
+CD40,Lipid and atherosclerosis,KEGG
+CD40LG,Lipid and atherosclerosis,KEGG
+CDC42,Lipid and atherosclerosis,KEGG
+CHUK,Lipid and atherosclerosis,KEGG
+CXCL1,Lipid and atherosclerosis,KEGG
+CXCL2,Lipid and atherosclerosis,KEGG
+CXCL3,Lipid and atherosclerosis,KEGG
+CXCL8,Lipid and atherosclerosis,KEGG
+CYBA,Lipid and atherosclerosis,KEGG
+CYBB,Lipid and atherosclerosis,KEGG
+CYCS,Lipid and atherosclerosis,KEGG
+CYP1A1,Lipid and atherosclerosis,KEGG
+CYP2A6,Lipid and atherosclerosis,KEGG
+CYP2A7,Lipid and atherosclerosis,KEGG
+CYP2B6,Lipid and atherosclerosis,KEGG
+CYP2C8,Lipid and atherosclerosis,KEGG
+CYP2C9,Lipid and atherosclerosis,KEGG
+CYP2J2,Lipid and atherosclerosis,KEGG
+DDIT3,Lipid and atherosclerosis,KEGG
+EIF2AK3,Lipid and atherosclerosis,KEGG
+EIF2S1,Lipid and atherosclerosis,KEGG
+ERN1,Lipid and atherosclerosis,KEGG
+ERO1A,Lipid and atherosclerosis,KEGG
+FAS,Lipid and atherosclerosis,KEGG
+FASLG,Lipid and atherosclerosis,KEGG
+FOS,Lipid and atherosclerosis,KEGG
+GSK3B,Lipid and atherosclerosis,KEGG
+HRAS,Lipid and atherosclerosis,KEGG
+HSP90AA1,Lipid and atherosclerosis,KEGG
+HSP90AB1,Lipid and atherosclerosis,KEGG
+HSP90B1,Lipid and atherosclerosis,KEGG
+HSPA1A,Lipid and atherosclerosis,KEGG
+HSPA1B,Lipid and atherosclerosis,KEGG
+HSPA1L,Lipid and atherosclerosis,KEGG
+HSPA2,Lipid and atherosclerosis,KEGG
+HSPA4,Lipid and atherosclerosis,KEGG
+HSPA5,Lipid and atherosclerosis,KEGG
+HSPA6,Lipid and atherosclerosis,KEGG
+HSPA8,Lipid and atherosclerosis,KEGG
+HSPD1,Lipid and atherosclerosis,KEGG
+ICAM1,Lipid and atherosclerosis,KEGG
+IFNA1,Lipid and atherosclerosis,KEGG
+IFNA10,Lipid and atherosclerosis,KEGG
+IFNA13,Lipid and atherosclerosis,KEGG
+IFNA14,Lipid and atherosclerosis,KEGG
+IFNA16,Lipid and atherosclerosis,KEGG
+IFNA17,Lipid and atherosclerosis,KEGG
+IFNA2,Lipid and atherosclerosis,KEGG
+IFNA21,Lipid and atherosclerosis,KEGG
+IFNA4,Lipid and atherosclerosis,KEGG
+IFNA5,Lipid and atherosclerosis,KEGG
+IFNA6,Lipid and atherosclerosis,KEGG
+IFNA7,Lipid and atherosclerosis,KEGG
+IFNA8,Lipid and atherosclerosis,KEGG
+IFNB1,Lipid and atherosclerosis,KEGG
+IKBKB,Lipid and atherosclerosis,KEGG
+IKBKE,Lipid and atherosclerosis,KEGG
+IKBKG,Lipid and atherosclerosis,KEGG
+IL12A,Lipid and atherosclerosis,KEGG
+IL12B,Lipid and atherosclerosis,KEGG
+IL18,Lipid and atherosclerosis,KEGG
+IL1B,Lipid and atherosclerosis,KEGG
+IL6,Lipid and atherosclerosis,KEGG
+IRAK1,Lipid and atherosclerosis,KEGG
+IRAK4,Lipid and atherosclerosis,KEGG
+IRF3,Lipid and atherosclerosis,KEGG
+IRF7,Lipid and atherosclerosis,KEGG
+ITPR1,Lipid and atherosclerosis,KEGG
+JAK2,Lipid and atherosclerosis,KEGG
+JUN,Lipid and atherosclerosis,KEGG
+KRAS,Lipid and atherosclerosis,KEGG
+LBP,Lipid and atherosclerosis,KEGG
+LDLR,Lipid and atherosclerosis,KEGG
+LY96,Lipid and atherosclerosis,KEGG
+LYN,Lipid and atherosclerosis,KEGG
+MAP2K3,Lipid and atherosclerosis,KEGG
+MAP2K4,Lipid and atherosclerosis,KEGG
+MAP2K6,Lipid and atherosclerosis,KEGG
+MAP2K7,Lipid and atherosclerosis,KEGG
+MAP3K5,Lipid and atherosclerosis,KEGG
+MAP3K7,Lipid and atherosclerosis,KEGG
+MAPK1,Lipid and atherosclerosis,KEGG
+MAPK10,Lipid and atherosclerosis,KEGG
+MAPK11,Lipid and atherosclerosis,KEGG
+MAPK12,Lipid and atherosclerosis,KEGG
+MAPK13,Lipid and atherosclerosis,KEGG
+MAPK14,Lipid and atherosclerosis,KEGG
+MAPK3,Lipid and atherosclerosis,KEGG
+MAPK8,Lipid and atherosclerosis,KEGG
+MAPK9,Lipid and atherosclerosis,KEGG
+MIB1,Lipid and atherosclerosis,KEGG
+MIB2,Lipid and atherosclerosis,KEGG
+MMP1,Lipid and atherosclerosis,KEGG
+MMP3,Lipid and atherosclerosis,KEGG
+MMP9,Lipid and atherosclerosis,KEGG
+MYD88,Lipid and atherosclerosis,KEGG
+NCF1,Lipid and atherosclerosis,KEGG
+NCF2,Lipid and atherosclerosis,KEGG
+NCF4,Lipid and atherosclerosis,KEGG
+NFATC1,Lipid and atherosclerosis,KEGG
+NFATC2,Lipid and atherosclerosis,KEGG
+NFATC3,Lipid and atherosclerosis,KEGG
+NFE2L2,Lipid and atherosclerosis,KEGG
+NFKB1,Lipid and atherosclerosis,KEGG
+NFKBIA,Lipid and atherosclerosis,KEGG
+NLRP3,Lipid and atherosclerosis,KEGG
+NOS3,Lipid and atherosclerosis,KEGG
+NOX1,Lipid and atherosclerosis,KEGG
+NRAS,Lipid and atherosclerosis,KEGG
+OLR1,Lipid and atherosclerosis,KEGG
+P3R3URF-PIK3R3,Lipid and atherosclerosis,KEGG
+PDPK1,Lipid and atherosclerosis,KEGG
+PIK3CA,Lipid and atherosclerosis,KEGG
+PIK3CB,Lipid and atherosclerosis,KEGG
+PIK3CD,Lipid and atherosclerosis,KEGG
+PIK3R1,Lipid and atherosclerosis,KEGG
+PIK3R2,Lipid and atherosclerosis,KEGG
+PIK3R3,Lipid and atherosclerosis,KEGG
+PLCB1,Lipid and atherosclerosis,KEGG
+PLCB2,Lipid and atherosclerosis,KEGG
+PLCB3,Lipid and atherosclerosis,KEGG
+PLCB4,Lipid and atherosclerosis,KEGG
+PLCG1,Lipid and atherosclerosis,KEGG
+POU2F1,Lipid and atherosclerosis,KEGG
+POU2F2,Lipid and atherosclerosis,KEGG
+POU2F3,Lipid and atherosclerosis,KEGG
+PPARG,Lipid and atherosclerosis,KEGG
+PPP3CA,Lipid and atherosclerosis,KEGG
+PPP3CB,Lipid and atherosclerosis,KEGG
+PPP3CC,Lipid and atherosclerosis,KEGG
+PPP3R1,Lipid and atherosclerosis,KEGG
+PPP3R2,Lipid and atherosclerosis,KEGG
+PRKCA,Lipid and atherosclerosis,KEGG
+PTK2,Lipid and atherosclerosis,KEGG
+PYCARD,Lipid and atherosclerosis,KEGG
+RAC1,Lipid and atherosclerosis,KEGG
+RAP1A,Lipid and atherosclerosis,KEGG
+RAP1B,Lipid and atherosclerosis,KEGG
+RELA,Lipid and atherosclerosis,KEGG
+RHOA,Lipid and atherosclerosis,KEGG
+ROCK2,Lipid and atherosclerosis,KEGG
+RXRA,Lipid and atherosclerosis,KEGG
+RXRB,Lipid and atherosclerosis,KEGG
+RXRG,Lipid and atherosclerosis,KEGG
+SELE,Lipid and atherosclerosis,KEGG
+SELP,Lipid and atherosclerosis,KEGG
+SOD2,Lipid and atherosclerosis,KEGG
+SRC,Lipid and atherosclerosis,KEGG
+STAT3,Lipid and atherosclerosis,KEGG
+TAB1,Lipid and atherosclerosis,KEGG
+TAB2,Lipid and atherosclerosis,KEGG
+TANK,Lipid and atherosclerosis,KEGG
+TBK1,Lipid and atherosclerosis,KEGG
+TICAM1,Lipid and atherosclerosis,KEGG
+TICAM2,Lipid and atherosclerosis,KEGG
+TIRAP,Lipid and atherosclerosis,KEGG
+TLR2,Lipid and atherosclerosis,KEGG
+TLR4,Lipid and atherosclerosis,KEGG
+TLR6,Lipid and atherosclerosis,KEGG
+TNF,Lipid and atherosclerosis,KEGG
+TNFRSF10A,Lipid and atherosclerosis,KEGG
+TNFRSF10B,Lipid and atherosclerosis,KEGG
+TNFRSF1A,Lipid and atherosclerosis,KEGG
+TNFSF10,Lipid and atherosclerosis,KEGG
+TP53,Lipid and atherosclerosis,KEGG
+TRAF2,Lipid and atherosclerosis,KEGG
+TRAF3,Lipid and atherosclerosis,KEGG
+TRAF6,Lipid and atherosclerosis,KEGG
+VAV1,Lipid and atherosclerosis,KEGG
+VAV2,Lipid and atherosclerosis,KEGG
+VAV3,Lipid and atherosclerosis,KEGG
+VCAM1,Lipid and atherosclerosis,KEGG
+VLDLR,Lipid and atherosclerosis,KEGG
+XBP1,Lipid and atherosclerosis,KEGG
 ANGPTL3,Assembly of active LPL and LIPC lipase complexes,Reactome
 ANGPTL4,Assembly of active LPL and LIPC lipase complexes,Reactome
 ANGPTL8,Assembly of active LPL and LIPC lipase complexes,Reactome
@@ -91,6 +233,21 @@ MBTPS1,Assembly of active LPL and LIPC lipase complexes,Reactome
 MBTPS2,Assembly of active LPL and LIPC lipase complexes,Reactome
 PCSK5,Assembly of active LPL and LIPC lipase complexes,Reactome
 PCSK6,Assembly of active LPL and LIPC lipase complexes,Reactome
+APOA1,Chylomicron assembly,Reactome
+APOA2,Chylomicron assembly,Reactome
+APOA4,Chylomicron assembly,Reactome
+APOB,Chylomicron assembly,Reactome
+APOC2,Chylomicron assembly,Reactome
+APOC3,Chylomicron assembly,Reactome
+APOE,Chylomicron assembly,Reactome
+MTTP,Chylomicron assembly,Reactome
+P4HB,Chylomicron assembly,Reactome
+SAR1B,Chylomicron assembly,Reactome
+APOB,Chylomicron clearance,Reactome
+APOE,Chylomicron clearance,Reactome
+LDLR,Chylomicron clearance,Reactome
+LDLRAP1,Chylomicron clearance,Reactome
+LIPC,Chylomicron clearance,Reactome
 APOA1,Chylomicron remodeling,Reactome
 APOA2,Chylomicron remodeling,Reactome
 APOA4,Chylomicron remodeling,Reactome
@@ -101,12 +258,17 @@ APOC3,Chylomicron remodeling,Reactome
 APOE,Chylomicron remodeling,Reactome
 GPIHBP1,Chylomicron remodeling,Reactome
 LPL,Chylomicron remodeling,Reactome
-APOB,LDL remodeling,Reactome
-APOF,LDL remodeling,Reactome
-CETP,LDL remodeling,Reactome
-LPA,LDL remodeling,Reactome
-MTTP,LDL remodeling,Reactome
-P4HB,LDL remodeling,Reactome
+A2M,HDL assembly,Reactome
+ABCA1,HDL assembly,Reactome
+APOA1,HDL assembly,Reactome
+PRKACA,HDL assembly,Reactome
+PRKACB,HDL assembly,Reactome
+PRKACG,HDL assembly,Reactome
+ZDHHC8,HDL assembly,Reactome
+AMN,HDL clearance,Reactome
+APOA1,HDL clearance,Reactome
+CUBN,HDL clearance,Reactome
+HDLBP,HDL clearance,Reactome
 ABCG1,HDL remodeling,Reactome
 ALB,HDL remodeling,Reactome
 APOA1,HDL remodeling,Reactome
@@ -116,17 +278,6 @@ APOE,HDL remodeling,Reactome
 CETP,HDL remodeling,Reactome
 LCAT,HDL remodeling,Reactome
 LIPG,HDL remodeling,Reactome
-APOB,Chylomicron clearance,Reactome
-APOE,Chylomicron clearance,Reactome
-LDLR,Chylomicron clearance,Reactome
-LDLRAP1,Chylomicron clearance,Reactome
-LIPC,Chylomicron clearance,Reactome
-APOB,VLDL clearance,Reactome
-APOBR,VLDL clearance,Reactome
-APOC1,VLDL clearance,Reactome
-APOC4,VLDL clearance,Reactome
-LSR,VLDL clearance,Reactome
-VLDLR,VLDL clearance,Reactome
 AP2A1,LDL clearance,Reactome
 AP2A2,LDL clearance,Reactome
 AP2B1,LDL clearance,Reactome
@@ -146,10 +297,23 @@ NPC2,LDL clearance,Reactome
 PCSK9,LDL clearance,Reactome
 SOAT1,LDL clearance,Reactome
 SOAT2,LDL clearance,Reactome
-AMN,HDL clearance,Reactome
-APOA1,HDL clearance,Reactome
-CUBN,HDL clearance,Reactome
-HDLBP,HDL clearance,Reactome
+APOB,LDL remodeling,Reactome
+APOF,LDL remodeling,Reactome
+CETP,LDL remodeling,Reactome
+LPA,LDL remodeling,Reactome
+MTTP,LDL remodeling,Reactome
+P4HB,LDL remodeling,Reactome
+APOB,VLDL assembly,Reactome
+APOC1,VLDL assembly,Reactome
+APOC4,VLDL assembly,Reactome
+MTTP,VLDL assembly,Reactome
+P4HB,VLDL assembly,Reactome
+APOB,VLDL clearance,Reactome
+APOBR,VLDL clearance,Reactome
+APOC1,VLDL clearance,Reactome
+APOC4,VLDL clearance,Reactome
+LSR,VLDL clearance,Reactome
+VLDLR,VLDL clearance,Reactome
 AP2A1,VLDLR internalisation and degradation,Reactome
 AP2A2,VLDLR internalisation and degradation,Reactome
 AP2B1,VLDLR internalisation and degradation,Reactome

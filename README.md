@@ -24,10 +24,10 @@ LipoKG is a comprehensive knowledge graph integrating multi-source data for lipo
 ### Coverage Validation
 
 **ETL Completeness:**
-- **KEGG hsa04979 (Cholesterol metabolism):** 88.5% coverage (46/52 genes)
+- **KEGG hsa05417 (Lipid and atherosclerosis):** 72.7% coverage (157/216 genes)
 - **Reactome lipoprotein pathways:** 85.9% coverage (61/71 genes)
 - **WikiPathways lipid pathways:** 79.3% coverage (73/92 genes)
-- **Overall pathway completeness:** 78.9% (127/161 unique reference genes)
+- **Overall pathway completeness:** 74.9% (259/346 unique reference genes)
 
 **Independent Validation:**
 - **Gene Ontology GO:0042157 (lipoprotein metabolic process):** 92.3% coverage (132/143 genes)
@@ -156,22 +156,22 @@ Comprehensive graph statistics including:
 
 ### KEGG
 - **Description:** Kyoto Encyclopedia of Genes and Genomes
-- **Pathway:** hsa04979 (Cholesterol metabolism)
-- **Coverage:** 52 genes
+- **Pathway:** hsa05417 (Lipid and atherosclerosis), 216 genes
+- **Coverage:** 157 of the 216 genes (72.7%) are represented in the protein graph
 - **URL:** https://www.kegg.jp
 - **License:** KEGG is free for academic use
 
 ### Reactome
 - **Description:** Free, open-source, curated and peer-reviewed pathway database
-- **Pathways:** 10 lipoprotein metabolism pathways
-- **Coverage:** 111 gene memberships
+- **Pathways:** 12 lipoprotein metabolism pathways
+- **Coverage:** 115 gene memberships
 - **URL:** https://reactome.org
 - **License:** Creative Commons Attribution 4.0 International
 
 ### WikiPathways
 - **Description:** Open science platform for community collection, curation and publication of biological pathways
-- **Pathways:** 4 lipid metabolism pathways (WP5242, WP4842, WP5243, WP5244)
-- **Coverage:** 79 gene memberships
+- **Reference set:** 4 lipid metabolism pathways (WP3965, WP430, WP554, WP206), 92 genes — used for coverage validation only, NOT imported into the graph
+- **Coverage:** 73 of the 92 reference genes (79.3%) are represented in the protein graph
 - **URL:** https://www.wikipathways.org
 - **License:** Creative Commons Attribution 4.0 International
 
@@ -410,14 +410,14 @@ We thank the maintainers of STRING, ClinVar, KEGG, Reactome, and WikiPathways fo
 
 | Layer (denominator = 1,852 proteins in the interaction graph) | Genes | Share |
 |---|---|---|
-| Pathway membership | 99 | 5.3% |
+| Pathway membership | 211 | 11.4% |
 | Disease / GWAS association | 62 | 3.3% |
 | ClinVar variant annotation | 43 | 2.3% |
 | Particle membership | 31 | 1.7% |
-| **Any non-STRING layer** | **117** | **6.3%** |
-| **Two or more non-STRING layers** | **60** | **3.2%** |
-| **STRING connectivity only** | **1,735** | **93.7%** |
+| **Any non-STRING layer** | **252** | **13.6%** |
+| **Two or more non-STRING layers** | **48** | **2.6%** |
+| **STRING connectivity only** | **1,600** | **86.4%** |
 
-Multi-layer annotation is concentrated in the curated 82-gene lipoprotein core (68.3% carry at least one
+Multi-layer annotation is concentrated in the curated 82-gene lipoprotein core (64.6% carry at least one
 additional layer). Proteins reachable only through 1-hop interaction expansion should be read as interaction
 context rather than as multi-layer annotations.

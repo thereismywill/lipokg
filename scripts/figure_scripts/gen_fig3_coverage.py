@@ -19,7 +19,7 @@ benchmarks = [
     ('ClinGen dosage genes',    25,  25,  '#2E7D32'),
     ('GO lipoprotein process', 132, 143,  '#1565C0'),
     ('Reactome pathways',       61,  71,  '#1565C0'),
-    ('KEGG hsa04979',           46,  52,  '#1565C0'),
+    ('KEGG hsa05417',          157, 216,  '#1565C0'),
     ('WikiPathways lipid',      73,  92,  '#1565C0'),
     ('GLGC 2021 GWAS loci',   244, 376,  '#E65100'),
 ]
@@ -120,13 +120,15 @@ ax2.set_title('B  Coverage Tier Summary', fontsize=14, fontweight='bold',
 import csv as _csv
 _S24 = os.path.join(resolve_supp_dir(), 'Table_S24_Gene_Level_Coverage.csv')
 _S1 = os.path.join(resolve_supp_dir(), 'Table_S1_Seed_Genes.csv')
-_rows24 = list(_csv.DictReader(open(_S24, encoding='utf-8-sig')))
+with open(_S24, encoding='utf-8-sig') as _f24:
+    _rows24 = list(_csv.DictReader(_f24))
 _in_graph = [r for r in _rows24 if r['in_string_graph'] == '1']
 n_prot = len(_in_graph)                          # 交互图中的蛋白数（分母）
 depth_counts = {k: sum(1 for r in _in_graph if int(r['n_non_string_layers']) == k)
                 for k in range(5)}               # 非 STRING 层数 -> 基因数
 assert sum(depth_counts.values()) == n_prot, "注释深度分布之和须等于交互图蛋白数"
-_seed = {r['symbol'] for r in _csv.DictReader(open(_S1, encoding='utf-8-sig'))}
+with open(_S1, encoding='utf-8-sig') as _f1:
+    _seed = {r['symbol'] for r in _csv.DictReader(_f1)}
 _core = [r for r in _rows24 if r['gene'] in _seed]
 _core_ge1 = sum(1 for r in _core if int(r['n_non_string_layers']) >= 1)
 _core_eq4 = sum(1 for r in _core if int(r['n_non_string_layers']) == 4)

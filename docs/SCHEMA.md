@@ -55,8 +55,8 @@ Pathogenic and likely pathogenic genetic variants from ClinVar (January 2024). V
 - `clinical_significance` (string): "Pathogenic", "Likely pathogenic", "Conflicting classifications of pathogenicity", etc.
 - `review_status` (string): Review status in ClinVar
 
-#### KEGGGene (52 nodes)
-Genes from KEGG pathway hsa04979 "Cholesterol metabolism"
+#### KEGGGene (216 nodes)
+Genes from KEGG pathway hsa05417 "Lipid and atherosclerosis"
 
 **Properties:**
 - `name` (string): Gene symbol (e.g., "LDLR")
@@ -68,7 +68,7 @@ Biological pathways from KEGG and Reactome (WikiPathways was used only as an ind
 **Properties:**
 - `name` (string): Pathway name
 - `source` (string): Source database ("KEGG", "Reactome")
-- `pathway_id` (string): Pathway identifier (e.g., "hsa04979", "R-HSA-174824", "WP5242")
+- `pathway_id` (string): Pathway identifier (e.g., "hsa05417", "R-HSA-174824", "WP3965")
 
 ### Relationship Types
 
@@ -123,13 +123,13 @@ Links ClinVar variants to their associated genes
 - `gene` (string): Associated gene symbol
 - `significance` (string): Clinical significance
 
-#### MEMBER_OF (167 edges)
+#### MEMBER_OF (331 edges)
 Links genes to pathways they participate in
 
 **Properties:**
 - `gene` (string): Gene symbol
 - `pathway` (string): Pathway name
-- `source` (string): Pathway database ("KEGG", "Reactome", "WikiPathways")
+- `source` (string): Pathway database ("KEGG", "Reactome")
 
 ---
 
@@ -231,10 +231,10 @@ The full Neo4j database includes 25 additional node types and 19 additional rela
 
 ## Coverage Validation
 
-- **KEGG hsa04979:** 88.5% coverage (46/52 genes)
+- **KEGG hsa05417:** 72.7% coverage (157/216 genes)
 - **Reactome lipoprotein pathways:** 85.9% coverage (61/71 genes)
 - **WikiPathways lipid pathways:** 79.3% coverage (73/92 genes)
-- **Overall coverage:** 78.9% (127/161 unique genes)
+- **Overall coverage:** 74.9% (259/346 unique genes)
 - **Gene Ontology GO:0042157:** 92.3% coverage (132/143 genes)
 
 ## Version Information

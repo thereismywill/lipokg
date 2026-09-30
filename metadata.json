@@ -2,7 +2,7 @@
   "metadata": {
     "title": "LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research",
     "upload_type": "dataset",
-    "description": "A comprehensive FAIR-compliant knowledge graph integrating multi-source data for lipoprotein metabolism research. This dataset combines protein-protein interactions (STRING v12.0), genetic variants (ClinVar), disease associations (DisGeNET, OMIM, GLGC 2021, Orphanet), and pathway information (KEGG, Reactome, WikiPathways) into a unified graph structure. The knowledge graph contains 6,050 core nodes and 36,404 core edges (extended Neo4j schema: 6,475 nodes, 37,177 edges), with 78.9% coverage of reference lipoprotein metabolism genes across three pathway databases. Independent validation achieves 92.3% coverage of GO:0042157 (lipoprotein metabolic process). This dataset is designed to support systematic knowledge gap discovery, drug repurposing research, and precision medicine applications in cardiovascular disease. This version (1.2.0) additionally includes the six extended-schema CSV exports under data/extended/, a per-file inventory with byte sizes and row counts (Table S25), and a gene-level annotation coverage matrix (Table S24) characterising how many genes carry annotation in each layer beyond STRING connectivity: of the 1,852 proteins in the interaction graph, 114 (6.2%) carry at least one additional layer and 1,738 (93.8%) are represented by STRING edges only.",
+    "description": "A comprehensive FAIR-compliant knowledge graph integrating multi-source data for lipoprotein metabolism research. This dataset combines protein-protein interactions (STRING v12.0), genetic variants (ClinVar), disease associations (DisGeNET, OMIM, GLGC 2021, Orphanet), and pathway information (KEGG, Reactome, WikiPathways) into a unified graph structure. The knowledge graph contains 6,214 core nodes and 36,568 core edges (extended Neo4j schema: 6,475 nodes, 37,177 edges), with 74.9% coverage of reference lipoprotein metabolism genes across three pathway databases. Independent validation achieves 92.3% coverage of GO:0042157 (lipoprotein metabolic process). This dataset is designed to support systematic knowledge gap discovery, drug repurposing research, and precision medicine applications in cardiovascular disease. This version (1.2.0) additionally includes the six extended-schema CSV exports under data/extended/, a per-file inventory with byte sizes and row counts (Table S25), and a gene-level annotation coverage matrix (Table S24) characterising how many genes carry annotation in each layer beyond STRING connectivity: of the 1,852 proteins in the interaction graph, 252 (13.6%) carry at least one additional layer and 1,600 (86.4%) are represented by STRING edges only.",
     "creators": [
       {
         "name": "Ke Zhang",
@@ -125,15 +125,15 @@
     },
     {
       "filename": "data/kegg_genes.csv",
-      "description": "52 gene nodes from KEGG pathway hsa04979"
+      "description": "216 gene nodes from KEGG pathway hsa05417"
     },
     {
       "filename": "data/pathways.csv",
-      "description": "15 pathway nodes from KEGG, Reactome, and WikiPathways"
+      "description": "13 pathway nodes from KEGG and Reactome"
     },
     {
       "filename": "data/pathway_memberships.csv",
-      "description": "246 gene-pathway membership edges"
+      "description": "331 gene-pathway membership edges"
     },
     {
       "filename": "data/graph_statistics.json",

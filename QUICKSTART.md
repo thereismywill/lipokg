@@ -133,8 +133,8 @@ print(f"Edges: {G.number_of_edges()}")
 
 ## 关键统计
 
-- **核心节点总数**: 6,050（扩展schema: 6,475）
-- **核心边总数**: 36,404（扩展schema: 37,177）
+- **核心节点总数**: 6,214（扩展schema: 6,475）
+- **核心边总数**: 36,568（扩展schema: 37,177）
 - **核心节点类型**: 7 (STRINGProtein, Particle, Molecule, Disease, ClinVarVariant, KEGGGene, Pathway)
 - **核心边类型**: 7 (STRING_INTERACTS, COMPONENT_OF, MODIFIES, ASSEMBLED_BY, VARIANT_OF, MEMBER_OF, DISEASE_ASSOCIATION)
 - **蛋白数**: 1,852 (STRING v12.0)
@@ -146,10 +146,10 @@ print(f"Edges: {G.number_of_edges()}")
 ## 覆盖度验证
 
 **ETL完整性:**
-- **KEGG hsa04979**: 88.5% (46/52 genes)
+- **KEGG hsa05417**: 72.7% (157/216 genes)
 - **Reactome lipoprotein**: 85.9% (61/71 genes)
 - **WikiPathways lipid**: 79.3% (73/92 genes)
-- **总体通路完整度**: 78.9% (127/161 unique genes)
+- **总体通路完整度**: 74.9% (259/346 unique genes)
 
 **独立验证:**
 - **GO:0042157 (脂蛋白代谢过程)**: 92.3% (132/143 genes)
