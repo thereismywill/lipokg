@@ -1,9 +1,5 @@
 ﻿name,source,pathway_id
-Lipid and atherosclerosis,KEGG,hsa04979
-Lipid metabolism pathway,WikiPathways,WP5242
-Statin pathway,WikiPathways,WP4842
-ACE inhibitor pathway,WikiPathways,WP5243
-Fatty acid omega-oxidation,WikiPathways,WP5244
+Cholesterol metabolism,KEGG,hsa04979
 Chylomicron assembly,Reactome,R-HSA-8963888
 VLDL assembly,Reactome,R-HSA-8866423
 HDL assembly,Reactome,R-HSA-8963896

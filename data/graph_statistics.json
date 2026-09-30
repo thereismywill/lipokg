@@ -8,7 +8,7 @@
    "Disease": 27,
    "ClinVarVariant": 4042,
    "KEGGGene": 52,
-   "Pathway": 17
+   "Pathway": 13
   },
   "relationship_types": {
    "STRING_INTERACTS": 31878,
@@ -17,10 +17,10 @@
    "ASSEMBLED_BY": 8,
    "DISEASE_ASSOCIATION": 238,
    "VARIANT_OF": 4042,
-   "MEMBER_OF": 246
+   "MEMBER_OF": 167
   },
-  "total_core_nodes": 6054,
-  "total_core_edges": 36483
+  "total_core_nodes": 6050,
+  "total_core_edges": 36404
  },
  "extended_schema": {
   "description": "Full Neo4j graph including Reactome-derived and manually curated types (25 additional node types, 19 additional relationship types)",
@@ -78,10 +78,10 @@
  "node_type_count": 32,
  "edge_type_count": 26,
  "etl_completeness": {
-  "KEGG_hsa04979": "89.5% (119/133 genes)",
+  "KEGG_hsa04979": "88.5% (46/52 genes)",
   "Reactome_lipoprotein_pathways": "85.9% (61/71 genes)",
-  "WikiPathways_lipid_pathways": "87.7% (71/81 genes)",
-  "overall_pathway_completeness": "83.0% (161/194 unique genes)"
+  "WikiPathways_lipid_pathways": "79.3% (73/92 genes)",
+  "overall_pathway_completeness": "78.9% (127/161 unique genes)"
  },
  "independent_validation": {
   "GO_0042157_lipoprotein_metabolic_process": "92.3% (132/143 genes)",

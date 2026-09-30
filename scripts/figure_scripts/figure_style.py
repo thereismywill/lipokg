@@ -157,7 +157,7 @@ NODE_COUNTS = {
     'Disease':        27,
     'ClinVarVariant': 4042,
     'KEGGGene':       52,
-    'Pathway':        17,
+    'Pathway':        13,
 }
 
 REL_COUNTS = {
@@ -167,19 +167,19 @@ REL_COUNTS = {
     'ASSEMBLED_BY':        8,
     'DISEASE_ASSOCIATION': 238,
     'VARIANT_OF':          4042,
-    'MEMBER_OF':           246,
+    'MEMBER_OF':           167,
 }
 
-TOTAL_CORE_NODES = 6054
-TOTAL_CORE_EDGES = 36483
-TOTAL_NODES = 6463
-TOTAL_EDGES = 37165
+TOTAL_CORE_NODES = 6050
+TOTAL_CORE_EDGES = 36404
+TOTAL_NODES = 6475
+TOTAL_EDGES = 37177
 
 # Validation benchmarks
 VALIDATION = {
-    'KEGG hsa04979':          {'pct': 89.5, 'num': 119, 'den': 133},
+    'KEGG hsa04979':          {'pct': 88.5, 'num': 46,  'den': 52},
     'Reactome pathways':      {'pct': 85.9, 'num': 61,  'den': 71},
-    'WikiPathways lipid':     {'pct': 87.7, 'num': 71,  'den': 81},
+    'WikiPathways lipid':     {'pct': 79.3, 'num': 73,  'den': 92},
     'GO lipoprotein process': {'pct': 92.3, 'num': 132, 'den': 143},
     'GLGC 2021 GWAS loci':   {'pct': 64.9, 'num': 244, 'den': 376},
     'ClinGen dosage genes':   {'pct': 100,  'num': 25,  'den': 25},

@@ -24,10 +24,10 @@ LipoKG is a comprehensive knowledge graph integrating multi-source data for lipo
 ### Coverage Validation
 
 **ETL Completeness:**
-- **KEGG hsa04979 (Lipid and atherosclerosis):** 89.5% coverage (119/133 genes)
+- **KEGG hsa04979 (Cholesterol metabolism):** 88.5% coverage (46/52 genes)
 - **Reactome lipoprotein pathways:** 85.9% coverage (61/71 genes)
-- **WikiPathways lipid pathways:** 87.7% coverage (71/81 genes)
-- **Overall pathway completeness:** 83.0% (161/194 unique reference genes)
+- **WikiPathways lipid pathways:** 79.3% coverage (73/92 genes)
+- **Overall pathway completeness:** 78.9% (127/161 unique reference genes)
 
 **Independent Validation:**
 - **Gene Ontology GO:0042157 (lipoprotein metabolic process):** 92.3% coverage (132/143 genes)
@@ -78,7 +78,7 @@ Genes from KEGG database
 - `kegg_id`: KEGG gene identifier
 
 #### `data/pathways.csv`
-Biological pathways (15 nodes: 1 KEGG, 10 Reactome, 4 WikiPathways)
+Biological pathways (13 nodes: 1 KEGG, 12 Reactome)
 - `name`: Pathway name
 - `source`: Data source (e.g., "KEGG", "Reactome", "WikiPathways")
 - `pathway_id`: Pathway identifier
@@ -156,7 +156,7 @@ Comprehensive graph statistics including:
 
 ### KEGG
 - **Description:** Kyoto Encyclopedia of Genes and Genomes
-- **Pathway:** hsa04979 (Lipid and atherosclerosis)
+- **Pathway:** hsa04979 (Cholesterol metabolism)
 - **Coverage:** 52 genes
 - **URL:** https://www.kegg.jp
 - **License:** KEGG is free for academic use
@@ -285,7 +285,7 @@ WHERE v.clinical_significance = 'Pathogenic'
 RETURN v.variant_id, v.clinical_significance
 
 // Find all genes in KEGG lipid pathway
-MATCH (g:KEGGGene)-[:MEMBER_OF]->(p:Pathway {name: 'Lipid and atherosclerosis'})
+MATCH (g:KEGGGene)-[:MEMBER_OF]->(p:Pathway {name: 'Cholesterol metabolism'})
 RETURN g.name, g.kegg_id
 
 // Find diseases associated with multiple lipoprotein genes

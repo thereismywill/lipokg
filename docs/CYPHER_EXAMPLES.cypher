@@ -126,7 +126,7 @@ ORDER BY variants DESC;
 // ============================================================================
 
 // 5.1 查找KEGG脂蛋白代谢通路中的所有基因
-MATCH (g:KEGGGene)-[:MEMBER_OF]->(p:Pathway {name: 'Lipid and atherosclerosis'})
+MATCH (g:KEGGGene)-[:MEMBER_OF]->(p:Pathway {name: 'Cholesterol metabolism'})
 RETURN g.name, g.kegg_id
 ORDER BY g.name;
 
@@ -274,7 +274,7 @@ RETURN path
 LIMIT 50;
 
 // 9.3 提取通路子图
-MATCH (g:KEGGGene)-[:MEMBER_OF]->(p:Pathway {name: 'Lipid and atherosclerosis'})
+MATCH (g:KEGGGene)-[:MEMBER_OF]->(p:Pathway {name: 'Cholesterol metabolism'})
 OPTIONAL MATCH (g)-[:STRING_INTERACTS]-(interactor:KEGGGene)-[:MEMBER_OF]->(p)
 RETURN g.name, interactor.name, p.name
 ORDER BY g.name

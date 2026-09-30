@@ -56,18 +56,18 @@ Pathogenic and likely pathogenic genetic variants from ClinVar (January 2024). V
 - `review_status` (string): Review status in ClinVar
 
 #### KEGGGene (52 nodes)
-Genes from KEGG pathway hsa04979 "Lipid and atherosclerosis"
+Genes from KEGG pathway hsa04979 "Cholesterol metabolism"
 
 **Properties:**
 - `name` (string): Gene symbol (e.g., "LDLR")
 - `kegg_id` (string): KEGG gene identifier (e.g., "hsa:3949")
 
-#### Pathway (15 nodes)
-Biological pathways from KEGG, Reactome, and WikiPathways
+#### Pathway (13 nodes)
+Biological pathways from KEGG and Reactome (WikiPathways was used only as an independent reference set and was not imported)
 
 **Properties:**
 - `name` (string): Pathway name
-- `source` (string): Source database ("KEGG", "Reactome", "WikiPathways")
+- `source` (string): Source database ("KEGG", "Reactome")
 - `pathway_id` (string): Pathway identifier (e.g., "hsa04979", "R-HSA-174824", "WP5242")
 
 ### Relationship Types
@@ -123,7 +123,7 @@ Links ClinVar variants to their associated genes
 - `gene` (string): Associated gene symbol
 - `significance` (string): Clinical significance
 
-#### MEMBER_OF (242 edges)
+#### MEMBER_OF (167 edges)
 Links genes to pathways they participate in
 
 **Properties:**
@@ -206,7 +206,7 @@ The full Neo4j database includes 25 additional node types and 19 additional rela
 | ClinVar | 2024-01 | 2024-01-20 | Public domain | 4,042 pathogenic/likely pathogenic variants |
 | KEGG | 2024-01 | 2024-01-10 | Academic use | hsa04979, 52 genes |
 | Reactome | v87 | 2026-06-13 | CC BY 4.0 | 12 pathways, 115 gene memberships |
-| WikiPathways | 2024-01 | 2024-01-18 | CC BY 4.0 | 4 pathways, 79 gene memberships |
+| WikiPathways | GMT 2026-09-10 | 2026-10-01 | CC BY 4.0 | 4 reference pathways (WP3965/WP430/WP554/WP206), 92 genes — reference set only (NOT imported) |
 | DisGeNET | v7.0 (≥0.3) | 2024-01-08 | CC BY-NC-SA 4.0 | 35 gene-disease associations |
 | OMIM | 2024-01 | 2024-01-05 | Custom | 20 gene-disease associations |
 | GLGC 2021 (Graham et al.) | 2024-01 | 2024-01-25 | CC0 | 111 gene-trait associations |
@@ -231,10 +231,10 @@ The full Neo4j database includes 25 additional node types and 19 additional rela
 
 ## Coverage Validation
 
-- **KEGG hsa04979:** 89.5% coverage (119/133 genes)
+- **KEGG hsa04979:** 88.5% coverage (46/52 genes)
 - **Reactome lipoprotein pathways:** 85.9% coverage (61/71 genes)
-- **WikiPathways lipid pathways:** 87.7% coverage (71/81 genes)
-- **Overall coverage:** 83.0% (161/194 unique genes)
+- **WikiPathways lipid pathways:** 79.3% coverage (73/92 genes)
+- **Overall coverage:** 78.9% (127/161 unique genes)
 - **Gene Ontology GO:0042157:** 92.3% coverage (132/143 genes)
 
 ## Version Information

@@ -19,8 +19,8 @@ benchmarks = [
     ('ClinGen dosage genes',    25,  25,  '#2E7D32'),
     ('GO lipoprotein process', 132, 143,  '#1565C0'),
     ('Reactome pathways',       61,  71,  '#1565C0'),
-    ('KEGG hsa04979',          119, 133,  '#1565C0'),
-    ('WikiPathways lipid',      71,  81,  '#1565C0'),
+    ('KEGG hsa04979',           46,  52,  '#1565C0'),
+    ('WikiPathways lipid',      73,  92,  '#1565C0'),
     ('GLGC 2021 GWAS loci',   244, 376,  '#E65100'),
 ]
 

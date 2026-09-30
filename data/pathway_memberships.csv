@@ -1,135 +1,56 @@
 ﻿gene,pathway,source
-NPC2,Lipid and atherosclerosis,KEGG
-CETP,Lipid and atherosclerosis,KEGG
-STARD3,Lipid and atherosclerosis,KEGG
-OSBPL5,Lipid and atherosclerosis,KEGG
-CYP7A1,Lipid and atherosclerosis,KEGG
-CYP27A1,Lipid and atherosclerosis,KEGG
-ABCA1,Lipid and atherosclerosis,KEGG
-PCSK9,Lipid and atherosclerosis,KEGG
-LDLRAP1,Lipid and atherosclerosis,KEGG
-CIDEB,Lipid and atherosclerosis,KEGG
-ANGPTL3,Lipid and atherosclerosis,KEGG
-MYLIP,Lipid and atherosclerosis,KEGG
-APOA1,Lipid and atherosclerosis,KEGG
-APOA2,Lipid and atherosclerosis,KEGG
-APOA4,Lipid and atherosclerosis,KEGG
-APOB,Lipid and atherosclerosis,KEGG
-APOC1,Lipid and atherosclerosis,KEGG
-APOC2,Lipid and atherosclerosis,KEGG
-APOC3,Lipid and atherosclerosis,KEGG
-APOE,Lipid and atherosclerosis,KEGG
-APOH,Lipid and atherosclerosis,KEGG
-LCAT,Lipid and atherosclerosis,KEGG
-LDLR,Lipid and atherosclerosis,KEGG
-LIPA,Lipid and atherosclerosis,KEGG
-LIPC,Lipid and atherosclerosis,KEGG
-LPA,Lipid and atherosclerosis,KEGG
-LPL,Lipid and atherosclerosis,KEGG
-LRP1,Lipid and atherosclerosis,KEGG
-LRP2,Lipid and atherosclerosis,KEGG
-LRPAP1,Lipid and atherosclerosis,KEGG
-NPC1,Lipid and atherosclerosis,KEGG
-ANGPTL4,Lipid and atherosclerosis,KEGG
-PLTP,Lipid and atherosclerosis,KEGG
-ANGPTL8,Lipid and atherosclerosis,KEGG
-NCEH1,Lipid and atherosclerosis,KEGG
-SORT1,Lipid and atherosclerosis,KEGG
-ABCG5,Lipid and atherosclerosis,KEGG
-ABCG8,Lipid and atherosclerosis,KEGG
-SOAT1,Lipid and atherosclerosis,KEGG
-STAR,Lipid and atherosclerosis,KEGG
-TSPO,Lipid and atherosclerosis,KEGG
-VDAC1,Lipid and atherosclerosis,KEGG
-VDAC2,Lipid and atherosclerosis,KEGG
-VDAC3,Lipid and atherosclerosis,KEGG
-STARD3NL,Lipid and atherosclerosis,KEGG
-SOAT2,Lipid and atherosclerosis,KEGG
-ABCB11,Lipid and atherosclerosis,KEGG
-VAPB,Lipid and atherosclerosis,KEGG
-VAPA,Lipid and atherosclerosis,KEGG
-LIPG,Lipid and atherosclerosis,KEGG
-CD36,Lipid and atherosclerosis,KEGG
-SCARB1,Lipid and atherosclerosis,KEGG
-LDLR,Lipid metabolism pathway,WikiPathways
-PCSK9,Lipid metabolism pathway,WikiPathways
-HMGCR,Lipid metabolism pathway,WikiPathways
-HMGCS1,Lipid metabolism pathway,WikiPathways
-HMGCS2,Lipid metabolism pathway,WikiPathways
-ACACA,Lipid metabolism pathway,WikiPathways
-ACACB,Lipid metabolism pathway,WikiPathways
-FASN,Lipid metabolism pathway,WikiPathways
-SCD,Lipid metabolism pathway,WikiPathways
-SREBF1,Lipid metabolism pathway,WikiPathways
-SREBF2,Lipid metabolism pathway,WikiPathways
-PPARA,Lipid metabolism pathway,WikiPathways
-PPARG,Lipid metabolism pathway,WikiPathways
-RXRA,Lipid metabolism pathway,WikiPathways
-LXR,Lipid metabolism pathway,WikiPathways
-ABCA1,Lipid metabolism pathway,WikiPathways
-ABCG1,Lipid metabolism pathway,WikiPathways
-NPC1L1,Lipid metabolism pathway,WikiPathways
-MTTP,Lipid metabolism pathway,WikiPathways
-APOB,Lipid metabolism pathway,WikiPathways
-APOA1,Lipid metabolism pathway,WikiPathways
-LPL,Lipid metabolism pathway,WikiPathways
-LIPC,Lipid metabolism pathway,WikiPathways
-CETP,Lipid metabolism pathway,WikiPathways
-LCAT,Lipid metabolism pathway,WikiPathways
-PLTP,Lipid metabolism pathway,WikiPathways
-FABP1,Lipid metabolism pathway,WikiPathways
-FABP2,Lipid metabolism pathway,WikiPathways
-HMGCR,Statin pathway,WikiPathways
-HMGCS1,Statin pathway,WikiPathways
-LDLR,Statin pathway,WikiPathways
-PCSK9,Statin pathway,WikiPathways
-SREBF2,Statin pathway,WikiPathways
-SCAP,Statin pathway,WikiPathways
-INSIG1,Statin pathway,WikiPathways
-INSIG2,Statin pathway,WikiPathways
-SQLE,Statin pathway,WikiPathways
-FDFT1,Statin pathway,WikiPathways
-FDPS,Statin pathway,WikiPathways
-MVK,Statin pathway,WikiPathways
-PMVK,Statin pathway,WikiPathways
-MVD,Statin pathway,WikiPathways
-CYP51A1,Statin pathway,WikiPathways
-LSS,Statin pathway,WikiPathways
-DHCR7,Statin pathway,WikiPathways
-EBP,Statin pathway,WikiPathways
-NSDHL,Statin pathway,WikiPathways
-MSMO1,Statin pathway,WikiPathways
-IDI1,Statin pathway,WikiPathways
-IDI2,Statin pathway,WikiPathways
-ACE,ACE inhibitor pathway,WikiPathways
-ACE2,ACE inhibitor pathway,WikiPathways
-AGT,ACE inhibitor pathway,WikiPathways
-AGTR1,ACE inhibitor pathway,WikiPathways
-AGTR2,ACE inhibitor pathway,WikiPathways
-REN,ACE inhibitor pathway,WikiPathways
-CMA1,ACE inhibitor pathway,WikiPathways
-CTSG,ACE inhibitor pathway,WikiPathways
-CASP3,ACE inhibitor pathway,WikiPathways
-MMP2,ACE inhibitor pathway,WikiPathways
-MMP9,ACE inhibitor pathway,WikiPathways
-BDKRB1,ACE inhibitor pathway,WikiPathways
-BDKRB2,ACE inhibitor pathway,WikiPathways
-CYP4A11,Fatty acid omega-oxidation,WikiPathways
-CYP4A22,Fatty acid omega-oxidation,WikiPathways
-CYP4F2,Fatty acid omega-oxidation,WikiPathways
-CYP4F3,Fatty acid omega-oxidation,WikiPathways
-CYP4F8,Fatty acid omega-oxidation,WikiPathways
-CYP4F11,Fatty acid omega-oxidation,WikiPathways
-CYP4F12,Fatty acid omega-oxidation,WikiPathways
-CYP4F22,Fatty acid omega-oxidation,WikiPathways
-CYP4V2,Fatty acid omega-oxidation,WikiPathways
-CYP4Z1,Fatty acid omega-oxidation,WikiPathways
-ADH1A,Fatty acid omega-oxidation,WikiPathways
-ADH1B,Fatty acid omega-oxidation,WikiPathways
-ADH1C,Fatty acid omega-oxidation,WikiPathways
-ADH4,Fatty acid omega-oxidation,WikiPathways
-ADH5,Fatty acid omega-oxidation,WikiPathways
-ALDH2,Fatty acid omega-oxidation,WikiPathways
+NPC2,Cholesterol metabolism,KEGG
+CETP,Cholesterol metabolism,KEGG
+STARD3,Cholesterol metabolism,KEGG
+OSBPL5,Cholesterol metabolism,KEGG
+CYP7A1,Cholesterol metabolism,KEGG
+CYP27A1,Cholesterol metabolism,KEGG
+ABCA1,Cholesterol metabolism,KEGG
+PCSK9,Cholesterol metabolism,KEGG
+LDLRAP1,Cholesterol metabolism,KEGG
+CIDEB,Cholesterol metabolism,KEGG
+ANGPTL3,Cholesterol metabolism,KEGG
+MYLIP,Cholesterol metabolism,KEGG
+APOA1,Cholesterol metabolism,KEGG
+APOA2,Cholesterol metabolism,KEGG
+APOA4,Cholesterol metabolism,KEGG
+APOB,Cholesterol metabolism,KEGG
+APOC1,Cholesterol metabolism,KEGG
+APOC2,Cholesterol metabolism,KEGG
+APOC3,Cholesterol metabolism,KEGG
+APOE,Cholesterol metabolism,KEGG
+APOH,Cholesterol metabolism,KEGG
+LCAT,Cholesterol metabolism,KEGG
+LDLR,Cholesterol metabolism,KEGG
+LIPA,Cholesterol metabolism,KEGG
+LIPC,Cholesterol metabolism,KEGG
+LPA,Cholesterol metabolism,KEGG
+LPL,Cholesterol metabolism,KEGG
+LRP1,Cholesterol metabolism,KEGG
+LRP2,Cholesterol metabolism,KEGG
+LRPAP1,Cholesterol metabolism,KEGG
+NPC1,Cholesterol metabolism,KEGG
+ANGPTL4,Cholesterol metabolism,KEGG
+PLTP,Cholesterol metabolism,KEGG
+ANGPTL8,Cholesterol metabolism,KEGG
+NCEH1,Cholesterol metabolism,KEGG
+SORT1,Cholesterol metabolism,KEGG
+ABCG5,Cholesterol metabolism,KEGG
+ABCG8,Cholesterol metabolism,KEGG
+SOAT1,Cholesterol metabolism,KEGG
+STAR,Cholesterol metabolism,KEGG
+TSPO,Cholesterol metabolism,KEGG
+VDAC1,Cholesterol metabolism,KEGG
+VDAC2,Cholesterol metabolism,KEGG
+VDAC3,Cholesterol metabolism,KEGG
+STARD3NL,Cholesterol metabolism,KEGG
+SOAT2,Cholesterol metabolism,KEGG
+ABCB11,Cholesterol metabolism,KEGG
+VAPB,Cholesterol metabolism,KEGG
+VAPA,Cholesterol metabolism,KEGG
+LIPG,Cholesterol metabolism,KEGG
+CD36,Cholesterol metabolism,KEGG
+SCARB1,Cholesterol metabolism,KEGG
 APOA1,Chylomicron assembly,Reactome
 APOA2,Chylomicron assembly,Reactome
 APOA4,Chylomicron assembly,Reactome

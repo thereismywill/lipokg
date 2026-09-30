@@ -148,7 +148,7 @@ LIMIT 10;
 
 ```cypher
 // 查找KEGG脂蛋白代谢通路中的所有基因
-MATCH (g:KEGGGene)-[:MEMBER_OF]->(p:Pathway {name: 'Lipid and atherosclerosis'})
+MATCH (g:KEGGGene)-[:MEMBER_OF]->(p:Pathway {name: 'Cholesterol metabolism'})
 RETURN g.name, g.kegg_id
 ORDER BY g.name;
 

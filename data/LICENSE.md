@@ -27,8 +27,8 @@ restrictive terms retain their respective licences. **The licence applicable to 
 | `clinvar_variants.csv` | Variant nodes | ClinVar | Public domain (CC0-equivalent) |
 | `clinvar_relationships.csv` | Variant–gene edges | ClinVar | Public domain (CC0-equivalent) |
 | `kegg_genes.csv` | KEGG genes (hsa04979) | KEGG | **Academic use only** (see §3) |
-| `pathways.csv` | Pathway nodes | KEGG (1) / Reactome (10) / WikiPathways (4) | KEGG: academic use; Reactome & WikiPathways: CC BY 4.0 |
-| `pathway_memberships.csv` | Gene–pathway edges | KEGG / Reactome / WikiPathways | per source (see above) |
+| `pathways.csv` | Pathway nodes | KEGG (1) / Reactome (12) | KEGG: academic use; Reactome & WikiPathways: CC BY 4.0 |
+| `pathway_memberships.csv` | Gene–pathway edges | KEGG / Reactome | per source (see above) |
 | `molecules.csv` | Molecule nodes | UniProt (56) / LIPID MAPS (1) | UniProt: CC BY 4.0; LIPID MAPS: CC BY 4.0 |
 | `diseases.csv` | Disease/trait nodes | OMIM / DisGeNET / Orphanet / GWAS | **mixed — see §2** |
 | `disease_associations.csv` | Gene–disease/trait edges | DisGeNET / OMIM / GWAS (GLGC 2021) / Orphanet / expert curation | **mixed — see §2** |
