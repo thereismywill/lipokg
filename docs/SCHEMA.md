@@ -5,7 +5,7 @@
 LipoKG is a comprehensive knowledge graph for lipoprotein metabolism research, integrating data from STRING v12.0, ClinVar, KEGG, Reactome, WikiPathways, DisGeNET, and OMIM. The dataset is distributed in two tiers:
 
 - **Core Schema** (7 node types, 7 relationship types): Distributed as CSV files for universal compatibility
-- **Extended Schema** (31 node types, 25 relationship types; 24 additional node types, 18 additional relationship types): Available in the full Neo4j database dump
+- **Extended Schema** (32 node types, 26 relationship types; 25 additional node types, 19 additional relationship types): Available in the full Neo4j database dump
 
 ---
 
@@ -40,7 +40,7 @@ Small molecules, drugs, proteins, and metabolites relevant to lipoprotein metabo
 - `source` (string): Data source ("UniProt", "DrugBank", "LIPID MAPS")
 
 #### Disease (27 nodes)
-Disease and trait entities related to lipoprotein metabolism from OMIM, DisGeNET, GWAS Catalog, and Orphanet
+Disease and trait entities related to lipoprotein metabolism from OMIM, DisGeNET, GLGC 2021, and Orphanet
 
 **Properties:**
 - `name` (string): Disease/trait name (e.g., "Familial Hypercholesterolemia", "LDL cholesterol levels")
@@ -106,8 +106,8 @@ Particle assembly depends on an assembly protein
 - `assembly_stage` (string): Stage of particle assembly
 - `tissue` (string): Tissue context
 
-#### DISEASE_ASSOCIATION (318 edges)
-Gene/protein-disease/trait associations from DisGeNET (35), OMIM (22), GWAS Catalog (187), and Orphanet (38)
+#### DISEASE_ASSOCIATION (238 edges)
+Gene/protein-disease/trait associations from DisGeNET (35), OMIM (20), GLGC 2021 (111), Orphanet (50), and expert curation (22)
 
 **Properties:**
 - `source` (string): Gene symbol
@@ -135,7 +135,7 @@ Links genes to pathways they participate in
 
 ## Extended Schema (Neo4j Full Distribution)
 
-The full Neo4j database includes 24 additional node types and 18 additional relationship types derived from Reactome pathway annotations and manual expert curation. These enable advanced queries about biochemical reactions, enzyme-substrate relationships, drug-target interactions, and disease progression.
+The full Neo4j database includes 25 additional node types and 19 additional relationship types derived from Reactome pathway annotations and manual expert curation. These enable advanced queries about biochemical reactions, enzyme-substrate relationships, drug-target interactions, and disease progression.
 
 ### Extended Node Types
 
@@ -205,12 +205,12 @@ The full Neo4j database includes 24 additional node types and 18 additional rela
 | STRING | v12.0 | 2024-01-15 | CC BY 4.0 | 1,852 proteins, 31,878 interactions |
 | ClinVar | 2024-01 | 2024-01-20 | Public domain | 4,042 pathogenic/likely pathogenic variants |
 | KEGG | 2024-01 | 2024-01-10 | Academic use | hsa04979, 52 genes |
-| Reactome | v87 | 2024-01-12 | CC BY 4.0 | 10 pathways, 111 gene memberships |
+| Reactome | v87 | 2026-06-13 | CC BY 4.0 | 12 pathways, 115 gene memberships |
 | WikiPathways | 2024-01 | 2024-01-18 | CC BY 4.0 | 4 pathways, 79 gene memberships |
 | DisGeNET | v7.0 (≥0.3) | 2024-01-08 | CC BY-NC-SA 4.0 | 35 gene-disease associations |
-| OMIM | 2024-01 | 2024-01-05 | Custom | 22 gene-disease associations |
-| GWAS Catalog (GLGC 2021) | 2024-01 | 2024-01-25 | CC0 | 187 gene-trait associations |
-| Orphanet | 2024-01 | 2024-01-22 | CC BY 4.0 | 38 gene-disease associations (7 disorders) |
+| OMIM | 2024-01 | 2024-01-05 | Custom | 20 gene-disease associations |
+| GLGC 2021 (Graham et al.) | 2024-01 | 2024-01-25 | CC0 | 111 gene-trait associations |
+| Orphanet | 2024-01 | 2024-01-22 | CC BY 4.0 | 50 gene-disease associations (7 disorders) |
 
 ## Statistics Summary
 
@@ -219,22 +219,22 @@ The full Neo4j database includes 24 additional node types and 18 additional rela
 | **Core Schema (CSV)** | |
 | Core node types | 7 |
 | Core relationship types | 7 |
-| Core total nodes | 6,052 |
-| Core total edges | 36,559 |
+| Core total nodes | 6,054 |
+| Core total edges | 36,483 |
 | **Extended Schema (Neo4j)** | |
 | Additional node types | 24 |
 | Additional relationship types | 18 |
 | Total node types | 31 |
 | Total relationship types | 25 |
-| Total nodes | 6,463 |
-| Total edges | 37,165 |
+| Total nodes | 6,475 |
+| Total edges | 37,177 |
 
 ## Coverage Validation
 
 - **KEGG hsa04979:** 89.5% coverage (119/133 genes)
-- **Reactome lipoprotein pathways:** 90.9% coverage (50/55 genes)
+- **Reactome lipoprotein pathways:** 85.9% coverage (61/71 genes)
 - **WikiPathways lipid pathways:** 87.7% coverage (71/81 genes)
-- **Overall coverage:** 84.8% (167/197 unique genes)
+- **Overall coverage:** 83.0% (161/194 unique genes)
 - **Gene Ontology GO:0042157:** 92.3% coverage (132/143 genes)
 
 ## Version Information

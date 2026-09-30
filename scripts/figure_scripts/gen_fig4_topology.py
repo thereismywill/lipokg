@@ -1,11 +1,12 @@
 """
 Figure 4: Network Topology
 Panel A: Network visualization (force-directed layout of key subnetwork)
-Panel B: Degree distribution with power-law fit (alpha=2.31)
+Panel B: Degree distribution as a CCDF with competing model fits (power law / lognormal / exponential)
 """
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from figure_style import *
+import degree_models as dm
 import pandas as pd
 import networkx as nx
 from scipy import stats as sp_stats
@@ -13,7 +14,7 @@ from scipy import stats as sp_stats
 setup_style()
 
 # ── Load data ──
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'data')
+DATA_DIR = resolve_data_dir()
 
 proteins = pd.read_csv(os.path.join(DATA_DIR, 'string_proteins.csv'))
 interactions = pd.read_csv(os.path.join(DATA_DIR, 'string_interactions.csv'))
@@ -39,30 +40,14 @@ for d in degree_values:
 deg_k = sorted(degree_counts.keys())
 deg_p = [degree_counts[k] / len(degree_values) for k in deg_k]
 
-# Power-law fit using MLE estimator (Clauset et al. 2009)
-# alpha = 1 + n * (sum(log(k_i / k_min)))^(-1)
-kmin = 5
-all_degrees_arr = np.array(degree_values)
-above_kmin = all_degrees_arr[all_degrees_arr >= kmin]
-n_above = len(above_kmin)
-alpha_mle = 1 + n_above * np.sum(np.log(above_kmin / (kmin - 0.5)))**(-1)
-print(f"Power-law MLE fit: alpha = {alpha_mle:.2f} (n={n_above}, kmin={kmin})")
-
-# Also do log-log regression for plotting the fit line
-deg_k_arr = np.array(deg_k, dtype=float)
-deg_p_arr = np.array(deg_p, dtype=float)
-mask = deg_k_arr >= kmin
-fit_k = deg_k_arr[mask]
-fit_p = deg_p_arr[mask]
-log_k = np.log10(fit_k)
-log_p = np.log10(fit_p)
-slope, intercept, r_value, p_value, std_err = sp_stats.linregress(log_k, log_p)
-# The paper reports alpha=2.31 from the full 6,463-node network (all types).
-# The STRING-only subnetwork gives a different exponent; we annotate both.
-alpha_full = 2.31  # from graph_statistics.json (full network)
-alpha = alpha_mle  # from STRING subnetwork
-print(f"Log-log regression slope: {slope:.2f}, R^2 = {r_value**2:.3f}")
-print(f"Full network alpha (reported): {alpha_full}")
+# Degree-distribution model fits (power law / lognormal / exponential) come from
+# Review/powerlaw_final.py (powerlaw v2.0, discrete; Clauset-Shalizi-Newman 2009).
+# See degree_models.py for the fitted values and their provenance.
+FIT = dm.FIT
+print(f"Degree distribution: power-law alpha = {FIT['alpha']:.3f} "
+      f"(xmin = {FIT['xmin']:.0f}, 95% CI {FIT['alpha_ci95'][0]:.2f}-{FIT['alpha_ci95'][1]:.2f})")
+print(f"  bootstrap KS p = {FIT['bootstrap_p']:.0e} ({FIT['bootstrap_N']} sets) -> power law rejected")
+print(f"  preferred: lognormal (R = {FIT['R_vs_lognormal']:.2f}, p = {FIT['p_vs_lognormal']:.2e})")
 
 # ═══════════════════════════════════════════════════════
 # CREATE FIGURE
@@ -141,45 +126,44 @@ axA.axis('off')
 stats_text = (f"Full network: {G.number_of_nodes():,} nodes, {G.number_of_edges():,} edges\n"
               f"Connected components: 1\n"
               f"Average degree: {np.mean(degree_values):.1f}\n"
-              f"Diameter: 8\n"
-              f"Louvain modules: 7 (Q = 0.41)")
+              f"Diameter: 7\n"
+              f"Louvain modules: 9 (Q = 0.51)")
 axA.text(0.02, 0.98, stats_text, transform=axA.transAxes, fontsize=7.5,
          va='top', ha='left', family='monospace',
          bbox=dict(boxstyle='round', fc='#F5F5F5', ec='#CCC', alpha=0.9))
 
 # ═══ Panel B: Degree distribution ═══
 axB = fig.add_subplot(gs[0, 1])
-axB.set_title('B  Degree Distribution (Power-Law Fit)',
+axB.set_title('B  Degree distribution: model comparison (CCDF)',
               fontsize=13, fontweight='bold', loc='left', pad=8)
 
-axB.scatter(deg_k, deg_p, s=15, color='#4C72B0', alpha=0.6, zorder=3, label='Observed')
+k_emp, ccdf_emp = dm.empirical_ccdf(degree_values)
+kk = np.logspace(0, np.log10(max(k_emp)), 400)
+lam = dm.exponential_lambda(degree_values)
 
-# Power-law fit line
-fit_x = np.logspace(np.log10(kmin), np.log10(max(deg_k)), 100)
-fit_y = 10**(intercept + slope * np.log10(fit_x))
-axB.plot(fit_x, fit_y, '-', color='#C44E52', lw=2, label=f'Power-law fit (STRING)\nα = {alpha:.2f}')
-
-# Confidence band (approximate)
-ci_x = fit_x
-ci_y_upper = 10**(intercept + slope * np.log10(fit_x) + 0.3)
-ci_y_lower = 10**(intercept + slope * np.log10(fit_x) - 0.3)
-axB.fill_between(ci_x, ci_y_lower, ci_y_upper, alpha=0.1, color='#C44E52',
-                  label='95% CI [2.24, 2.38]')
+axB.scatter(k_emp, ccdf_emp, s=3, color='#4C72B0', alpha=0.35, zorder=2,
+            label=f'Observed ({len(degree_values):,} proteins)')
+axB.plot(kk, dm.exponential_ccdf(kk, lam), '--', color='#55A868', lw=1.6, label='Exponential')
+axB.plot(kk, dm.lognormal_ccdf(kk), '-', color='#DD8452', lw=2.2,
+         label=f'Lognormal (\u03bc = {dm.FIT["lognormal_mu"]:.2f}, \u03c3 = {dm.FIT["lognormal_sigma"]:.2f})')
+axB.plot(kk, dm.pl_ccdf(kk), '-', color='#C44E52', lw=2.2,
+         label=f'Power law (\u03b1 = {dm.FIT["alpha"]:.2f}, xmin = {int(dm.FIT["xmin"])})')
 
 axB.set_xscale('log')
 axB.set_yscale('log')
+axB.set_xlim(0.9, max(k_emp) * 1.4)
+axB.set_ylim(4e-4, 1.6)
 axB.set_xlabel('Degree (k)', fontsize=11)
-axB.set_ylabel('P(k)', fontsize=11)
-axB.legend(fontsize=9, loc='upper right')
+axB.set_ylabel('P(K \u2265 k)', fontsize=11)
+axB.legend(fontsize=8, loc='lower left', framealpha=0.9)
 
-# Annotations
-axB.annotate(f'Full network: α = {alpha_full:.2f}\n(95% CI: 2.24–2.38)\n'
-             f'STRING subgraph: α = {alpha:.2f}',
-             xy=(50, 10**(intercept + slope * np.log10(50))),
-             xytext=(200, 0.01),
-             fontsize=9, fontweight='bold', color='#C44E52',
-             arrowprops=dict(arrowstyle='->', color='#C44E52'),
-             bbox=dict(boxstyle='round', fc='#FFF5F5', ec='#C44E52', alpha=0.9))
+axB.text(0.98, 0.97,
+         'Power law rejected\n'
+         f'bootstrap KS p = {dm.FIT["bootstrap_p"]:.0e} (n = {dm.FIT["bootstrap_N"]:,})\n'
+         'Lognormal preferred\n'
+         f'R = {dm.FIT["R_vs_lognormal"]:.1f}, p = {dm.FIT["p_vs_lognormal"]:.1e}',
+         transform=axB.transAxes, ha='right', va='top', fontsize=8,
+         bbox=dict(boxstyle='round', fc='#FFF5F5', ec='#C44E52', alpha=0.9))
 
 axB.spines['top'].set_visible(False)
 axB.spines['right'].set_visible(False)

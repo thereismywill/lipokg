@@ -2,6 +2,7 @@
 Shared style module for LipoKG paper figures.
 Target: Scientific Data (Nature Portfolio) publication quality.
 """
+import os
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -9,6 +10,53 @@ import matplotlib.patches as mpatches
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 import matplotlib.patheffects as path_effects
 import numpy as np
+
+# ============================================================
+# PUBLICATION SETTINGS
+# ============================================================
+# ============================================================
+# 目录布局自适应（2026-09-30）
+#   同一份脚本要在两种布局下都能跑：
+#     ① 代码仓库布局   <root>/data/*.csv
+#     ② 稿件工程布局   <root>/data/data/*.csv  (+ data/zenodo_package*/data/*.csv)
+#   实测事故：仓库布局下 gen_fig4 / gen_supp_figures / gen_fig5 因写死
+#   `../../data/data/...` 直接 FileNotFoundError —— 审稿人克隆仓库后**跑不出图**，
+#   而 GigaScience 的选文标准正是 reproducibility。
+# ============================================================
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_ROOT = os.path.dirname(os.path.dirname(_HERE))
+
+def _first_existing(paths):
+    for p in paths:
+        if os.path.exists(p):
+            return p
+    return None
+
+def resolve_data_dir(probe='string_proteins.csv'):
+    """返回含 probe 文件的数据目录（两种布局都能找到）。"""
+    cands = [os.path.join(_ROOT, 'data'),
+             os.path.join(_ROOT, 'data', 'data'),
+             os.path.join(_ROOT, 'data', 'zenodo_package_v1.2.0', 'data'),
+             os.path.join(_ROOT, 'data', 'zenodo_package', 'data')]
+    hit = _first_existing([os.path.join(c, probe) for c in cands])
+    if hit is None:
+        raise FileNotFoundError(
+            f'找不到数据文件 {probe}；已查找：' + ', '.join(cands))
+    return os.path.dirname(hit)
+
+def resolve_supp_dir():
+    """补充表目录；两种布局下都在 <root>/supplementary。"""
+    for c in (os.path.join(_ROOT, 'supplementary'),
+              os.path.join(_ROOT, 'data', 'supplementary')):
+        if os.path.isdir(c):
+            return c
+    raise FileNotFoundError(
+        '找不到 supplementary/ 目录（图脚本需要其中的 Table_S18/S19/S20/S22 等输入表）')
+
+def resolve_out_dir():
+    d = os.path.join(_ROOT, 'figures', 'generated')
+    os.makedirs(d, exist_ok=True)
+    return d
 
 # ============================================================
 # PUBLICATION SETTINGS
@@ -109,7 +157,7 @@ NODE_COUNTS = {
     'Disease':        27,
     'ClinVarVariant': 4042,
     'KEGGGene':       52,
-    'Pathway':        15,
+    'Pathway':        17,
 }
 
 REL_COUNTS = {
@@ -119,18 +167,18 @@ REL_COUNTS = {
     'ASSEMBLED_BY':        8,
     'DISEASE_ASSOCIATION': 238,
     'VARIANT_OF':          4042,
-    'MEMBER_OF':           242,
+    'MEMBER_OF':           246,
 }
 
-TOTAL_CORE_NODES = 6052
-TOTAL_CORE_EDGES = 36479
+TOTAL_CORE_NODES = 6054
+TOTAL_CORE_EDGES = 36483
 TOTAL_NODES = 6463
 TOTAL_EDGES = 37165
 
 # Validation benchmarks
 VALIDATION = {
     'KEGG hsa04979':          {'pct': 89.5, 'num': 119, 'den': 133},
-    'Reactome pathways':      {'pct': 90.9, 'num': 50,  'den': 55},
+    'Reactome pathways':      {'pct': 85.9, 'num': 61,  'den': 71},
     'WikiPathways lipid':     {'pct': 87.7, 'num': 71,  'den': 81},
     'GO lipoprotein process': {'pct': 92.3, 'num': 132, 'den': 143},
     'GLGC 2021 GWAS loci':   {'pct': 64.9, 'num': 244, 'den': 376},
@@ -142,11 +190,12 @@ VALIDATION = {
 TOPOLOGY = {
     'connected_components': 1,
     'average_degree': 34.4,
-    'diameter': 8,
-    'power_law_alpha': 2.31,
-    'power_law_95CI': (2.24, 2.38),
-    'louvain_modularity': 0.41,
-    'louvain_modules': 7,
+    'diameter': 7,
+    'power_law_alpha': 2.65,
+    'power_law_95CI': (2.52, 2.78),
+    'power_law_xmin': 34,
+    'louvain_modularity': 0.51,
+    'louvain_modules': 9,
 }
 
 def save_fig(fig, path):

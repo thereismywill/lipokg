@@ -11,13 +11,26 @@ sys.path.insert(0, os.path.dirname(__file__))
 from figure_style import *
 import pandas as pd
 setup_style()
-SUPP_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'supplementary')
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'data')
+SUPP_DIR = resolve_supp_dir()
+DATA_DIR = resolve_data_dir()
 
 # Load data
 gap_df = pd.read_csv(os.path.join(SUPP_DIR, 'Table_S18_Gap_Score_Validation.csv'))
 drug_df = pd.read_csv(os.path.join(SUPP_DIR, 'Table_S19_Rediscovery_Test.csv'))
-clinvar_df = pd.read_csv(os.path.join(SUPP_DIR, 'Table_S5_ClinVar_Gene_Distribution.csv'))
+# Panel C 的基因级变异分布**直接从沉积数据算**，不再依赖 Supplementary Table S5。
+# 2026-09-30 实测：原实现读的 Table_S5 是手打旧清单 —— 48 基因、47/48 行计数与沉积不符
+# （LDLR 写 1,847 而实际 2,267），且含 14 个沉积里根本不存在的基因 ⇒ **图上柱长是错的**。
+_clin = pd.read_csv(os.path.join(DATA_DIR, 'clinvar_relationships.csv'))
+_gene_dis = {}
+_da = pd.read_csv(os.path.join(DATA_DIR, 'disease_associations.csv'))
+for _g, _d in zip(_da['source'], _da['target']):
+    _gene_dis.setdefault(_g, [])
+    if _d not in _gene_dis[_g]:
+        _gene_dis[_g].append(_d)
+clinvar_df = (_clin['gene'].value_counts().rename_axis('Gene')
+              .reset_index(name='Variant_Count'))
+clinvar_df['Associated_Diseases'] = [', '.join(_gene_dis.get(g, []))
+                                     for g in clinvar_df['Gene']]
 target_df = pd.read_csv(os.path.join(SUPP_DIR, 'Table_S20_Target_Neighborhood.csv'))
 
 fig, axes = plt.subplots(2, 3, figsize=(20, 13))
@@ -85,7 +98,7 @@ for i, (_, row) in enumerate(top_genes.iterrows()):
     if len(disease) > 30:
         disease = disease[:28] + '…'
     axC.text(row['Variant_Count'] + 20, i, disease, va='center', fontsize=6.5, color='#555555')
-axC.text(0.98, 0.02, f'Total: 4,042 variants\nacross {len(clinvar_df)} genes',
+axC.text(0.98, 0.02, f"Total: {len(_clin):,} variants\nacross {len(clinvar_df)} genes",
          transform=axC.transAxes, fontsize=8, va='bottom', ha='right', color='#222222',
          bbox=dict(boxstyle='round', fc='#F3E5F5', ec='#8172B3', alpha=0.9))
 axC.spines['top'].set_visible(False)

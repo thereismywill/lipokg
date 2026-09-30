@@ -2,21 +2,21 @@
   "metadata": {
     "title": "LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research",
     "upload_type": "dataset",
-    "description": "A comprehensive FAIR-compliant knowledge graph integrating multi-source data for lipoprotein metabolism research. This dataset combines protein-protein interactions (STRING v12.0), genetic variants (ClinVar), disease associations (DisGeNET, OMIM, GWAS Catalog, Orphanet), and pathway information (KEGG, Reactome, WikiPathways) into a unified graph structure. The knowledge graph contains 6,052 core nodes and 36,559 core edges (extended Neo4j schema: 6,463 nodes, 37,165 edges), with 84.8% coverage of reference lipoprotein metabolism genes across three pathway databases. Independent validation achieves 92.3% coverage of GO:0042157 (lipoprotein metabolic process). This dataset is designed to support systematic knowledge gap discovery, drug repurposing research, and precision medicine applications in cardiovascular disease.",
+    "description": "A comprehensive FAIR-compliant knowledge graph integrating multi-source data for lipoprotein metabolism research. This dataset combines protein-protein interactions (STRING v12.0), genetic variants (ClinVar), disease associations (DisGeNET, OMIM, GLGC 2021, Orphanet), and pathway information (KEGG, Reactome, WikiPathways) into a unified graph structure. The knowledge graph contains 6,054 core nodes and 36,483 core edges (extended Neo4j schema: 6,475 nodes, 37,177 edges), with 83.0% coverage of reference lipoprotein metabolism genes across three pathway databases. Independent validation achieves 92.3% coverage of GO:0042157 (lipoprotein metabolic process). This dataset is designed to support systematic knowledge gap discovery, drug repurposing research, and precision medicine applications in cardiovascular disease. This version (1.2.0) additionally includes the six extended-schema CSV exports under data/extended/, a per-file inventory with byte sizes and row counts (Table S25), and a gene-level annotation coverage matrix (Table S24) characterising how many genes carry annotation in each layer beyond STRING connectivity: of the 1,852 proteins in the interaction graph, 117 (6.3%) carry at least one additional layer and 1,735 (93.7%) are represented by STRING edges only.",
     "creators": [
       {
         "name": "Ke Zhang",
-        "affiliation": "Shandong Provincial Hospital Affiliated to Shandong First Medical University",
+        "affiliation": "Shandong Provincial Hospital Affiliated to Shandong First Medical University, Jinan, Shandong, China",
         "orcid": ""
       },
       {
         "name": "Junyi Zhao",
-        "affiliation": "School of Laboratory Animal & Shandong Laboratory Animal Center, Shandong First Medical University & Shandong Academy of Medical Sciences",
+        "affiliation": "School of Laboratory Animal & Shandong Laboratory Animal Center, Shandong First Medical University & Shandong Academy of Medical Sciences, Jinan, Shandong, China",
         "orcid": ""
       },
       {
         "name": "Yang Yu",
-        "affiliation": "Shandong Provincial Hospital Affiliated to Shandong First Medical University",
+        "affiliation": "Shandong Provincial Hospital Affiliated to Shandong First Medical University, Jinan, Shandong, China",
         "orcid": ""
       }
     ],
@@ -36,7 +36,23 @@
     "access_right": "open",
     "license": "cc-by-4.0",
     "version": "1.2.0",
-    "publication_date": "2026-09-29"
+    "publication_date": "2026-07-01",
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/thereismywill/lipokg",
+        "relation": "isSupplementTo",
+        "resource_type": "software"
+      }
+    ],
+    "references": [
+      "Szklarczyk D, et al. (2023) The STRING database in 2023: protein-protein association networks and functional enrichment analysis for any sequenced genome of interest. Nucleic Acids Res 51(D1):D483-D489.",
+      "Landrum MJ, et al. (2018) ClinVar: improving access to variant interpretations and supporting evidence. Nucleic Acids Res 46(D1):D1062-D1067.",
+      "Kanehisa M, et al. (2023) KEGG for taxonomy-based analysis of pathways and genomes. Nucleic Acids Res 51(D1):D587-D592.",
+      "Jassal B, et al. (2020) The reactome pathway knowledgebase. Nucleic Acids Res 48(D1):D498-D503.",
+      "Martens L, et al. (2021) WikiPathways: connecting computational biology to patient physiology. Nat Rev Genet 22(5):281-282.",
+      "Piñero J, et al. (2020) The DisGeNET knowledge platform for disease genomics: 2019 update. Nucleic Acids Res 48(D1):D845-D855.",
+      "Graham SE, et al. (2021) The power of genetic diversity in genome-wide association studies of lipids. Nature 600(7890):675-679."
+    ]
   },
   "files": [
     {
@@ -85,7 +101,7 @@
     },
     {
       "filename": "data/disease_associations.csv",
-      "description": "318 gene-disease association edges from DisGeNET, OMIM, GWAS Catalog, and Orphanet"
+      "description": "238 gene-disease association edges from DisGeNET (35), OMIM (20), GLGC 2021 (111), Orphanet (50), and expert curation (22)"
     },
     {
       "filename": "data/molecules.csv",
@@ -97,15 +113,15 @@
     },
     {
       "filename": "data/particle_protein_links.csv",
-      "description": "48 protein-particle composition edges"
+      "description": "48 protein-particle composition edges (COMPONENT_OF)"
     },
     {
       "filename": "data/assembly_links.csv",
-      "description": "8 protein-particle assembly relationship edges"
+      "description": "8 protein-particle assembly relationship edges (ASSEMBLED_BY)"
     },
     {
       "filename": "data/enzyme_particle_links.csv",
-      "description": "23 enzyme-particle modification edges (MODIFIES relationships)"
+      "description": "23 enzyme-particle modification edges (MODIFIES)"
     },
     {
       "filename": "data/kegg_genes.csv",
@@ -117,15 +133,35 @@
     },
     {
       "filename": "data/pathway_memberships.csv",
-      "description": "242 gene-pathway membership edges"
+      "description": "246 gene-pathway membership edges"
     },
     {
       "filename": "data/graph_statistics.json",
       "description": "Comprehensive graph statistics in JSON format"
     },
     {
-      "filename": "scripts/figure_scripts/",
-      "description": "Python scripts for reproducing all figures in the manuscript"
+      "filename": "data/extended/drug_targets.csv",
+      "description": "Drug-target relationships (29 TARGETS edges)"
+    },
+    {
+      "filename": "data/extended/drug_diseases.csv",
+      "description": "Drug-disease relationships (20 TREATS edges)"
+    },
+    {
+      "filename": "data/extended/enzyme_substrates.csv",
+      "description": "Enzyme-substrate relationships (59 SUBSTRATE_OF edges)"
+    },
+    {
+      "filename": "data/extended/affects_gene.csv",
+      "description": "Variant-gene effect relationships (AFFECTS_GENE edges)"
+    },
+    {
+      "filename": "data/extended/particle_all_links.csv",
+      "description": "Merged particle-protein mapping (79 relationships)"
+    },
+    {
+      "filename": "data/extended/isoform_links.csv",
+      "description": "Protein isoform relationships (12 ISOFORM_OF edges)"
     }
   ]
 }

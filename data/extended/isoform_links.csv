@@ -1,13 +1,13 @@
-protein,isoform_of,relationship_type,isoform_count,functional_distinction
-APOB,APOB,ISOFORM_OF,2,"APOB-100 (liver, 4536 aa, VLDL/LDL assembly, LDLR ligand) vs APOB-48 (intestine, 2152 aa, chylomicron assembly, no LDLR binding)"
-PCSK9,PCSK9,ISOFORM_OF,2,"proPCSK9 (inactive, intracellular) vs mature PCSK9 (secreted, mediates LDLR degradation)"
-APOE,APOE,ISOFORM_OF,3,"APOE2 (Cys112/Cys158, reduced LDLR binding, FDBL risk) vs APOE3 (Cys112/Arg158, normal) vs APOE4 (Arg112/Arg158, increased CVD risk)"
-MTTP,MTTP,ISOFORM_OF,2,"Full-length MTTP (97 kDa, active lipid transfer) vs alternatively spliced forms"
-LPL,LPL,ISOFORM_OF,2,"LPL monomer (inactive, ER-bound) vs LPL dimer (active, GPIHBP1-anchored at endothelium)"
-APOA1,APOA1,ISOFORM_OF,2,"proAPOA1 (267 aa, secreted) vs mature APOA1 (243 aa, after propeptide cleavage)"
-SCARB1,SCARB1,ISOFORM_OF,3,"SR-BI (full-length, HDL receptor) vs SR-BII (alternative C-terminus) vs SR-BIII (non-functional)"
-LDLR,LDLR,ISOFORM_OF,2,"Precursor LDLR (120 kDa) vs mature LDLR (160 kDa, glycosylated)"
-GCKR,GCKR,ISOFORM_OF,2,"Functional GCKR vs P446L variant (rs1260326, common, affects TG levels)"
-APOC3,APOC3,ISOFORM_OF,2,Non-glycosylated vs glycosylated APOC3
-ANGPTL3,ANGPTL3,ISOFORM_OF,2,Full-length ANGPTL3 (N- and C-terminal domains) vs furin-cleaved N-terminal domain
-ANGPTL4,ANGPTL4,ISOFORM_OF,2,Intact ANGPTL4 vs cleaved N- and C-terminal fragments
+﻿isoform_id,isoform_name,parent_protein,relationship_type,isoform_count,distinction_class,functional_distinction
+ISOFORM:APOB-48,APOB-48,APOB,ISOFORM_OF,2,RNA_editing,"APOB-48 (intestine, 2152 aa, chylomicron assembly, no LDLR binding) vs APOB-100 (liver, 4536 aa, VLDL/LDL assembly, LDLR ligand)"
+ISOFORM:PCSK9-pro,proPCSK9,PCSK9,ISOFORM_OF,2,proprotein_processing,"proPCSK9 (inactive zymogen, intracellular) vs mature secreted PCSK9 (mediates LDLR degradation)"
+ISOFORM:APOE-variants,APOE2/APOE4,APOE,ISOFORM_OF,3,genetic_polymorphism,"APOE2 (Cys112/Cys158, reduced LDLR binding, FDBL risk) vs APOE3 (reference, Cys112/Arg158) vs APOE4 (Arg112/Arg158, increased CVD risk)"
+ISOFORM:MTTP-splice,MTTP splice variants,MTTP,ISOFORM_OF,2,alternative_splicing,"Full-length MTTP (97 kDa, active lipid transfer) vs alternatively spliced forms"
+ISOFORM:LPL-dimer,LPL dimer,LPL,ISOFORM_OF,2,quaternary_structure,"LPL monomer (inactive, ER-bound) vs LPL dimer (active, GPIHBP1-anchored at endothelium)"
+ISOFORM:APOA1-pro,proAPOA1,APOA1,ISOFORM_OF,2,propeptide_cleavage,"proAPOA1 (267 aa, secreted) vs mature APOA1 (243 aa, after propeptide cleavage)"
+ISOFORM:SCARB1-SR-BII,SR-BII/SR-BIII,SCARB1,ISOFORM_OF,3,alternative_splicing,SR-BI (full-length HDL receptor) vs SR-BII (alternative C-terminus) vs SR-BIII (non-functional)
+ISOFORM:LDLR-precursor,LDLR precursor,LDLR,ISOFORM_OF,2,glycosylation_maturation,Precursor LDLR (120 kDa) vs mature glycosylated LDLR (160 kDa)
+ISOFORM:GCKR-P446L,GCKR P446L,GCKR,ISOFORM_OF,2,genetic_polymorphism,"Reference GCKR vs P446L variant (rs1260326, common, affects TG levels)"
+ISOFORM:APOC3-glycosylated,glycosylated APOC3,APOC3,ISOFORM_OF,2,glycosylation,Non-glycosylated vs glycosylated APOC3
+ISOFORM:ANGPTL3-cleaved,furin-cleaved ANGPTL3,ANGPTL3,ISOFORM_OF,2,proteolytic_cleavage,Full-length ANGPTL3 (N- and C-terminal domains) vs furin-cleaved N-terminal domain
+ISOFORM:ANGPTL4-cleaved,cleaved ANGPTL4,ANGPTL4,ISOFORM_OF,2,proteolytic_cleavage,Intact ANGPTL4 vs cleaved N- and C-terminal fragments

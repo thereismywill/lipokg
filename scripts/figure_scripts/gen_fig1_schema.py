@@ -134,7 +134,7 @@ for from_t, to_t, rel_name, count, curve in relationships:
 # ── Title and summary box ──
 ax.text(0, 5.6, "LipoKG Core Schema", ha='center', va='center',
         fontsize=18, fontweight='bold', color='#222222')
-ax.text(0, 5.2, "7 Node Types  ·  7 Relationship Types  ·  6,052 Nodes  ·  36,479 Edges",
+ax.text(0, 5.2, "7 Node Types  ·  7 Relationship Types  ·  6,054 Nodes  ·  36,483 Edges",
         ha='center', va='center', fontsize=10, color='#555555')
 
 # ── Legend: Particles as first-class entities ──

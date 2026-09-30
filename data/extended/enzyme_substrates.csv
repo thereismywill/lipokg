@@ -1,11 +1,11 @@
-enzyme_gene,enzyme_uniprot,substrate_gene,substrate_uniprot,reaction_type,pathway_context,source
+﻿enzyme_gene,enzyme_uniprot,substrate_gene,substrate_uniprot,reaction_type,pathway_context,source
 LPL,P06858,APOC2,P02655,activator/cofactor,Chylomicron/VLDL catabolism,UniProt
 LPL,P06858,GPIHBP1,Q8IV16,capillary anchoring,Lipolysis,UniProt
 LPL,P06858,ANGPTL3,Q9Y5C1,inhibition of LPL,Lipid metabolism regulation,UniProt
 LPL,P06858,ANGPTL4,Q9BY76,inhibition of LPL,Lipid metabolism regulation,UniProt
-LPL,P06858,APOC3,P02654,inhibition of LPL,Triglyceride metabolism,Literature
-LPL,P06858,APOA5,Q9BZR6,activation of LPL,Triglyceride metabolism,Literature
-LPL,P06858,LMF1,Q96S42,LPL maturation,ER processing,UniProt
+LPL,P06858,APOC3,P02656,inhibition of LPL,Triglyceride metabolism,Literature
+LPL,P06858,APOA5,Q6Q788,activation of LPL,Triglyceride metabolism,Literature
+LPL,P06858,LMF1,Q96S06,LPL maturation,ER processing,UniProt
 LPL,P06858,GPIHBP1,Q8IV16,LPL transport to capillary surface,Lipolysis,Literature
 LIPC,P11150,APOA1,P02647,hydrolysis target,HDL metabolism,UniProt
 LIPC,P11150,APOA2,P02652,hydrolysis target,HDL metabolism,Literature
@@ -17,14 +17,14 @@ LCAT,P04180,APOA2,P02652,weak activator,HDL metabolism,Literature
 LCAT,P04180,APOC1,P02654,modulator,Lipid metabolism,Literature
 CETP,P11597,APOA1,P02647,acceptor particle,Reverse cholesterol transport,UniProt
 CETP,P11597,APOB,P04114,acceptor particle,LDL metabolism,UniProt
-CETP,P11597,PLTP,Q92888,cooperative,HDL metabolism,Literature
+CETP,P11597,PLTP,P55058,cooperative,HDL metabolism,Literature
 CETP,P11597,APOE,P02649,modulator,Lipoprotein remodeling,Literature
 PCSK9,Q8NBP7,LDLR,P01130,receptor degradation,LDL clearance,UniProt
 PCSK9,Q8NBP7,VLDLR,P98155,receptor degradation,Lipoprotein clearance,Literature
 PCSK9,Q8NBP7,LRP1,Q07954,receptor degradation,Lipoprotein clearance,Literature
 HMGCR,P04035,HMGCS1,Q01581,acetoacetyl-CoA formation,Mevalonate pathway,UniProt
 HMGCR,P04035,SQLE,Q14534,squalene synthesis,Cholesterol biosynthesis,UniProt
-HMGCR,P04035,SCAP,Q12805,SREBP cleavage activation,Cholesterol homeostasis,UniProt
+HMGCR,P04035,SCAP,Q12770,SREBP cleavage activation,Cholesterol homeostasis,UniProt
 HMGCR,P04035,INSIG1,O15503,ER retention signal,Cholesterol homeostasis,UniProt
 HMGCR,P04035,INSIG2,Q9Y5U4,ER retention signal,Cholesterol homeostasis,UniProt
 HMGCR,P04035,SREBF2,Q12772,SREBP-2 processing,Cholesterol homeostasis,UniProt
@@ -41,7 +41,7 @@ ACACA,Q13085,PRKAA2,P54646,AMPK inhibition,Fatty acid oxidation,UniProt
 ACACA,Q13085,AKT1,P31749,mTOR pathway activation,Lipid synthesis regulation,Literature
 PLA2G7,Q13093,PON1,P27169,oxidized phospholipid hydrolysis,Oxidative stress response,UniProt
 PLA2G7,Q13093,OLR1,P78380,oxLDL receptor signaling,Atherosclerosis,Literature
-PLA2G2A,P14555,CD36,Q08708,modified lipoprotein uptake,Atherosclerosis,Literature
+PLA2G2A,P14555,CD36,P16671,modified lipoprotein uptake,Atherosclerosis,Literature
 PLA2G2A,P14555,MSR1,P21757,modified lipoprotein uptake,Macrophage foam cell formation,Literature
 MPO,P05164,PON1,P27169,oxidative modification,Anti-atherogenic protection,UniProt
 MPO,P05164,APOA1,P02647,oxidative modification,HDL dysfunction,Literature

@@ -1,16 +1,18 @@
-name,source,pathway_id
+﻿name,source,pathway_id
 Lipid and atherosclerosis,KEGG,hsa04979
-Plasma lipoprotein assembly remodeling and clearance,Reactome,R-HSA-174824
-HDL-mediated lipid transport,Reactome,R-HSA-8963743
-Chylomicron-mediated lipid transport,Reactome,R-HSA-171052
-Intestinal lipid absorption,Reactome,R-HSA-8963888
-Lipoprotein metabolism,Reactome,R-HSA-174824.1
-Triglyceride biosynthesis,Reactome,R-HSA-1483249
-HDL assembly,Reactome,R-HSA-174739
-HDL remodeling,Reactome,R-HSA-174752
-LDL clearance,Reactome,R-HSA-174802
-Lipoprotein(a) assembly,Reactome,R-HSA-8963901
 Lipid metabolism pathway,WikiPathways,WP5242
 Statin pathway,WikiPathways,WP4842
 ACE inhibitor pathway,WikiPathways,WP5243
 Fatty acid omega-oxidation,WikiPathways,WP5244
+Chylomicron assembly,Reactome,R-HSA-8963888
+VLDL assembly,Reactome,R-HSA-8866423
+HDL assembly,Reactome,R-HSA-8963896
+Assembly of active LPL and LIPC lipase complexes,Reactome,R-HSA-8963889
+Chylomicron remodeling,Reactome,R-HSA-8963901
+LDL remodeling,Reactome,R-HSA-8964041
+HDL remodeling,Reactome,R-HSA-8964058
+Chylomicron clearance,Reactome,R-HSA-8964026
+VLDL clearance,Reactome,R-HSA-8964046
+LDL clearance,Reactome,R-HSA-8964038
+HDL clearance,Reactome,R-HSA-8964011
+VLDLR internalisation and degradation,Reactome,R-HSA-8866427

@@ -81,7 +81,7 @@ draw_arrow(axA, 0, -0.8, 0, -1.5, color='#C62828', lw=1.5)
 draw_box(axA, 0, -2.2, 5.0, 1.2,
          'LipoKG Knowledge Graph',
          fc='#E3F2FD', ec='#1565C0', fontsize=11, bold=True,
-         subtext='6,052 core nodes · 36,479 core edges · 7+7 schema')
+         subtext='6,054 core nodes · 36,483 core edges · 7+7 schema')
 draw_arrow(axA, 0, -2.8, -2.5, -3.7, color='#1565C0', lw=1.2)
 draw_arrow(axA, 0, -2.8, 2.5, -3.7, color='#1565C0', lw=1.2)
 
@@ -120,7 +120,7 @@ prisma = [
      '#FFF8E1', '#F57F17', '4,042 variants across 52 KEGG genes'),
     (0, -3.6, 5.2, 1.0,
      'Final LipoKG Seed Set\n1,852 STRING proteins + 52 KEGG genes\n+ 57 molecules',
-     '#E3F2FD', '#1565C0', 'Total: 6,052 core nodes'),
+     '#E3F2FD', '#1565C0', 'Total: 6,054 core nodes'),
 ]
 for i, (x, y, w, h, text, fc, ec, sub) in enumerate(prisma):
     draw_box(axB, x, y, w, h, text, fc=fc, ec=ec, fontsize=8.5, subtext=sub)

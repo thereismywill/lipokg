@@ -1,27 +1,27 @@
-name,source,mondo_id
-Familial Hypercholesterolemia,OMIM,MONDO:0007750
-Homozygous Familial Hypercholesterolemia,OMIM,MONDO:0009118
-Familial Combined Hyperlipidemia,OMIM,MONDO:0007751
-Type III Hyperlipoproteinemia,OMIM,MONDO:0009742
-Familial Chylomicronemia Syndrome,OMIM,MONDO:0009121
-Hypertriglyceridemia,DisGeNET,MONDO:0005386
-Atherosclerotic Cardiovascular Disease,DisGeNET,MONDO:0005301
-Metabolic Dysfunction-Associated Steatotic Liver Disease,DisGeNET,MONDO:0012570
-Metabolic Syndrome,DisGeNET,MONDO:0013098
-Tangier Disease,OMIM,MONDO:0010261
-Familial LCAT Deficiency,OMIM,MONDO:0009230
-Abetalipoproteinemia,OMIM,MONDO:0008882
-Phytosterolemia,OMIM,MONDO:0009821
-Elevated Lp(a),OMIM,MONDO:0007750
-Acute Pancreatitis (Hypertriglyceridemic),DisGeNET,MONDO:0001495
-Plaque Rupture,DisGeNET,HP:0033152
-Cerebrotendinous Xanthomatosis,Orphanet,MONDO:0009587
-Lysosomal Acid Lipase Deficiency,Orphanet,MONDO:0009561
-Smith-Lemli-Opitz Syndrome,Orphanet,MONDO:0008829
-Congenital Generalized Lipodystrophy,Orphanet,MONDO:0015258
-Familial Partial Lipodystrophy,Orphanet,MONDO:0015259
-Glycogen Storage Disease Type I,Orphanet,MONDO:0009271
-Niemann-Pick Disease Type C,Orphanet,MONDO:0009762
+﻿name,source,mondo_id
+Familial Hypercholesterolemia,OMIM,MONDO:0005439
+Homozygous Familial Hypercholesterolemia,OMIM,MONDO:0018328
+Familial Combined Hyperlipidemia,OMIM,MONDO:0011237
+Type III Hyperlipoproteinemia,OMIM,MONDO:0018473
+Familial Chylomicronemia Syndrome,OMIM,MONDO:0018637
+Hypertriglyceridemia,DisGeNET,MONDO:0005347
+Atherosclerotic Cardiovascular Disease,DisGeNET,MONDO:1060134
+Metabolic Dysfunction-Associated Steatotic Liver Disease,DisGeNET,MONDO:0013209
+Metabolic Syndrome,DisGeNET,MONDO:0011565
+Tangier Disease,OMIM,MONDO:0008783
+Familial LCAT Deficiency,OMIM,MONDO:0018999
+Abetalipoproteinemia,OMIM,MONDO:0008692
+Phytosterolemia,OMIM,MONDO:0008863
+Elevated Lp(a),OMIM,EFO:0006925
+Acute Pancreatitis (Hypertriglyceridemic),DisGeNET,MONDO:0006515
+Plaque Rupture,DisGeNET,HP:0031012
+Cerebrotendinous Xanthomatosis,Orphanet,MONDO:0008948
+Lysosomal Acid Lipase Deficiency,Orphanet,MONDO:0800449
+Smith-Lemli-Opitz Syndrome,Orphanet,MONDO:0010035
+Congenital Generalized Lipodystrophy,Orphanet,MONDO:0006536
+Familial Partial Lipodystrophy,Orphanet,MONDO:0020088
+Glycogen Storage Disease Type I,Orphanet,MONDO:0002413
+Niemann-Pick Disease Type C,Orphanet,MONDO:0018982
 Total cholesterol levels,GWAS_Catalog,EFO_0004574
 LDL cholesterol levels,GWAS_Catalog,EFO_0004611
 HDL cholesterol levels,GWAS_Catalog,EFO_0004612

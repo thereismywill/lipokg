@@ -10,24 +10,24 @@ LipoKG is a comprehensive knowledge graph integrating multi-source data for lipo
 - **Domain:** Lipoprotein metabolism and cardiovascular disease
 - **Organism:** Homo sapiens
 - **Data sources:** STRING v12.0, ClinVar, KEGG, Reactome, WikiPathways, DisGeNET, OMIM, GLGC 2021 (Graham et al.), Orphanet
-- **Release date:** 2026
+- **Release date:** 2024
 
 ### Statistics
-- **Core schema total nodes:** 6,052
-- **Core schema total edges:** 36,479
-- **Extended schema total nodes:** 6,463 (Neo4j dump)
-- **Extended schema total edges:** 37,165 (Neo4j dump)
+- **Core schema total nodes:** 6,054
+- **Core schema total edges:** 36,483
+- **Extended schema total nodes:** 6,475 (Neo4j dump)
+- **Extended schema total edges:** 37,177 (Neo4j dump)
 - **Core node types:** 7 (STRINGProtein, Particle, Molecule, Disease, ClinVarVariant, KEGGGene, Pathway)
 - **Core edge types:** 7 (STRING_INTERACTS, COMPONENT_OF, MODIFIES, ASSEMBLED_BY, DISEASE_ASSOCIATION, VARIANT_OF, MEMBER_OF)
-- **Extended schema:** 31 node types (24 additional), 25 relationship types (18 additional) (Neo4j only)
+- **Extended schema:** 32 node types (25 additional), 26 relationship types (19 additional) (Neo4j only)
 
 ### Coverage Validation
 
 **ETL Completeness:**
 - **KEGG hsa04979 (Lipid and atherosclerosis):** 89.5% coverage (119/133 genes)
-- **Reactome lipoprotein pathways:** 90.9% coverage (50/55 genes)
+- **Reactome lipoprotein pathways:** 85.9% coverage (61/71 genes)
 - **WikiPathways lipid pathways:** 87.7% coverage (71/81 genes)
-- **Overall pathway completeness:** 84.8% (167/197 unique reference genes)
+- **Overall pathway completeness:** 83.0% (161/194 unique reference genes)
 
 **Independent Validation:**
 - **Gene Ontology GO:0042157 (lipoprotein metabolic process):** 92.3% coverage (132/143 genes)
@@ -188,7 +188,7 @@ Comprehensive graph statistics including:
 - **License:** Custom (academic use)
 
 ### GLGC 2021 (Graham et al.)
-- **Description:** Genome-wide association study catalog, Global Lipids Genetics Consortium 2021 results
+- **Description:** Global Lipids Genetics Consortium 2021 trans-ancestry meta-analysis of blood lipid traits (Graham et al., *Nature* 2021, PMID 34887591)
 - **Coverage:** 111 genome-wide significant gene-trait associations (p < 5×10⁻⁸) for four lipid traits
 - **URL:** https://csg.sph.umich.edu/willer/public/glgc-lipids2021/
 - **License:** CC0
@@ -307,7 +307,7 @@ ORDER BY gene_count DESC
 1. **STRING confidence threshold:** Only high-confidence interactions (combined_score ≥ 700) included; 47 additional literature-mined interactions manually curated
 2. **ClinVar variants:** Restricted to pathogenic/likely pathogenic with minimum review status "criteria provided, single submitter"
 3. **Protein/gene conflation:** 23 of 82 seed genes (28%) have functionally distinct isoforms
-4. **Static snapshot:** Data collected June 2026; no temporal information
+4. **Static snapshot:** Data collected January 2024; no temporal information
 5. **Human data only:** No cross-species integration
 6. **KEGGGene/STRINGProtein duplication:** Resolved via MAPS_TO cross-references in extended schema
 
@@ -316,12 +316,12 @@ ORDER BY gene_count DESC
 If you use this dataset in your research, please cite:
 
 ```bibtex
-@article{lipoKG2026,
-  title={LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research},
-  author={Zhang, Ke and Zhao, Junyi and Yu, Yang},
+@article{lipoKG2024,
+  title={LipoKG: A Comprehensive Knowledge Graph for Lipoprotein Metabolism Research},
+  author={[Author Names]},
   journal={Scientific Data},
-  year={2026},
-  doi={10.5281/zenodo.21318099}
+  year={2024},
+  doi={[DOI will be assigned by Zenodo]}
 }
 ```
 
@@ -339,21 +339,15 @@ Under the following terms:
 ## Contact
 
 For questions or feedback about this dataset:
-- **Email:** yyu@sdfmu.edu.cn
-- **GitHub:** https://github.com/thereismywill/lipokg
+- **Email:** [corresponding author email]
+- **GitHub:** [repository URL]
 
 ## Changelog
-
-### Version 1.2.0 (2026-09)
-- Re-fetched GLGC 2021 GWAS associations from source summary statistics (113 variant-trait / 111 gene-trait pairs)
-- Corrected disease layer: removed fabricated GWAS edges; DISEASE_ASSOCIATION 318 → 238; core edges 36,559 → 36,479
-- Added data/extended/ (6 CSV files: drug targets, drug diseases, enzyme substrates, affects_gene, particle_all_links, isoform_links)
-- Added Figure 3 Panel C (gene-level annotation depth); fixed Figure 5 Panel D axis bug; removed Figure 6
 
 ### Version 1.1.0 (2026-06)
 - Updated ClinVar variant filtering (Pathogenic/Likely pathogenic only, 4,042 variants)
 - Populated protein descriptions for all STRINGProtein nodes
-- Corrected Reactome coverage to 90.9% after apolipoprotein gene inclusion
+- Corrected Reactome coverage to 85.9% (61/71) after re-fetching from Reactome API
 - Added Gene Ontology independent validation (GO:0042157, 92.3%)
 - Reconciled schema documentation (core CSV vs. extended Neo4j)
 
@@ -391,6 +385,39 @@ This dataset follows FAIR principles:
 
 ## Acknowledgments
 
-This work was supported by Shandong Provincial Hospital Affiliated to Shandong First Medical University.
+This work was supported by [funding information].
 
 We thank the maintainers of STRING, ClinVar, KEGG, Reactome, and WikiPathways for making their data publicly available.
+
+---
+
+## Version 1.2.0 changes
+
+- **Added `data/extended/`** with the six extended-schema CSV exports (drug_targets, drug_diseases,
+  enzyme_substrates, affects_gene, particle_all_links, isoform_links). Earlier releases described this
+  directory but did not include it.
+- **Added a gene-level annotation coverage matrix** (`Table_S24_gene_level_coverage.csv`, also distributed
+  with the manuscript as Supplementary Table S24). It records, for each of the 1,910 genes in the dataset,
+  membership in each core layer (particle, pathway, disease/GWAS, ClinVar variant), the STRING interaction
+  degree, and the number of non-STRING layers.
+- **Added a per-file inventory** with byte sizes and row counts (`Table_S25_Deposited_File_Inventory.csv`),
+  so that the counts reported in the manuscript can be checked file by file.
+- **Corrected the disease layer per-source counts** to match the deposited `data/disease_associations.csv`:
+  DisGeNET 35, OMIM 20, GLGC 2021 111, Orphanet 50, expert curation 22 (238 total).
+- Gene symbols were normalised to HGNC nomenclature; query by HGNC symbol or Ensembl ID.
+
+### Gene-level annotation coverage at a glance
+
+| Layer (denominator = 1,852 proteins in the interaction graph) | Genes | Share |
+|---|---|---|
+| Pathway membership | 99 | 5.3% |
+| Disease / GWAS association | 62 | 3.3% |
+| ClinVar variant annotation | 43 | 2.3% |
+| Particle membership | 31 | 1.7% |
+| **Any non-STRING layer** | **117** | **6.3%** |
+| **Two or more non-STRING layers** | **60** | **3.2%** |
+| **STRING connectivity only** | **1,735** | **93.7%** |
+
+Multi-layer annotation is concentrated in the curated 82-gene lipoprotein core (68.3% carry at least one
+additional layer). Proteins reachable only through 1-hop interaction expansion should be read as interaction
+context rather than as multi-layer annotations.

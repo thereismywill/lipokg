@@ -1,4 +1,4 @@
-gene,pathway,source
+﻿gene,pathway,source
 NPC2,Lipid and atherosclerosis,KEGG
 CETP,Lipid and atherosclerosis,KEGG
 STARD3,Lipid and atherosclerosis,KEGG
@@ -51,117 +51,6 @@ VAPA,Lipid and atherosclerosis,KEGG
 LIPG,Lipid and atherosclerosis,KEGG
 CD36,Lipid and atherosclerosis,KEGG
 SCARB1,Lipid and atherosclerosis,KEGG
-APOA1,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOA2,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOA4,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOA5,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOB,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOC1,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOC2,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOC3,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOE,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOH,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LPL,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LIPC,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LIPG,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LCAT,Plasma lipoprotein assembly remodeling and clearance,Reactome
-CETP,Plasma lipoprotein assembly remodeling and clearance,Reactome
-PLTP,Plasma lipoprotein assembly remodeling and clearance,Reactome
-ABCA1,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LRP1,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LRP2,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LDLR,Plasma lipoprotein assembly remodeling and clearance,Reactome
-SCARB1,Plasma lipoprotein assembly remodeling and clearance,Reactome
-PCSK9,Plasma lipoprotein assembly remodeling and clearance,Reactome
-MTTP,Plasma lipoprotein assembly remodeling and clearance,Reactome
-SORT1,Plasma lipoprotein assembly remodeling and clearance,Reactome
-GPIHBP1,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LMF1,Plasma lipoprotein assembly remodeling and clearance,Reactome
-ANGPTL3,Plasma lipoprotein assembly remodeling and clearance,Reactome
-ANGPTL4,Plasma lipoprotein assembly remodeling and clearance,Reactome
-APOBR,Plasma lipoprotein assembly remodeling and clearance,Reactome
-CD36,Plasma lipoprotein assembly remodeling and clearance,Reactome
-LPA,Plasma lipoprotein assembly remodeling and clearance,Reactome
-ABCA1,Digestion of dietary lipid,Reactome
-APOA1,Digestion of dietary lipid,Reactome
-APOA2,Digestion of dietary lipid,Reactome
-APOA4,Digestion of dietary lipid,Reactome
-APOB,Digestion of dietary lipid,Reactome
-APOC1,Digestion of dietary lipid,Reactome
-APOC2,Digestion of dietary lipid,Reactome
-APOC3,Digestion of dietary lipid,Reactome
-MTTP,Digestion of dietary lipid,Reactome
-NPC1L1,Digestion of dietary lipid,Reactome
-ABCG5,Digestion of dietary lipid,Reactome
-ABCG8,Digestion of dietary lipid,Reactome
-SOAT2,Digestion of dietary lipid,Reactome
-SCARB1,Digestion of dietary lipid,Reactome
-APOA1,Chylomicron-mediated lipid transport,Reactome
-APOA4,Chylomicron-mediated lipid transport,Reactome
-APOA5,Chylomicron-mediated lipid transport,Reactome
-APOB,Chylomicron-mediated lipid transport,Reactome
-APOC2,Chylomicron-mediated lipid transport,Reactome
-APOC3,Chylomicron-mediated lipid transport,Reactome
-APOE,Chylomicron-mediated lipid transport,Reactome
-LPL,Chylomicron-mediated lipid transport,Reactome
-GPIHBP1,Chylomicron-mediated lipid transport,Reactome
-LMF1,Chylomicron-mediated lipid transport,Reactome
-LIPC,Chylomicron-mediated lipid transport,Reactome
-LRP1,Chylomicron-mediated lipid transport,Reactome
-LDLR,Chylomicron-mediated lipid transport,Reactome
-MTTP,Chylomicron-mediated lipid transport,Reactome
-APOA1,HDL assembly,Reactome
-APOA2,HDL assembly,Reactome
-APOA4,HDL assembly,Reactome
-ABCA1,HDL assembly,Reactome
-LCAT,HDL assembly,Reactome
-LIPG,HDL assembly,Reactome
-APOA1,HDL remodeling,Reactome
-APOA2,HDL remodeling,Reactome
-APOC1,HDL remodeling,Reactome
-APOC2,HDL remodeling,Reactome
-APOC3,HDL remodeling,Reactome
-APOE,HDL remodeling,Reactome
-CETP,HDL remodeling,Reactome
-PLTP,HDL remodeling,Reactome
-LCAT,HDL remodeling,Reactome
-LIPC,HDL remodeling,Reactome
-LIPG,HDL remodeling,Reactome
-SCARB1,HDL remodeling,Reactome
-ABCA1,HDL remodeling,Reactome
-ABCG1,HDL remodeling,Reactome
-LDLR,LDL clearance,Reactome
-PCSK9,LDL clearance,Reactome
-APOB,LDL clearance,Reactome
-APOE,LDL clearance,Reactome
-LRP1,LDL clearance,Reactome
-LDLRAP1,LDL clearance,Reactome
-ARH,LDL clearance,Reactome
-DAB2,LDL clearance,Reactome
-IDOL,LDL clearance,Reactome
-HGS,LDL clearance,Reactome
-APOB,VLDL assembly,Reactome
-APOE,VLDL assembly,Reactome
-APOC1,VLDL assembly,Reactome
-APOC2,VLDL assembly,Reactome
-APOC3,VLDL assembly,Reactome
-MTTP,VLDL assembly,Reactome
-SOAT1,VLDL assembly,Reactome
-SOAT2,VLDL assembly,Reactome
-ABCA1,VLDL assembly,Reactome
-LPL,Triglyceride-rich lipoprotein clearance,Reactome
-GPIHBP1,Triglyceride-rich lipoprotein clearance,Reactome
-APOC2,Triglyceride-rich lipoprotein clearance,Reactome
-APOC3,Triglyceride-rich lipoprotein clearance,Reactome
-APOA5,Triglyceride-rich lipoprotein clearance,Reactome
-APOE,Triglyceride-rich lipoprotein clearance,Reactome
-LRP1,Triglyceride-rich lipoprotein clearance,Reactome
-LDLR,Triglyceride-rich lipoprotein clearance,Reactome
-VLDLR,Triglyceride-rich lipoprotein clearance,Reactome
-LIPC,Triglyceride-rich lipoprotein clearance,Reactome
-LMF1,Triglyceride-rich lipoprotein clearance,Reactome
-ANGPTL3,Triglyceride-rich lipoprotein clearance,Reactome
-ANGPTL4,Triglyceride-rich lipoprotein clearance,Reactome
 LDLR,Lipid metabolism pathway,WikiPathways
 PCSK9,Lipid metabolism pathway,WikiPathways
 HMGCR,Lipid metabolism pathway,WikiPathways
@@ -241,3 +130,118 @@ ADH1C,Fatty acid omega-oxidation,WikiPathways
 ADH4,Fatty acid omega-oxidation,WikiPathways
 ADH5,Fatty acid omega-oxidation,WikiPathways
 ALDH2,Fatty acid omega-oxidation,WikiPathways
+APOA1,Chylomicron assembly,Reactome
+APOA2,Chylomicron assembly,Reactome
+APOA4,Chylomicron assembly,Reactome
+APOB,Chylomicron assembly,Reactome
+APOC2,Chylomicron assembly,Reactome
+APOC3,Chylomicron assembly,Reactome
+APOE,Chylomicron assembly,Reactome
+MTTP,Chylomicron assembly,Reactome
+P4HB,Chylomicron assembly,Reactome
+SAR1B,Chylomicron assembly,Reactome
+APOB,VLDL assembly,Reactome
+APOC1,VLDL assembly,Reactome
+APOC4,VLDL assembly,Reactome
+MTTP,VLDL assembly,Reactome
+P4HB,VLDL assembly,Reactome
+A2M,HDL assembly,Reactome
+ABCA1,HDL assembly,Reactome
+APOA1,HDL assembly,Reactome
+PRKACA,HDL assembly,Reactome
+PRKACB,HDL assembly,Reactome
+PRKACG,HDL assembly,Reactome
+ZDHHC8,HDL assembly,Reactome
+ANGPTL3,Assembly of active LPL and LIPC lipase complexes,Reactome
+ANGPTL4,Assembly of active LPL and LIPC lipase complexes,Reactome
+ANGPTL8,Assembly of active LPL and LIPC lipase complexes,Reactome
+APOA4,Assembly of active LPL and LIPC lipase complexes,Reactome
+APOA5,Assembly of active LPL and LIPC lipase complexes,Reactome
+APOC2,Assembly of active LPL and LIPC lipase complexes,Reactome
+CREB3L3,Assembly of active LPL and LIPC lipase complexes,Reactome
+FGF21,Assembly of active LPL and LIPC lipase complexes,Reactome
+FURIN,Assembly of active LPL and LIPC lipase complexes,Reactome
+GPIHBP1,Assembly of active LPL and LIPC lipase complexes,Reactome
+LIPC,Assembly of active LPL and LIPC lipase complexes,Reactome
+LMF1,Assembly of active LPL and LIPC lipase complexes,Reactome
+LMF2,Assembly of active LPL and LIPC lipase complexes,Reactome
+LPL,Assembly of active LPL and LIPC lipase complexes,Reactome
+MBTPS1,Assembly of active LPL and LIPC lipase complexes,Reactome
+MBTPS2,Assembly of active LPL and LIPC lipase complexes,Reactome
+PCSK5,Assembly of active LPL and LIPC lipase complexes,Reactome
+PCSK6,Assembly of active LPL and LIPC lipase complexes,Reactome
+APOA1,Chylomicron remodeling,Reactome
+APOA2,Chylomicron remodeling,Reactome
+APOA4,Chylomicron remodeling,Reactome
+APOA5,Chylomicron remodeling,Reactome
+APOB,Chylomicron remodeling,Reactome
+APOC2,Chylomicron remodeling,Reactome
+APOC3,Chylomicron remodeling,Reactome
+APOE,Chylomicron remodeling,Reactome
+GPIHBP1,Chylomicron remodeling,Reactome
+LPL,Chylomicron remodeling,Reactome
+APOB,LDL remodeling,Reactome
+APOF,LDL remodeling,Reactome
+CETP,LDL remodeling,Reactome
+LPA,LDL remodeling,Reactome
+MTTP,LDL remodeling,Reactome
+P4HB,LDL remodeling,Reactome
+ABCG1,HDL remodeling,Reactome
+ALB,HDL remodeling,Reactome
+APOA1,HDL remodeling,Reactome
+APOC2,HDL remodeling,Reactome
+APOC3,HDL remodeling,Reactome
+APOE,HDL remodeling,Reactome
+CETP,HDL remodeling,Reactome
+LCAT,HDL remodeling,Reactome
+LIPG,HDL remodeling,Reactome
+APOB,Chylomicron clearance,Reactome
+APOE,Chylomicron clearance,Reactome
+LDLR,Chylomicron clearance,Reactome
+LDLRAP1,Chylomicron clearance,Reactome
+LIPC,Chylomicron clearance,Reactome
+APOB,VLDL clearance,Reactome
+APOBR,VLDL clearance,Reactome
+APOC1,VLDL clearance,Reactome
+APOC4,VLDL clearance,Reactome
+LSR,VLDL clearance,Reactome
+VLDLR,VLDL clearance,Reactome
+AP2A1,LDL clearance,Reactome
+AP2A2,LDL clearance,Reactome
+AP2B1,LDL clearance,Reactome
+AP2M1,LDL clearance,Reactome
+AP2S1,LDL clearance,Reactome
+APOB,LDL clearance,Reactome
+CES3,LDL clearance,Reactome
+CLTA,LDL clearance,Reactome
+CLTC,LDL clearance,Reactome
+LDLR,LDL clearance,Reactome
+LDLRAP1,LDL clearance,Reactome
+LIPA,LDL clearance,Reactome
+LSR,LDL clearance,Reactome
+NCEH1,LDL clearance,Reactome
+NPC1,LDL clearance,Reactome
+NPC2,LDL clearance,Reactome
+PCSK9,LDL clearance,Reactome
+SOAT1,LDL clearance,Reactome
+SOAT2,LDL clearance,Reactome
+AMN,HDL clearance,Reactome
+APOA1,HDL clearance,Reactome
+CUBN,HDL clearance,Reactome
+HDLBP,HDL clearance,Reactome
+AP2A1,VLDLR internalisation and degradation,Reactome
+AP2A2,VLDLR internalisation and degradation,Reactome
+AP2B1,VLDLR internalisation and degradation,Reactome
+AP2M1,VLDLR internalisation and degradation,Reactome
+AP2S1,VLDLR internalisation and degradation,Reactome
+CLTA,VLDLR internalisation and degradation,Reactome
+CLTC,VLDLR internalisation and degradation,Reactome
+MYLIP,VLDLR internalisation and degradation,Reactome
+NR1H2,VLDLR internalisation and degradation,Reactome
+NR1H3,VLDLR internalisation and degradation,Reactome
+PCSK9,VLDLR internalisation and degradation,Reactome
+RPS27A,VLDLR internalisation and degradation,Reactome
+UBA52,VLDLR internalisation and degradation,Reactome
+UBB,VLDLR internalisation and degradation,Reactome
+UBC,VLDLR internalisation and degradation,Reactome
+VLDLR,VLDLR internalisation and degradation,Reactome

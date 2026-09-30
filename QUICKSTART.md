@@ -8,9 +8,9 @@
 
 ```bash
 # 从Zenodo下载
-# 从GitHub克隆仓库
-git clone https://github.com/thereismywill/lipokg.git
-cd lipokg
+wget https://zenodo.org/records/[DOI]/files/lipokg-v1.0.0.zip
+unzip lipokg-v1.0.0.zip
+cd lipokg-v1.0.0
 ```
 
 ### 2. 导入Neo4j
@@ -133,8 +133,8 @@ print(f"Edges: {G.number_of_edges()}")
 
 ## 关键统计
 
-- **核心节点总数**: 6,052（扩展schema: 6,463）
-- **核心边总数**: 36,559（扩展schema: 37,165）
+- **核心节点总数**: 6,054（扩展schema: 6,475）
+- **核心边总数**: 36,483（扩展schema: 37,177）
 - **核心节点类型**: 7 (STRINGProtein, Particle, Molecule, Disease, ClinVarVariant, KEGGGene, Pathway)
 - **核心边类型**: 7 (STRING_INTERACTS, COMPONENT_OF, MODIFIES, ASSEMBLED_BY, VARIANT_OF, MEMBER_OF, DISEASE_ASSOCIATION)
 - **蛋白数**: 1,852 (STRING v12.0)
@@ -147,9 +147,9 @@ print(f"Edges: {G.number_of_edges()}")
 
 **ETL完整性:**
 - **KEGG hsa04979**: 89.5% (119/133 genes)
-- **Reactome lipoprotein**: 90.9% (50/55 genes)
+- **Reactome lipoprotein**: 85.9% (61/71 genes)
 - **WikiPathways lipid**: 87.7% (71/81 genes)
-- **总体通路完整度**: 84.8% (167/197 unique genes)
+- **总体通路完整度**: 83.0% (161/194 unique genes)
 
 **独立验证:**
 - **GO:0042157 (脂蛋白代谢过程)**: 92.3% (132/143 genes)
@@ -168,17 +168,17 @@ print(f"Edges: {G.number_of_edges()}")
 ## 获取帮助
 
 - **问题**: 查看 [USAGE_TUTORIAL.md](docs/USAGE_TUTORIAL.md#故障排除)
-- **GitHub**: https://github.com/thereismywill/lipokg
-- **Email**: yyu@sdfmu.edu.cn
+- **GitHub**: [repository URL]
+- **Email**: [corresponding author email]
 
 ## 引用
 
 ```bibtex
 @dataset{lipoKG2024,
   title={LipoKG: Lipoprotein Metabolism Knowledge Graph},
-  year={2026},
+  year={2024},
   publisher={Zenodo},
-  doi={[DOI will be assigned after publication]}
+  doi={[DOI]}
 }
 ```
 

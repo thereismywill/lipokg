@@ -429,5 +429,5 @@ classes:
 
 settings:
   license_url: https://creativecommons.org/licenses/by/4.0/
-  repository: https://github.com/sdfmu-lipidomics/lipokg
-  documentation: https://zenodo.org/records/12345678
+  repository: https://github.com/thereismywill/lipokg
+  documentation: https://zenodo.org/records/21318100

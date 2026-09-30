@@ -1,21 +1,21 @@
-drug_name,drug_id,disease_name,disease_id,evidence_level,approval_status,source
-atorvastatin,DB01098,Familial Hypercholesterolemia,MONDO:0007750,Level 1,Approved,FDA/EMA
-atorvastatin,DB01098,ASCVD,MONDO:0005242,Level 1,Approved,FDA/EMA
-atorvastatin,DB01098,Hypercholesterolemia,MONDO:0001911,Level 1,Approved,FDA/EMA
-rosuvastatin,DB12024,Familial Hypercholesterolemia,MONDO:0007750,Level 1,Approved,FDA/EMA
-rosuvastatin,DB12024,ASCVD,MONDO:0005242,Level 1,Approved,FDA/EMA
-simvastatin,DB00641,Hypercholesterolemia,MONDO:0001911,Level 1,Approved,FDA/EMA
-ezetimibe,DB00963,Familial Hypercholesterolemia,MONDO:0007750,Level 1,Approved,FDA/EMA
-ezetimibe,DB00963,ASCVD,MONDO:0005242,Level 1,Approved,FDA/EMA
-evolocumab,DB09276,Heterozygous Familial Hypercholesterolemia,MONDO:0007750,Level 1,Approved,FDA/EMA
-evolocumab,DB09276,Homozygous Familial Hypercholesterolemia,MONDO:0009110,Level 1,Approved,FDA/EMA
-evolocumab,DB09276,ASCVD,MONDO:0005242,Level 1,Approved,FDA/EMA
-alirocumab,DB09531,Heterozygous Familial Hypercholesterolemia,MONDO:0007750,Level 1,Approved,FDA/EMA
-alirocumab,DB09531,ASCVD,MONDO:0005242,Level 1,Approved,FDA/EMA
-evinacumab,DB15588,Homozygous Familial Hypercholesterolemia,MONDO:0009110,Level 1,Approved,FDA
-volanesorsen,DB14941,Familial Chylomicronemia Syndrome,MONDO:0015518,Level 1,Approved,EMA
-olezarsen,DB22938,Familial Chylomicronemia Syndrome,MONDO:0015518,Level 1,Approved,FDA
-lomitapide,DB08877,Homozygous Familial Hypercholesterolemia,MONDO:0009110,Level 1,Approved,FDA/EMA
-mipomersen,DB09210,Homozygous Familial Hypercholesterolemia,MONDO:0009110,Level 1,Approved,FDA
-icosapent ethyl,DB09177,Hypertriglyceridemia,MONDO:0001913,Level 1,Approved,FDA/EMA
-fenofibrate,DB00961,Hypertriglyceridemia,MONDO:0001913,Level 1,Approved,FDA/EMA
+﻿drug_name,drug_id,disease_name,disease_id,evidence_level,approval_status,source
+atorvastatin,DB01076,Familial Hypercholesterolemia,MONDO:0005439,Level 1,Approved,FDA/EMA
+atorvastatin,DB01076,ASCVD,MONDO:1060134,Level 1,Approved,FDA/EMA
+atorvastatin,DB01076,Hypercholesterolemia,HP:0003124,Level 1,Approved,FDA/EMA
+rosuvastatin,DB01098,Familial Hypercholesterolemia,MONDO:0005439,Level 1,Approved,FDA/EMA
+rosuvastatin,DB01098,ASCVD,MONDO:1060134,Level 1,Approved,FDA/EMA
+simvastatin,DB00641,Hypercholesterolemia,HP:0003124,Level 1,Approved,FDA/EMA
+ezetimibe,DB00973,Familial Hypercholesterolemia,MONDO:0005439,Level 1,Approved,FDA/EMA
+ezetimibe,DB00973,ASCVD,MONDO:1060134,Level 1,Approved,FDA/EMA
+evolocumab,DB09281,Heterozygous Familial Hypercholesterolemia,MONDO:0005439,Level 1,Approved,FDA/EMA
+evolocumab,DB09281,Homozygous Familial Hypercholesterolemia,MONDO:0018328,Level 1,Approved,FDA/EMA
+evolocumab,DB09281,ASCVD,MONDO:1060134,Level 1,Approved,FDA/EMA
+alirocumab,DB09280,Heterozygous Familial Hypercholesterolemia,MONDO:0005439,Level 1,Approved,FDA/EMA
+alirocumab,DB09280,ASCVD,MONDO:1060134,Level 1,Approved,FDA/EMA
+evinacumab,DB15759,Homozygous Familial Hypercholesterolemia,MONDO:0018328,Level 1,Approved,FDA
+volanesorsen,DB14049,Familial Chylomicronemia Syndrome,MONDO:0018637,Level 1,Approved,EMA
+olezarsen,DB16953,Familial Chylomicronemia Syndrome,MONDO:0018637,Level 1,Approved,FDA
+lomitapide,DB08827,Homozygous Familial Hypercholesterolemia,MONDO:0018328,Level 1,Approved,FDA/EMA
+mipomersen,DB09177,Homozygous Familial Hypercholesterolemia,MONDO:0018328,Level 1,Approved,FDA
+icosapent ethyl,DB08887,Hypertriglyceridemia,MONDO:0005347,Level 1,Approved,FDA/EMA
+fenofibrate,DB01039,Hypertriglyceridemia,MONDO:0005347,Level 1,Approved,FDA/EMA

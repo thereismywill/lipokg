@@ -1,30 +1,30 @@
-drug_name,drug_id,target_gene,target_uniprot,interaction_type,approval_status,source
-atorvastatin,DB01022,HMGCR,P04035,inhibitor,Approved,DrugBank
+﻿drug_name,drug_id,target_gene,target_uniprot,interaction_type,approval_status,source
+atorvastatin,DB01076,HMGCR,P04035,inhibitor,Approved,DrugBank
 rosuvastatin,DB01098,HMGCR,P04035,inhibitor,Approved,DrugBank
 simvastatin,DB00641,HMGCR,P04035,inhibitor,Approved,DrugBank
 pravastatin,DB00175,HMGCR,P04035,inhibitor,Approved,DrugBank
 lovastatin,DB00227,HMGCR,P04035,inhibitor,Approved,DrugBank
-fluvastatin,DB00960,HMGCR,P04035,inhibitor,Approved,DrugBank
+fluvastatin,DB01095,HMGCR,P04035,inhibitor,Approved,DrugBank
 pitavastatin,DB08860,HMGCR,P04035,inhibitor,Approved,DrugBank
-ezetimibe,DB00402,NPC1L1,Q9UHC9,inhibitor,Approved,DrugBank
+ezetimibe,DB00973,NPC1L1,Q9UHC9,inhibitor,Approved,DrugBank
 evolocumab,DB09281,PCSK9,Q8NBP7,inhibitor (monoclonal antibody),Approved,DrugBank
 alirocumab,DB09280,PCSK9,Q8NBP7,inhibitor (monoclonal antibody),Approved,DrugBank
 inclisiran,DB15760,PCSK9,Q8NBP7,siRNA silencing,Approved,DrugBank
-lomitapide,DB08865,MTTP,P55157,inhibitor,Approved,DrugBank
+lomitapide,DB08827,MTTP,P55157,inhibitor,Approved,DrugBank
 mipomersen,DB09177,APOB,P04114,antisense oligonucleotide,Approved,DrugBank
 evinacumab,DB15759,ANGPTL3,Q9Y5C1,inhibitor (monoclonal antibody),Approved,DrugBank
-volanesorsen,DB14049,APOC3,P02654,antisense oligonucleotide,Approved,DrugBank
-olezarsen,DB16953,APOC3,P02654,antisense oligonucleotide,Approved,DrugBank
+volanesorsen,DB14049,APOC3,P02656,antisense oligonucleotide,Approved,DrugBank
+olezarsen,DB16953,APOC3,P02656,antisense oligonucleotide,Approved,DrugBank
 pelacarsen,DB16954,APO_LPA,P08519,antisense oligonucleotide,Phase 3,DrugBank/ClinicalTrials
 olpasiran,DB16955,APO_LPA,P08519,siRNA silencing,Phase 3,DrugBank/ClinicalTrials
 muvalaplin,DB17891,APO_LPA,P08519,small molecule inhibitor,Phase 2,ClinicalTrials
 lepodisiran,N/A,APO_LPA,P08519,siRNA silencing,Phase 1,ClinicalTrials
-icosapent ethyl,DB09276,PPARA,Q03181,agonist,Approved,DrugBank
-icosapent ethyl,DB09276,DGAT1,O75907,modulator,Approved,Literature
-icosapent ethyl,DB09276,SREBF1,P36956,modulator,Approved,Literature
-bempedoic acid,DB12619,ACLY,P54868,inhibitor,Approved,DrugBank;not_in_seed_set
+icosapent ethyl,DB08887,PPARA,Q07869,agonist,Approved,DrugBank
+icosapent ethyl,DB08887,DGAT1,O75907,modulator,Approved,Literature
+icosapent ethyl,DB08887,SREBF1,P36956,modulator,Approved,Literature
+bempedoic acid,DB11936,ACLY,P53396,inhibitor,Approved,DrugBank;not_in_seed_set
 alipogene tiparvovec,DB09531,LPL,P06858,gene therapy,Approved (EU),DrugBank
-fenofibrate,DB01039,PPARA,Q03181,agonist,Approved,DrugBank
-gemfibrozil,DB00471,PPARA,Q03181,agonist,Approved,DrugBank
-niacin,DB00627,HCAR2,P49019,agonist,Approved,DrugBank;not_in_seed_set
+fenofibrate,DB01039,PPARA,Q07869,agonist,Approved,DrugBank
+gemfibrozil,DB01241,PPARA,Q07869,agonist,Approved,DrugBank
+niacin,DB00627,HCAR2,Q8TDS4,agonist,Approved,DrugBank;not_in_seed_set
 niacin,DB00627,DGAT2,Q96PD7,modulator,Approved,Literature
