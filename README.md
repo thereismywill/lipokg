@@ -322,7 +322,7 @@ If you use this dataset in your research, please cite:
   author={[Author Names]},
   journal={Scientific Data},
   year={2024},
-  doi={[DOI will be assigned by Zenodo]}
+  doi={10.5281/zenodo.21318099}
 }
 ```
 
