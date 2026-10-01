@@ -5,13 +5,13 @@ A short guide to loading and querying LipoKG, a knowledge graph of lipoprotein m
 ## 1. Download the data
 
 ```bash
-# Version 1.2.1 (30 files, 2.37 MB uncompressed / 0.35 MB as the archive)
-wget "https://zenodo.org/records/23074632/files/lipokg_data_v1.2.1.zip?download=1"
-unzip lipokg_data_v1.2.1.zip
-cd lipokg_data_v1.2.1
+# Version 1.2.2 (30 files, 2.38 MB uncompressed / 0.35 MB as the archive)
+wget "https://zenodo.org/records/23080346/files/lipokg_data_v1.2.2.zip?download=1"
+unzip lipokg_data_v1.2.2.zip
+cd lipokg_data_v1.2.2
 ```
 
-The version DOI `10.5281/zenodo.23074632` always resolves to v1.2.1. The concept DOI
+The version DOI `10.5281/zenodo.23080346` always resolves to v1.2.2. The concept DOI
 `10.5281/zenodo.21318099` always resolves to the latest version. A per-file inventory with byte
 sizes and row counts is given in Supplementary Table S25 of the accompanying manuscript.
 
@@ -218,9 +218,9 @@ deposited CSVs.
 
 **Gene-level annotation depth** (denominator = 1,852 proteins in the interaction graph)
 
-- At least one non-STRING layer: 252 (13.6%)
-- Two or more layers: 48 (2.6%)
-- STRING connectivity only: 1,600 (86.4%)
+- At least one non-STRING layer: 256 (13.8%)
+- Two or more layers: 50 (2.7%)
+- STRING connectivity only: 1,596 (86.2%)
 
 Multi-layer annotation is concentrated in the curated core; proteins reached only through 1-hop
 interaction expansion should be read as interaction context rather than as annotated genes.
@@ -245,10 +245,10 @@ interaction expansion should be read as interaction context rather than as annot
   author    = {Zhang, Ke and Zhao, Junyi and Yu, Yang},
   title     = {LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research},
   year      = {2026},
-  version   = {1.2.1},
+  version   = {1.2.2},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.23074632},
-  url       = {https://doi.org/10.5281/zenodo.23074632}
+  doi       = {10.5281/zenodo.23080346},
+  url       = {https://doi.org/10.5281/zenodo.23080346}
 }
 ```
 

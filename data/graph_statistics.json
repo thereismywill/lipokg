@@ -103,7 +103,7 @@
   "degree_distribution_preferred": "lognormal (likelihood ratio R = -20.96 vs power law, p = 1.3e-04; truncated power law also preferred, R = -20.97, p = 9.4e-11)"
  },
  "metadata": {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "data_collection_date": "2026-06",
   "release_date": "2026-10-01",
   "description": "Core schema distributed as CSV (7 node types, 7 relationship types); extended schema available in Neo4j dump (32 node types, 26 relationship types). ClinVar variants filtered to Pathogenic/Likely pathogenic only. Lipoprotein particles represented as first-class entities."

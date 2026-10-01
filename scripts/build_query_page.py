@@ -141,7 +141,7 @@ font-family:inherit;font-size:13px;cursor:pointer;color:var(--muted)}
 <body>
 <div class="nav">
   <b>LipoKG</b><span class="chip">read-only dataset query</span>
-  <span class="sp">Lipoprotein Metabolism Knowledge Graph · v1.2.0</span>
+  <span class="sp">Lipoprotein Metabolism Knowledge Graph · v1.2.2</span>
 </div>
 <header>
   <h1>Query the LipoKG gene-annotation layers</h1>
@@ -175,10 +175,10 @@ font-family:inherit;font-size:13px;cursor:pointer;color:var(--muted)}
       <div class="sec-h">How to read this<span class="hint">please read before using</span></div>
       <div class="note">
         Annotation depth is <b>concentrated in the curated lipoprotein core</b>. Of the 1,852 proteins in the
-        STRING-derived interaction graph, only <b>117 (6.3%)</b> carry at least one non-STRING annotation layer and
-        <b>1,735 (93.7%)</b> are represented by interaction edges alone. Proteins reachable only through 1-hop
+        STRING-derived interaction graph, <b>256 (13.8%)</b> carry at least one non-STRING annotation layer and
+        <b>1,596 (86.2%)</b> are represented by interaction edges alone. Proteins reachable only through 1-hop
         interaction expansion should therefore be read as <b>interaction context</b>, not as multi-layer annotations.
-        Layer membership here reflects the deposited dataset snapshot (January 2024) and does not imply clinical validity.
+        Layer membership here reflects the deposited dataset snapshot (June 2026) and does not imply clinical validity.
       </div>
     </div>
     <div class="card">
@@ -204,7 +204,7 @@ font-family:inherit;font-size:13px;cursor:pointer;color:var(--muted)}
 </div>
 
 <footer>
-  Dataset: <span class="mono">Zenodo 10.5281/zenodo.21318099</span> (LipoKG v1.2.1; layered licence — see <span class="mono">data/LICENSE.md</span>) &nbsp;·&nbsp;
+  Dataset: <span class="mono">Zenodo 10.5281/zenodo.23080346</span> (LipoKG v1.2.2; concept DOI 10.5281/zenodo.21318099; layered licence — see <span class="mono">data/LICENSE.md</span>) &nbsp;·&nbsp;
   Code: <span class="mono">github.com/thereismywill/lipokg</span><br>
   This page is generated from the deposited supplementary tables (S8, S17, S24) and runs entirely in your browser;
   no data leaves your device. Layer membership is derived from STRING v12.0, ClinVar (2026-06), KEGG hsa05417,

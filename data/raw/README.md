@@ -13,7 +13,7 @@ Raw output of the first full loading of the graph, kept for provenance:
 metabolism" with 52 genes, the WikiPathways search returned no pathways, and the full in-database
 graph held 8,394 nodes / 38,865 edges (the ClinVar layer alone held 6,050 variant nodes).
 
-The deposited package (v1.2.1) supersedes all of them: the KEGG layer is `hsa05417`
+The deposited package (v1.2.2) supersedes all of them: the KEGG layer is `hsa05417`
 "Lipid and atherosclerosis" (216 genes), WikiPathways is a 4-pathway / 92-gene reference set, and the
 curated CSV schema is 6,214 core nodes / 36,568 core edges, or 6,639 / 41,497 including the extended
 schema. The manuscript's "graph-size convention" paragraph explains why the two count sets differ.

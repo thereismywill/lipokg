@@ -4,13 +4,13 @@ APOB,1,1,1,1,1,4,117,T2 multi-layer
 APOA1,1,1,1,1,1,4,103,T2 multi-layer
 SCARB1,1,1,0,1,1,3,100,T2 multi-layer
 LPL,1,1,1,1,1,4,84,T2 multi-layer
-APOH,1,1,0,1,1,3,70,T2 multi-layer
+APOH,1,1,0,0,1,2,70,T2 multi-layer
 APOA2,1,1,1,1,1,4,59,T2 multi-layer
 APOC3,1,1,1,1,1,4,57,T2 multi-layer
 LCAT,1,1,1,1,1,4,54,T2 multi-layer
 LIPC,1,1,1,1,1,4,50,T2 multi-layer
 APOA5,1,1,1,1,1,4,47,T2 multi-layer
-LRP1,1,1,0,1,1,3,46,T2 multi-layer
+LRP1,1,1,0,0,1,2,46,T2 multi-layer
 APOA4,1,1,1,1,1,4,43,T2 multi-layer
 CETP,1,1,1,1,1,4,43,T2 multi-layer
 APOC2,1,1,1,1,1,4,42,T2 multi-layer
@@ -30,7 +30,7 @@ DHCR7,1,0,0,1,1,2,37,T2 multi-layer
 FDFT1,1,0,0,1,1,2,37,T2 multi-layer
 CYP51A1,1,0,0,1,1,2,34,T2 multi-layer
 MVK,1,0,0,1,1,2,28,T2 multi-layer
-VLDLR,1,0,1,1,1,3,26,T2 multi-layer
+VLDLR,1,0,1,0,1,2,26,T2 multi-layer
 NSDHL,1,0,0,1,1,2,23,T2 multi-layer
 ANGPTL4,1,1,1,1,0,3,17,T2 multi-layer
 LDLRAP1,1,0,1,1,1,3,11,T2 multi-layer
@@ -64,7 +64,7 @@ TM6SF2,0,1,0,1,0,2,0,T0 not in protein graph
 CASP3,1,0,1,0,0,1,144,T3 single-layer
 PPARA,1,0,0,0,0,0,122,T4 STRING-only
 SREBF1,1,0,0,0,0,0,90,T4 STRING-only
-DGAT1,1,1,0,0,0,1,70,T3 single-layer
+DGAT1,1,1,0,1,0,2,70,T2 multi-layer
 RXRA,1,0,1,0,0,1,67,T3 single-layer
 FASN,1,0,0,0,0,0,60,T4 STRING-only
 SREBF2,1,0,0,0,0,0,58,T4 STRING-only
@@ -116,7 +116,7 @@ OSBPL5,1,0,0,0,0,0,4,T4 STRING-only
 STARD3NL,1,0,0,0,0,0,4,T4 STRING-only
 CIDEB,1,0,0,0,0,0,3,T4 STRING-only
 APOBR,1,0,1,0,0,1,2,T3 single-layer
-PEPD,1,0,0,1,0,1,2,T3 single-layer
+PEPD,1,0,0,0,0,0,2,T4 STRING-only
 NIPSNAP3B,1,0,0,0,1,1,1,T3 single-layer
 AGTR1,0,0,0,0,0,0,0,T0 not in protein graph
 AGTR2,0,0,0,0,0,0,0,T0 not in protein graph
@@ -146,7 +146,7 @@ GALNT2,0,0,0,1,0,1,0,T0 not in protein graph
 GCKR,0,0,0,1,0,1,0,T0 not in protein graph
 HGS,0,0,0,0,0,0,0,T0 not in protein graph
 IDOL,0,0,0,0,0,0,0,T0 not in protein graph
-KLF14,0,0,0,1,0,1,0,T0 not in protein graph
+KLF14,0,0,0,0,0,0,0,T0 not in protein graph
 LDLR-AS1,0,0,0,0,1,1,0,T0 not in protein graph
 LMF1-AS1,0,0,0,0,1,1,0,T0 not in protein graph
 LOC112694753,0,0,0,0,1,1,0,T0 not in protein graph
@@ -162,13 +162,13 @@ MLXIP,0,0,0,1,0,1,0,T0 not in protein graph
 MMAB,0,0,0,0,1,1,0,T0 not in protein graph
 NCAN,0,0,0,1,0,1,0,T0 not in protein graph
 NCEH1,0,0,1,0,0,1,0,T0 not in protein graph
-OSBPL8,0,0,0,1,0,1,0,T0 not in protein graph
+OSBPL8,0,0,0,0,0,0,0,T0 not in protein graph
 SIK3,0,0,0,0,1,1,0,T0 not in protein graph
 SLC37A4,0,0,0,1,0,1,0,T0 not in protein graph
-STAP1,0,0,0,1,0,1,0,T0 not in protein graph
-SUGP1,0,0,0,1,0,1,0,T0 not in protein graph
+STAP1,0,0,0,0,0,0,0,T0 not in protein graph
+SUGP1,0,0,0,0,0,0,0,T0 not in protein graph
 TSPO,0,0,0,0,0,0,0,T0 not in protein graph
-UBASH3B,0,0,0,1,0,1,0,T0 not in protein graph
+UBASH3B,0,0,0,0,0,0,0,T0 not in protein graph
 USF1,0,0,0,1,0,1,0,T0 not in protein graph
 VAPA,0,0,0,0,0,0,0,T0 not in protein graph
 VAPB,0,0,0,0,0,0,0,T0 not in protein graph
@@ -767,7 +767,7 @@ IL13RA2,1,0,0,0,0,0,33,T4 STRING-only
 IL5RA,1,0,0,0,0,0,33,T4 STRING-only
 LCN2,1,0,0,0,0,0,33,T4 STRING-only
 LPCAT1,1,0,0,0,0,0,33,T4 STRING-only
-NR1H3,1,0,1,0,0,1,33,T3 single-layer
+NR1H3,1,0,1,1,0,2,33,T2 multi-layer
 NRP1,1,0,0,0,0,0,33,T4 STRING-only
 SELE,1,0,1,0,0,1,33,T3 single-layer
 SLC9A1,1,0,0,0,0,0,33,T4 STRING-only
@@ -1231,7 +1231,7 @@ ERG28,1,0,0,0,0,0,18,T4 STRING-only
 FKBP8,1,0,0,0,0,0,18,T4 STRING-only
 FLCN,1,0,0,0,0,0,18,T4 STRING-only
 GGPS1,1,0,0,0,0,0,18,T4 STRING-only
-GPAM,1,0,0,0,0,0,18,T4 STRING-only
+GPAM,1,0,0,1,0,1,18,T3 single-layer
 HYOU1,1,0,0,0,0,0,18,T4 STRING-only
 IGKV1-33,1,0,0,0,0,0,18,T4 STRING-only
 IL9R,1,0,0,0,0,0,18,T4 STRING-only
@@ -1392,7 +1392,7 @@ MRPS5,1,0,0,0,0,0,14,T4 STRING-only
 NCSTN,1,0,0,0,0,0,14,T4 STRING-only
 NF2,1,0,0,0,0,0,14,T4 STRING-only
 PAFAH1B1,1,0,0,0,0,0,14,T4 STRING-only
-PEMT,1,0,0,0,0,0,14,T4 STRING-only
+PEMT,1,0,0,1,0,1,14,T3 single-layer
 PFKFB2,1,0,0,0,0,0,14,T4 STRING-only
 PMS2,1,0,0,0,0,0,14,T4 STRING-only
 PNLIPRP3,1,0,0,0,0,0,14,T4 STRING-only
@@ -1740,7 +1740,7 @@ SESN3,1,0,0,0,0,0,6,T4 STRING-only
 SMPD3,1,0,0,0,0,0,6,T4 STRING-only
 SNX17,1,0,0,0,0,0,6,T4 STRING-only
 SPTLC1,1,0,0,0,0,0,6,T4 STRING-only
-STAB1,1,0,0,0,0,0,6,T4 STRING-only
+STAB1,1,0,0,1,0,1,6,T3 single-layer
 SUGT1,1,0,0,0,0,0,6,T4 STRING-only
 TCL1B,1,0,0,0,0,0,6,T4 STRING-only
 THEM4,1,0,0,0,0,0,6,T4 STRING-only
@@ -1821,7 +1821,7 @@ ARMS2,1,0,0,0,0,0,3,T4 STRING-only
 BUD13,1,0,0,0,0,0,3,T4 STRING-only
 CA8,1,0,0,0,0,0,3,T4 STRING-only
 CCKBR,1,0,0,0,0,0,3,T4 STRING-only
-CELSR2,1,0,0,0,0,0,3,T4 STRING-only
+CELSR2,1,0,0,1,0,1,3,T3 single-layer
 CLEC3B,1,0,0,0,0,0,3,T4 STRING-only
 COQ3,1,0,0,0,0,0,3,T4 STRING-only
 EBF2,1,0,0,0,0,0,3,T4 STRING-only
@@ -1868,7 +1868,7 @@ ISX,1,0,0,0,0,0,2,T4 STRING-only
 K7ERJ3_HUMAN,1,0,0,0,0,0,2,T4 STRING-only
 LSR,1,0,1,0,0,1,2,T3 single-layer
 LTA4H,1,0,0,0,0,0,2,T4 STRING-only
-MADD,1,0,0,0,0,0,2,T4 STRING-only
+MADD,1,0,0,1,0,1,2,T3 single-layer
 MAF1,1,0,0,0,0,0,2,T4 STRING-only
 MTDH,1,0,0,0,0,0,2,T4 STRING-only
 NUAK1,1,0,0,0,0,0,2,T4 STRING-only

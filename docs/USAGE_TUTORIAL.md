@@ -40,13 +40,13 @@ pip install neo4j pandas networkx matplotlib seaborn
 ### Downloading the data
 
 ```bash
-# Version 1.2.1 — 30 files, 2.37 MB uncompressed / 0.35 MB as the archive
-wget "https://zenodo.org/records/23074632/files/lipokg_data_v1.2.1.zip?download=1"
-unzip lipokg_data_v1.2.1.zip
-cd lipokg_data_v1.2.1
+# Version 1.2.2 — 30 files, 2.38 MB uncompressed / 0.35 MB as the archive
+wget "https://zenodo.org/records/23080346/files/lipokg_data_v1.2.2.zip?download=1"
+unzip lipokg_data_v1.2.2.zip
+cd lipokg_data_v1.2.2
 ```
 
-The version DOI `10.5281/zenodo.23074632` always resolves to v1.2.1 and the concept DOI
+The version DOI `10.5281/zenodo.23080346` always resolves to v1.2.2 and the concept DOI
 `10.5281/zenodo.21318099` always resolves to the latest version.
 
 ## Loading the data into Neo4j
@@ -494,10 +494,10 @@ A: Check the label and property names, and inspect the data with
   author    = {Zhang, Ke and Zhao, Junyi and Yu, Yang},
   title     = {LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research},
   year      = {2026},
-  version   = {1.2.1},
+  version   = {1.2.2},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.23074632},
-  url       = {https://doi.org/10.5281/zenodo.23074632}
+  doi       = {10.5281/zenodo.23080346},
+  url       = {https://doi.org/10.5281/zenodo.23080346}
 }
 ```
 

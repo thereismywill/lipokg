@@ -239,6 +239,6 @@ The full Neo4j database includes 25 additional node types and 19 additional rela
 
 ## Version Information
 
-- **Version:** 1.2.1
+- **Version:** 1.2.2
 - **Release date:** 2026-10-01
 - **Data collection date:** 2026-06 (KEGG and WikiPathways re-retrieved 2026-10-01)

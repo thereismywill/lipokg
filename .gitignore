@@ -224,3 +224,6 @@ figures/generated/
 *.bak
 *.bak_*
 _superseded_archives/
+
+# --- macOS ---
+.DS_Store

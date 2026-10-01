@@ -324,14 +324,14 @@ If you use this dataset in your research, please cite:
   author    = {Zhang, Ke and Zhao, Junyi and Yu, Yang},
   title     = {LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research},
   year      = {2026},
-  version   = {1.2.1},
+  version   = {1.2.2},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.23074632},
-  url       = {https://doi.org/10.5281/zenodo.23074632}
+  doi       = {10.5281/zenodo.23080346},
+  url       = {https://doi.org/10.5281/zenodo.23080346}
 }
 ```
 
-The version DOI above always resolves to v1.2.1. To cite the latest version at any time, use the
+The version DOI above always resolves to v1.2.2. To cite the latest version at any time, use the
 concept DOI `10.5281/zenodo.21318099`.
 
 ## License
@@ -356,6 +356,30 @@ For questions or feedback about this dataset:
 - **GitHub:** https://github.com/thereismywill/lipokg
 
 ## Changelog
+
+### Version 1.2.2 (2026-10)
+
+- **The deposited archive now matches the corrected documentation.** The v1.2.1 archive was produced
+  before the eight files named in that release's last bullet had been finalised, so the deposit and the
+  repository disagreed on `README.md`, `QUICKSTART.md`, `metadata.json`, `docs/SCHEMA.md`,
+  `docs/USAGE_TUTORIAL.md`, `docs/CYPHER_EXAMPLES.cypher`, `docs/lipokg_schema.yaml` and
+  `data/graph_statistics.json`. This release re-packages them, so deposit and repository are byte-identical
+  again.
+- **Version strings corrected throughout the deposit.** `data/graph_statistics.json` carried `1.1.0`,
+  `docs/SCHEMA.md` carried `1.1.0`, and `docs/lipokg_schema.yaml` carried `1.0.0 (draft)`; the QUICKSTART
+  and USAGE_TUTORIAL example commands still referenced `lipokg-v1.0.0.zip`. All now carry the current
+  version, so the deposit no longer states three different versions of itself.
+- **The gene-level annotation coverage matrix (Table S24) was recomputed.** Its disease/GWAS column still
+  reflected the disease layer *before* the rebuild described in v1.2.1: four genes were marked that carry
+  no association in the deposited `data/disease_associations.csv` (APOH, LRP1, PEPD, VLDLR), and seven that
+  do carry one were unmarked (CELSR2, DGAT1, GPAM, MADD, NR1H3, PEMT, STAB1 — all GWAS Catalog). The
+  `n_non_string_layers` and `tier` columns were recomputed for the same 16 rows from the deposited files.
+  The disease/GWAS layer is therefore **65** genes (was 62).
+- **Downstream counts resynchronised** to the recomputed matrix: at least one non-STRING layer
+  **256 (13.8%)** (was 252 / 13.6%); two or more layers **50 (2.7%)** (was 48 / 2.6%); STRING-only
+  **1,596 (86.2%)** (was 1,600 / 86.4%). Six of the changed rows lie in the curated 82-gene core, so that
+  figure becomes **69.5%** (was 64.6%, which disagreed with the manuscript's 68.3% before this release).
+  The manuscript, its Table 1, Figure 3C and the query page carry the same values.
 
 ### Version 1.2.1 (2026-10)
 
@@ -391,14 +415,14 @@ For questions or feedback about this dataset:
 | Layer (denominator = 1,852 proteins in the interaction graph) | Genes | Share |
 |---|---|---|
 | Pathway membership | 211 | 11.4% |
-| Disease / GWAS association | 62 | 3.3% |
+| Disease / GWAS association | 65 | 3.5% |
 | ClinVar variant annotation | 43 | 2.3% |
 | Particle membership | 31 | 1.7% |
-| **Any non-STRING layer** | **252** | **13.6%** |
-| **Two or more non-STRING layers** | **48** | **2.6%** |
-| **STRING connectivity only** | **1,600** | **86.4%** |
+| **Any non-STRING layer** | **256** | **13.8%** |
+| **Two or more non-STRING layers** | **50** | **2.7%** |
+| **STRING connectivity only** | **1,596** | **86.2%** |
 
-Multi-layer annotation is concentrated in the curated 82-gene lipoprotein core (64.6% carry at least one
+Multi-layer annotation is concentrated in the curated 82-gene lipoprotein core (69.5% carry at least one
 additional layer). Proteins reachable only through 1-hop interaction expansion should be read as interaction
 context rather than as multi-layer annotations.
 
