@@ -33,9 +33,12 @@ LipoKG is a comprehensive knowledge graph integrating multi-source data for lipo
 **Independent Validation:**
 - **Gene Ontology GO:0042157 (lipoprotein metabolic process):** 92.3% coverage (132/143 genes)
 - **GLGC 2021 GWAS loci:** 64.9% coverage (244/376 genome-wide significant loci)
-- **ClinGen dosage-sensitive genes:** 100% coverage (25/25 definitive + moderate-evidence genes)
-- **Published review gene lists:** 95.9% coverage (93/97 genes)
+- **ClinGen dosage-sensitive genes:** 100% coverage (25/25 definitive + moderate-evidence genes;
+  18/18 definitive and 7/7 moderate-evidence)
 - **Expert-curated 54-gene reference set:** 100% coverage (54/54)
+
+These four, together with the three construction pathway databases above, are the seven benchmarks
+reported in Figure 3A of the manuscript; across them the average coverage is 88.6%.
 
 ## Data Files
 
