@@ -236,6 +236,54 @@ TOPOLOGY = {
     'louvain_modules': 9,
 }
 
+def mannwhitney_p(a, b):
+    """双尾 Mann–Whitney U 的 p 值（正态近似 + 结校正）。
+
+    2026-10-01：Figure 5a 的 p 值原为手写字面量（p = 0.003），而 Table S18 重建后真值是 0.15。
+    图上任何统计量都应当**现算**，手写的数字在数据变动后不会跟。
+    """
+    import math
+    from collections import Counter
+    a = [x for x in a if x is not None]
+    b = [x for x in b if x is not None]
+    allv = sorted(a + b)
+    n1, n2 = len(a), len(b)
+    if n1 == 0 or n2 == 0:
+        return float('nan')
+    ranks, i = {}, 0
+    while i < len(allv):
+        j = i
+        while j + 1 < len(allv) and allv[j + 1] == allv[i]:
+            j += 1
+        ranks[allv[i]] = (i + j + 2) / 2
+        i = j + 1
+    U1 = sum(ranks[x] for x in a) - n1 * (n1 + 1) / 2
+    U = min(U1, n1 * n2 - U1)
+    cnt = Counter(allv)
+    tie = sum(v ** 3 - v for v in cnt.values())
+    N = n1 + n2
+    sd = ((n1 * n2 / 12) * ((N + 1) - tie / (N * (N - 1)))) ** 0.5
+    if not sd:
+        return 1.0
+    z = (U - n1 * n2 / 2) / sd
+    return 2 * (1 - 0.5 * (1 + math.erf(abs(z) / math.sqrt(2))))
+
+
+def load_disease_layer_counts():
+    """(有关联的蛋白数, 图内蛋白数) —— 图上要标「疾病层只注释了 N/M 个蛋白」。"""
+    import csv as _c
+    d = resolve_data_dir()
+    with open(os.path.join(d, 'string_proteins.csv'), encoding='utf-8-sig') as f:
+        n_prot = sum(1 for _ in _c.DictReader(f))
+    with open(os.path.join(d, 'disease_associations.csv'), encoding='utf-8-sig') as f:
+        n_ann = len({r['source'] for r in _c.DictReader(f)})
+    with open(os.path.join(d, 'string_proteins.csv'), encoding='utf-8-sig') as f:
+        names = {r['name'] for r in _c.DictReader(f)}
+    with open(os.path.join(d, 'disease_associations.csv'), encoding='utf-8-sig') as f:
+        in_graph = len({r['source'] for r in _c.DictReader(f) if r['source'] in names})
+    return in_graph, n_prot
+
+
 def save_fig(fig, path):
     """Save figure with publication settings."""
     fig.savefig(path, dpi=DPI, bbox_inches='tight',

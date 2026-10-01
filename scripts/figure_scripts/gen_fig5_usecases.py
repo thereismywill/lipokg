@@ -40,20 +40,33 @@ fig.suptitle('Figure 5: Use Case Examples', fontsize=18, fontweight='bold', y=0.
 # Panel A: Knowledge Gap Discovery
 # ═══════════════════════════════════════════════════════
 axA = axes[0, 0]
-axA.set_title('A  Use Case 1: Knowledge Gap Discovery', fontsize=12, fontweight='bold', pad=8, color='#222222')
+axA.set_title('A  Use Case 1: Annotation Gap Discovery',
+              fontsize=12, fontweight='bold', pad=8, color='#222222')
+# 2026-10-01 重建：原 Panel A 的文献计数与 p = 0.003 来自**伪造**的 Table_S18
+#   （3 个基因不在图内、度数与该沉积不符、gap_score 是手工递减序列）。
+#   现改为直接读重建后的 Table_S18，且中位数与 p 值**全部现算**（不留手写字面量）。
 top20 = gap_df.head(20)
-gap_pubs = top20['lipoprotein_publications_2023_2025'].values
-ctrl_pubs = top20['control_publications'].values
+gap_pubs = top20['lipoprotein_publications_2023_2025'].values.astype(float)
+ctrl_pubs = top20['control_publications'].values.astype(float)
 x_pos = np.arange(len(top20))
-axA.barh(x_pos + 0.2, gap_pubs, 0.35, color='#C44E52', alpha=0.8, label='Gap proteins')
+axA.barh(x_pos + 0.2, gap_pubs, 0.35, color='#C44E52', alpha=0.8, label='Top-20 gap proteins')
 axA.barh(x_pos - 0.2, ctrl_pubs, 0.35, color='#4C72B0', alpha=0.8, label='Degree-matched controls')
+axA.set_xscale('log')                       # 跨度 51–8,684 篇，必须用对数轴
 axA.set_yticks(x_pos)
 axA.set_yticklabels(top20['gene_symbol'], fontsize=7)
-axA.set_xlabel('Lipoprotein Publications (2023–2025)', fontsize=9, color='#222222')
+axA.set_xlabel('Lipoprotein publications 2023\u20132025 (log scale)', fontsize=9, color='#222222')
 axA.legend(fontsize=7, loc='lower right')
 axA.invert_yaxis()
-axA.text(0.98, 0.98, 'Median: 3.5 vs 24\np = 0.003\n(Mann-Whitney U)',
-         transform=axA.transAxes, fontsize=8, va='top', ha='right', color='#222222',
+_med_g, _med_c = float(np.median(gap_pubs)), float(np.median(ctrl_pubs))
+_p_gc = mannwhitney_p(list(gap_pubs), list(ctrl_pubs))
+_n_ann, _n_prot = load_disease_layer_counts()
+axA.text(0.98, 0.98,
+         f'Median: {_med_g:.0f} vs {_med_c:.0f}\n'
+         f'p = {_p_gc:.2f} (Mann\u2013Whitney U)\n'
+         'not significant\n'
+         f'Disease layer: {_n_ann:,} of {_n_prot:,}\nproteins annotated\n'
+         '\u2192 annotation gap, not\n   a literature gap',
+         transform=axA.transAxes, fontsize=7.5, va='top', ha='right', color='#222222',
          bbox=dict(boxstyle='round', fc='#FFF5F5', ec='#C44E52', alpha=0.9))
 axA.spines['top'].set_visible(False)
 axA.spines['right'].set_visible(False)
