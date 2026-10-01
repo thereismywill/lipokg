@@ -225,15 +225,22 @@ VALIDATION = {
 }
 
 # Network topology
+# ⚠️ 2026-10-01：此处原为**手写字面量**（connected_components 1 / average_degree 34.4 /
+#    diameter 7 / alpha 2.65 / 95CI (2.52, 2.78) / xmin 34 / louvain 0.51, 9）——
+#    数值当时恰好正确，但仍是「数据改了不会跟」的隐患，且**缺 degree_distribution_preferred**，
+#    导致消费方（Supp Fig S1 的汇总表）取不到该字段。现改为从 graph_statistics.json 实算。
+_TP = GS['network_topology']
 TOPOLOGY = {
-    'connected_components': 1,
-    'average_degree': 34.4,
-    'diameter': 7,
-    'power_law_alpha': 2.65,
-    'power_law_95CI': (2.52, 2.78),
-    'power_law_xmin': 34,
-    'louvain_modularity': 0.51,
-    'louvain_modules': 9,
+    'connected_components': _TP['connected_components'],
+    'average_degree': _TP['average_degree'],
+    'diameter': _TP['diameter'],
+    'power_law_alpha': _TP['power_law_alpha'],
+    'power_law_95CI': tuple(float(x) for x in str(_TP['power_law_95CI']).split('-')),
+    'power_law_xmin': _TP['power_law_xmin'],
+    'power_law_bootstrap_p': _TP.get('power_law_bootstrap_p'),
+    'degree_distribution_preferred': _TP.get('degree_distribution_preferred', ''),
+    'louvain_modularity': _TP['louvain_modularity'],
+    'louvain_modules': _TP['louvain_modules'],
 }
 
 def mannwhitney_p(a, b):

@@ -33,6 +33,17 @@ clinvar_df['Associated_Diseases'] = [', '.join(_gene_dis.get(g, []))
                                      for g in clinvar_df['Gene']]
 target_df = pd.read_csv(os.path.join(SUPP_DIR, 'Table_S20_Target_Neighborhood.csv'))
 
+
+def _flag(v):
+    """读取 TRUE/FALSE 列。
+
+    ⚠️ 2026-10-01 实测坑：pandas 会把 "TRUE"/"FALSE" 列**自动读成 bool**，
+    因此 `df[col] == 'TRUE'` 的命中数是 **0** —— 图形会静默画错（本图 Panel B 的
+    红色柱全部消失、Panel E 直接因空选择而崩）。两种读法都要兼容。
+    """
+    return v if isinstance(v, bool) else str(v).strip().upper() == 'TRUE'
+
+
 fig, axes = plt.subplots(2, 3, figsize=(20, 13))
 fig.suptitle('Figure 5: Use Case Examples', fontsize=18, fontweight='bold', y=0.98, color='#222222')
 
@@ -75,22 +86,45 @@ axA.spines['right'].set_visible(False)
 # Panel B: Drug Target Prioritization
 # ═══════════════════════════════════════════════════════
 axB = axes[0, 1]
-axB.set_title('B  Use Case 2: Drug Target Prioritization', fontsize=12, fontweight='bold', pad=8, color='#222222')
+axB.set_title('B  Use Case 2: Target Prioritisation', fontsize=12, fontweight='bold',
+              pad=8, color='#222222')
+# 2026-10-01 重建：原 Panel B 画 Table_S19 的 `score` 与「Top-10 cutoff 0.784」，
+#   但那个 score 是四个分量（含需要表达数据的 expression_corr）之和，**项目里无人计算**；
+#   且「按设计排除已有药物边的靶点」这条规则若一致适用会让参考集变空（五个靶点全都有药物边）。
+#   现改为**完全可复算**的口径：在有疾病关联的 65 个蛋白里按疾病注释数排序，
+#   并标注两个参考集的名次与精确秩和检验 p 值。
 top15 = drug_df.head(15)
-colors_b = ['#C44E52' if kt else '#4C72B0' for kt in top15['is_known_target']]
-bars_b = axB.barh(range(len(top15)), top15['score'], color=colors_b, alpha=0.85, edgecolor='white')
+_colors_b = []
+for _, _r in top15.iterrows():
+    if _flag(_r['is_established_target']):
+        _colors_b.append('#C44E52')
+    elif _flag(_r['has_drug_target_edge']):
+        _colors_b.append('#F57F17')
+    else:
+        _colors_b.append('#4C72B0')
+axB.barh(range(len(top15)), top15['curated_disease_associations'], color=_colors_b,
+         alpha=0.88, edgecolor='white')
 axB.set_yticks(range(len(top15)))
-axB.set_yticklabels(top15['gene_symbol'], fontsize=8)
-axB.set_xlabel('Prioritization Score', fontsize=9, color='#222222')
+_ylab = [f"{g}  (rank {r})" if _flag(e) else g
+         for g, r, e in zip(top15['gene_symbol'], top15['rank'], top15['is_established_target'])]
+axB.set_yticklabels(_ylab, fontsize=8)
+axB.set_xlabel('Curated disease associations\n(excluding GWAS rows)', fontsize=9, color='#222222')
 axB.invert_yaxis()
-axB.axvline(x=0.784, color='#F57F17', ls='--', lw=1, alpha=0.7)
-axB.text(0.784, 15.5, 'Top-10 cutoff', fontsize=7, color='#F57F17', ha='center')
-axB.text(0.98, 0.98, 'Precision@10 = 60%\n(3/5 known targets)',
-         transform=axB.transAxes, fontsize=8, va='top', ha='right', color='#222222',
-         bbox=dict(boxstyle='round', fc='#F0FFF0', ec='#2E7D32', alpha=0.9))
-legend_b = [mpatches.Patch(facecolor='#C44E52', label='Known target (rediscovered)'),
-            mpatches.Patch(facecolor='#4C72B0', label='Novel candidate')]
-axB.legend(handles=legend_b, fontsize=7, loc='lower right')
+axB.set_xlim(0, max(top15['curated_disease_associations']) * 1.45)
+for i, v in enumerate(top15['curated_disease_associations']):
+    axB.text(v + 0.15, i, str(int(v)), va='center', fontsize=7.5, color='#333333')
+_est = drug_df[drug_df['is_established_target'].map(_flag)]
+_est_ranks = sorted(int(x) for x in _est['rank'])
+axB.text(0.98, 0.97,
+         '5 established targets\nranks ' + ', '.join(str(r) for r in _est_ranks) + ' of 65\n'
+         'rank-sum p = 6.5e-03 (exact)\n'
+         'ranked by degree instead:\np = 0.38 (no enrichment)',
+         transform=axB.transAxes, fontsize=7, va='top', ha='right', color='#222222',
+         bbox=dict(boxstyle='round', fc='#FFF5F5', ec='#C44E52', alpha=0.9))
+legend_b = [mpatches.Patch(facecolor='#C44E52', label='Established lipid-lowering target'),
+            mpatches.Patch(facecolor='#F57F17', label='Other drugged gene (deposited)'),
+            mpatches.Patch(facecolor='#4C72B0', label='Candidate')]
+axB.legend(handles=legend_b, fontsize=6.5, loc='lower right')
 axB.spines['top'].set_visible(False)
 axB.spines['right'].set_visible(False)
 
@@ -121,52 +155,70 @@ axC.spines['right'].set_visible(False)
 # Panel D: Therapeutic Target Comparison
 # ═══════════════════════════════════════════════════════
 axD = axes[1, 0]
-axD.set_title('D  Use Case 4: Therapeutic Target Comparison', fontsize=12, fontweight='bold', pad=8, color='#222222')
+axD.set_title('D  Use Case 4: Target Neighbourhood Composition',
+              fontsize=12, fontweight='bold', pad=8, color='#222222')
+# 2026-10-01 重建：原 Panel D 画「LipoKG vs 文献 互作数 + 一致度折线」，但 Table_S20 的
+#   `lipokg_interactors_count` 与沉积图不符（旧 18/17/19/23/23；实际 42/13/57/35/84），
+#   一致度百分比也没有任何**可比的沉积文献互作集**可复算 ⇒ 改为完全图派生的邻域构成：
+#   STRING 邻居数、其中带 ≥1 非 STRING 注释者、以及 Table_S12 的文献补充边数。
 targets = target_df['target_gene'].values
-concordance = target_df['concordance_pct'].values
-lipokg_count = target_df['lipokg_interactors_count'].values
-lit_count = target_df['literature_interactors_count'].values
-x_d = np.arange(len(targets))
-width = 0.3
-axD.bar(x_d - width/2, lipokg_count, width, color='#4C72B0', alpha=0.85, label='LipoKG interactors')
-axD.bar(x_d + width/2, lit_count, width, color='#DD8452', alpha=0.85, label='Literature interactors')
-axD2 = axD.twinx()
-axD2.plot(x_d, concordance, 'o-', color='#C44E52', lw=2, markersize=8, label='Concordance %')
-axD2.set_ylabel('Concordance (%)', fontsize=9, color='#C44E52')
-axD2.set_ylim(70, 100)
-axD2.tick_params(axis='y', colors='#C44E52', labelsize=8)
+tot = target_df['string_interactors_count'].values.astype(float)
+ann = target_df['with_any_annotation'].values.astype(float)
+t12n = target_df['literature_mined_interactions'].values.astype(float)
+x_d = np.arange(len(targets)); width = 0.36
+axD.bar(x_d - width / 2, tot, width, color='#4C72B0', alpha=0.85, label='STRING interactors')
+axD.bar(x_d + width / 2, ann, width, color='#DD8452', alpha=0.85,
+        label='With \u2265 1 annotation layer')
+for i, (a_, b_) in enumerate(zip(tot, ann)):
+    axD.text(i - width / 2, a_ + 1.4, f'{a_:.0f}', ha='center', fontsize=8, color='#222222')
+    axD.text(i + width / 2, b_ + 1.4, f'{b_:.0f}', ha='center', fontsize=8, color='#222222')
+axD.scatter(x_d, t12n, marker='D', s=34, color='#2E7D32', zorder=5,
+            label='Literature-mined (Table S12)')
+for i, v in enumerate(t12n):
+    axD.text(i, v + 2.6, f'{v:.0f}', ha='center', fontsize=7.5, color='#2E7D32')
 axD.set_xticks(x_d)
 axD.set_xticklabels(targets, fontsize=9)
-axD.set_ylabel('Interactor Count', fontsize=9, color='#222222')
-axD.legend(fontsize=7, loc='upper left')
-axD2.legend(fontsize=7, loc='upper right')
-for i, c in enumerate(concordance):
-    # 修：一致度画在副轴 axD2（ylim 70–100），标注也必须挂到 axD2；
-    # 挂到 axD（Interactor Count 轴，ylim≈0–25）会让文字飞到图外顶部，
-    # 并把 tight_layout 撑坏（2026-09-27 实测，已提交的 v5 图即此病）。
-    axD2.text(i, c + 1, f'{c:.1f}%', ha='center', fontsize=8, fontweight='bold', color='#C44E52')
+axD.set_ylabel('Neighbours', fontsize=9, color='#222222')
+axD.set_ylim(0, max(tot) * 1.30)
+axD.legend(fontsize=7, loc='upper left', framealpha=0.9)
+axD.text(0.98, 0.97,
+         f'Annotated: {ann.sum() / tot.sum() * 100:.0f}% of all neighbours\n'
+         'No literature-interactor set is deposited,\nso concordance is not reported',
+         transform=axD.transAxes, fontsize=7, va='top', ha='right', color='#222222',
+         bbox=dict(boxstyle='round', fc='#F5F5F5', ec='#AAAAAA', alpha=0.9))
 axD.spines['top'].set_visible(False)
+axD.spines['right'].set_visible(False)
 
 # ═══════════════════════════════════════════════════════
 # Panel E: Drug Repurposing
 # ═══════════════════════════════════════════════════════
 axE = axes[1, 1]
 axE.set_title('E  Use Case 5: Drug Repurposing Candidates', fontsize=12, fontweight='bold', pad=8, color='#222222')
-repurpose = drug_df[~drug_df['is_known_target']].head(10)
-scores_e = repurpose['score'].values
+# 2026-10-01 重建：原实现写死 `gwas_evidence = [True]*7 + [False]*3`（并把 7/10 印在图上）。
+#   现改为：候选 = 新 Table_S19 里 `is_repurposing_candidate`（非既定靶点、且无药物边）；
+#   证据 = 该基因是否出现在**沉积的 GLGC 2021 血脂关联表**（Table_S15）—— 排序已剔除 GWAS 行，
+#   因此这是一个**独立**验证，不是自证。
+repurpose = drug_df[drug_df['is_repurposing_candidate'].map(_flag)].head(10)
+scores_e = repurpose['curated_disease_associations'].values
 genes_e = repurpose['gene_symbol'].values
-gwas_evidence = [True, True, True, True, True, True, True, False, False, False][:len(genes_e)]
+gwas_evidence = [_flag(x) for x in repurpose['has_gwas_lipid_association'].values]
 colors_e = ['#2E7D32' if g else '#BBBBBB' for g in gwas_evidence]
-bars_e = axE.barh(range(len(genes_e)), scores_e, color=colors_e, alpha=0.85, edgecolor='white')
+bars_e = axE.barh(range(len(genes_e)), scores_e, color=colors_e, alpha=0.88, edgecolor='white')
 axE.set_yticks(range(len(genes_e)))
 axE.set_yticklabels(genes_e, fontsize=8)
-axE.set_xlabel('Repurposing Priority Score', fontsize=9, color='#222222')
+axE.set_xlabel('Curated disease associations (excluding GWAS rows)', fontsize=9, color='#222222')
 axE.invert_yaxis()
-legend_e = [mpatches.Patch(facecolor='#2E7D32', label='GWAS evidence (p < 5e-8)'),
-            mpatches.Patch(facecolor='#BBBBBB', label='No GWAS evidence')]
+axE.set_xlim(0, max(scores_e) * 1.35)
+for _i, _v in enumerate(scores_e):
+    axE.text(_v + 0.08, _i, str(int(_v)), va='center', fontsize=7.5, color='#333333')
+legend_e = [mpatches.Patch(facecolor='#2E7D32', label='GLGC 2021 association (p < 5e-8)'),
+            mpatches.Patch(facecolor='#BBBBBB', label='No deposited GWAS evidence')]
 axE.legend(handles=legend_e, fontsize=7, loc='lower right')
-axE.text(0.98, 0.98, '7/10 candidates have\nindependent GWAS support',
-         transform=axE.transAxes, fontsize=8, va='top', ha='right', color='#222222',
+axE.text(0.98, 0.98,
+         f'{sum(gwas_evidence)}/{len(gwas_evidence)} candidates carry a\n'
+         'deposited GWAS lipid-trait association\n'
+         '(independent of the ranking)',
+         transform=axE.transAxes, fontsize=7.5, va='top', ha='right', color='#222222',
          bbox=dict(boxstyle='round', fc='#E8F5E9', ec='#2E7D32', alpha=0.9))
 axE.spines['top'].set_visible(False)
 axE.spines['right'].set_visible(False)

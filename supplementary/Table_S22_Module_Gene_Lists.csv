@@ -1,0 +1,181 @@
+﻿module_id,module_name,gene_symbol,graph_degree
+M1,Broad metabolic and signalling regulation,AKT1,435
+M1,Broad metabolic and signalling regulation,TP53,296
+M1,Broad metabolic and signalling regulation,HSP90AA1,187
+M1,Broad metabolic and signalling regulation,CTNNB1,185
+M1,Broad metabolic and signalling regulation,MAPK3,185
+M1,Broad metabolic and signalling regulation,BCL2,182
+M1,Broad metabolic and signalling regulation,ACTB,174
+M1,Broad metabolic and signalling regulation,JUN,172
+M1,Broad metabolic and signalling regulation,PPARG,169
+M1,Broad metabolic and signalling regulation,MYC,168
+M1,Broad metabolic and signalling regulation,EP300,164
+M1,Broad metabolic and signalling regulation,GAPDH,163
+M1,Broad metabolic and signalling regulation,ESR1,154
+M1,Broad metabolic and signalling regulation,MAPK1,151
+M1,Broad metabolic and signalling regulation,HSP90AB1,147
+M1,Broad metabolic and signalling regulation,CASP3,144
+M1,Broad metabolic and signalling regulation,PTEN,129
+M1,Broad metabolic and signalling regulation,CREBBP,126
+M1,Broad metabolic and signalling regulation,HIF1A,123
+M1,Broad metabolic and signalling regulation,FOXO1,114
+M2,Lipid transport and metabolism,INS,205
+M2,Lipid transport and metabolism,ALB,185
+M2,Lipid transport and metabolism,APOE,151
+M2,Lipid transport and metabolism,MMP9,139
+M2,Lipid transport and metabolism,APP,133
+M2,Lipid transport and metabolism,PPARA,122
+M2,Lipid transport and metabolism,APOB,117
+M2,Lipid transport and metabolism,CD36,108
+M2,Lipid transport and metabolism,APOA1,103
+M2,Lipid transport and metabolism,SCARB1,100
+M2,Lipid transport and metabolism,LEP,97
+M2,Lipid transport and metabolism,SREBF1,90
+M2,Lipid transport and metabolism,CRP,87
+M2,Lipid transport and metabolism,LPL,84
+M2,Lipid transport and metabolism,SCARB2,82
+M2,Lipid transport and metabolism,MPO,76
+M2,Lipid transport and metabolism,DGAT1,70
+M2,Lipid transport and metabolism,APOH,70
+M2,Lipid transport and metabolism,CLU,67
+M2,Lipid transport and metabolism,VTN,62
+M3,Growth-factor receptor signalling and cell migration,EGFR,287
+M3,Growth-factor receptor signalling and cell migration,SRC,241
+M3,Growth-factor receptor signalling and cell migration,FN1,191
+M3,Growth-factor receptor signalling and cell migration,CD44,161
+M3,Growth-factor receptor signalling and cell migration,EGF,160
+M3,Growth-factor receptor signalling and cell migration,ERBB2,154
+M3,Growth-factor receptor signalling and cell migration,GRB2,134
+M3,Growth-factor receptor signalling and cell migration,TGFB1,132
+M3,Growth-factor receptor signalling and cell migration,PIK3CA,127
+M3,Growth-factor receptor signalling and cell migration,KRAS,125
+M3,Growth-factor receptor signalling and cell migration,PIK3R1,121
+M3,Growth-factor receptor signalling and cell migration,RHOA,118
+M3,Growth-factor receptor signalling and cell migration,KIT,114
+M3,Growth-factor receptor signalling and cell migration,IGF1,112
+M3,Growth-factor receptor signalling and cell migration,PTPN11,107
+M3,Growth-factor receptor signalling and cell migration,FGF2,106
+M3,Growth-factor receptor signalling and cell migration,PDGFRB,105
+M3,Growth-factor receptor signalling and cell migration,CDC42,104
+M3,Growth-factor receptor signalling and cell migration,KDR,103
+M3,Growth-factor receptor signalling and cell migration,ITGB1,101
+M4,Cytokine signalling and immune response,IL6,376
+M4,Cytokine signalling and immune response,IL1B,299
+M4,Cytokine signalling and immune response,STAT3,250
+M4,Cytokine signalling and immune response,IFNG,241
+M4,Cytokine signalling and immune response,IL10,230
+M4,Cytokine signalling and immune response,CD4,214
+M4,Cytokine signalling and immune response,CXCL8,176
+M4,Cytokine signalling and immune response,IL2,167
+M4,Cytokine signalling and immune response,CD8A,167
+M4,Cytokine signalling and immune response,STAT1,164
+M4,Cytokine signalling and immune response,IL4,158
+M4,Cytokine signalling and immune response,CCL2,154
+M4,Cytokine signalling and immune response,JAK2,151
+M4,Cytokine signalling and immune response,CSF2,133
+M4,Cytokine signalling and immune response,ITGAM,131
+M4,Cytokine signalling and immune response,IL1A,130
+M4,Cytokine signalling and immune response,PTPRC,127
+M4,Cytokine signalling and immune response,ICAM1,119
+M4,Cytokine signalling and immune response,CXCR4,116
+M4,Cytokine signalling and immune response,CCL5,114
+M5,"Sterol, steroid and bile-acid biosynthesis",HMGCR,70
+M5,"Sterol, steroid and bile-acid biosynthesis",CYP7A1,69
+M5,"Sterol, steroid and bile-acid biosynthesis",SREBF2,58
+M5,"Sterol, steroid and bile-acid biosynthesis",ACACA,56
+M5,"Sterol, steroid and bile-acid biosynthesis",HMGCS1,53
+M5,"Sterol, steroid and bile-acid biosynthesis",SQLE,47
+M5,"Sterol, steroid and bile-acid biosynthesis",ACACB,46
+M5,"Sterol, steroid and bile-acid biosynthesis",NR1H4,46
+M5,"Sterol, steroid and bile-acid biosynthesis",CS,44
+M5,"Sterol, steroid and bile-acid biosynthesis",HMGCS2,43
+M5,"Sterol, steroid and bile-acid biosynthesis",ACAT2,43
+M5,"Sterol, steroid and bile-acid biosynthesis",NR0B2,40
+M5,"Sterol, steroid and bile-acid biosynthesis",ACOX1,40
+M5,"Sterol, steroid and bile-acid biosynthesis",LSS,38
+M5,"Sterol, steroid and bile-acid biosynthesis",FDFT1,37
+M5,"Sterol, steroid and bile-acid biosynthesis",ACAT1,37
+M5,"Sterol, steroid and bile-acid biosynthesis",DHCR7,37
+M5,"Sterol, steroid and bile-acid biosynthesis",CYP26A1,36
+M5,"Sterol, steroid and bile-acid biosynthesis",ACAA2,34
+M5,"Sterol, steroid and bile-acid biosynthesis",ABCG5,34
+M6,NF-kB and innate immune signalling,TNF,391
+M6,NF-kB and innate immune signalling,NFKB1,200
+M6,NF-kB and innate immune signalling,TLR4,188
+M6,NF-kB and innate immune signalling,RELA,139
+M6,NF-kB and innate immune signalling,TRAF6,128
+M6,NF-kB and innate immune signalling,TLR2,117
+M6,NF-kB and innate immune signalling,MYD88,111
+M6,NF-kB and innate immune signalling,CHUK,110
+M6,NF-kB and innate immune signalling,TNFRSF1A,109
+M6,NF-kB and innate immune signalling,IKBKB,104
+M6,NF-kB and innate immune signalling,NFKBIA,101
+M6,NF-kB and innate immune signalling,IKBKG,95
+M6,NF-kB and innate immune signalling,UBC,92
+M6,NF-kB and innate immune signalling,CASP8,89
+M6,NF-kB and innate immune signalling,TRAF2,86
+M6,NF-kB and innate immune signalling,CASP1,80
+M6,NF-kB and innate immune signalling,TLR3,76
+M6,NF-kB and innate immune signalling,TLR9,73
+M6,NF-kB and innate immune signalling,NLRP3,69
+M6,NF-kB and innate immune signalling,RIPK1,69
+M7,TOR signalling and autophagy,MTOR,176
+M7,TOR signalling and autophagy,BECN1,79
+M7,TOR signalling and autophagy,SQSTM1,79
+M7,TOR signalling and autophagy,RPTOR,77
+M7,TOR signalling and autophagy,RPS6KB1,73
+M7,TOR signalling and autophagy,TSC2,68
+M7,TOR signalling and autophagy,STK11,59
+M7,TOR signalling and autophagy,PRKAA2,57
+M7,TOR signalling and autophagy,PRKAA1,57
+M7,TOR signalling and autophagy,RICTOR,52
+M7,TOR signalling and autophagy,PRKAG2,49
+M7,TOR signalling and autophagy,PRKAB1,48
+M7,TOR signalling and autophagy,PRKAB2,48
+M7,TOR signalling and autophagy,LAMP1,48
+M7,TOR signalling and autophagy,ATG5,47
+M7,TOR signalling and autophagy,RHEB,44
+M7,TOR signalling and autophagy,MLST8,44
+M7,TOR signalling and autophagy,TSC1,44
+M7,TOR signalling and autophagy,PRKAG1,44
+M7,TOR signalling and autophagy,AKT1S1,43
+M8,ER-associated degradation and ER stress,HSPA5,79
+M8,ER-associated degradation and ER stress,VCP,67
+M8,ER-associated degradation and ER stress,CALR,56
+M8,ER-associated degradation and ER stress,HSP90B1,52
+M8,ER-associated degradation and ER stress,CANX,49
+M8,ER-associated degradation and ER stress,SEL1L,44
+M8,ER-associated degradation and ER stress,SORT1,42
+M8,ER-associated degradation and ER stress,XBP1,39
+M8,ER-associated degradation and ER stress,OS9,37
+M8,ER-associated degradation and ER stress,SYVN1,35
+M8,ER-associated degradation and ER stress,ERN1,32
+M8,ER-associated degradation and ER stress,ATF6,31
+M8,ER-associated degradation and ER stress,P4HB,30
+M8,ER-associated degradation and ER stress,PSMD14,29
+M8,ER-associated degradation and ER stress,AMFR,28
+M8,ER-associated degradation and ER stress,ERLEC1,28
+M8,ER-associated degradation and ER stress,DERL1,28
+M8,ER-associated degradation and ER stress,PSMC5,27
+M8,ER-associated degradation and ER stress,EDEM1,27
+M8,ER-associated degradation and ER stress,FAF2,27
+M9,Phospholipid metabolism,PTGS2,87
+M9,Phospholipid metabolism,PLA2G7,55
+M9,Phospholipid metabolism,PLD2,49
+M9,Phospholipid metabolism,CYP2E1,48
+M9,Phospholipid metabolism,PLAAT3,44
+M9,Phospholipid metabolism,PLA2G4A,41
+M9,Phospholipid metabolism,PLA2G6,39
+M9,Phospholipid metabolism,MBOAT2,37
+M9,Phospholipid metabolism,PLD1,37
+M9,Phospholipid metabolism,CHPT1,36
+M9,Phospholipid metabolism,ALOX15,34
+M9,Phospholipid metabolism,PLA2G2A,34
+M9,Phospholipid metabolism,LPCAT1,33
+M9,Phospholipid metabolism,CEPT1,32
+M9,Phospholipid metabolism,PLB1,31
+M9,Phospholipid metabolism,LPCAT2,31
+M9,Phospholipid metabolism,ALOX5,31
+M9,Phospholipid metabolism,PLA2G10,29
+M9,Phospholipid metabolism,PLA2G1B,29
+M9,Phospholipid metabolism,PTGS1,29

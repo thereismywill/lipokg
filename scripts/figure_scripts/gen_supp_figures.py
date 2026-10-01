@@ -62,8 +62,11 @@ axB.spines['right'].set_visible(False)
 axC = axes_s1[1, 0]
 axC.set_title('C  Core vs Extended Schema', fontsize=12, fontweight='bold')
 categories = ['Node Types', 'Relationship Types', 'Nodes', 'Edges']
-core_vals = [7, 7, 6052, 36479]
-ext_vals = [31, 25, 6463, 37165]
+# 2026-10-01：原为 `core_vals = [7, 7, 6052, 36479]` / `ext_vals = [31, 25, 6463, 37165]`
+#   —— **裸数字列表**，无标签无单位，此前所有判据都落空（只有肉眼看得出来）。
+#   现从 graph_statistics.json 实算；废值已进 `--retired` 黑名单防回归。
+core_vals = [len(NODE_COUNTS), len(REL_COUNTS), TOTAL_CORE_NODES, TOTAL_CORE_EDGES]
+ext_vals = [EXT_NODE_TYPES, EXT_REL_TYPES, TOTAL_NODES, TOTAL_EDGES]
 x = np.arange(len(categories))
 w = 0.35
 axC.bar(x - w/2, core_vals, w, color='#4C72B0', alpha=0.85, label='Core (CSV)')
@@ -83,25 +86,32 @@ axC.spines['right'].set_visible(False)
 axD = axes_s1[1, 1]
 axD.set_title('D  Network Summary Statistics', fontsize=12, fontweight='bold')
 axD.axis('off')
+# 2026-10-01：整表改为**从 graph_statistics.json 实算**。原表 4 个格子是手写字面量且全部过期
+#   （core 6,054/36,483；全图 6,475/37,177 —— 后者还是已被整体替换掉的 Neo4j count(*) 口径）。
+#   判据已覆盖该写法（check_figure_constants.py 的「图内汇总表 标签计数」）。
+_T = TOPOLOGY
+_PREF = _T['degree_distribution_preferred'].split(';')[0]
 stats_table = [
     ['Metric', 'Value'],
-    ['Total core nodes', '6,054'],
-    ['Total core edges', '36,483'],
-    ['Node types (core)', '7'],
-    ['Relationship types (core)', '7'],
-    ['Connected components', '1'],
-    ['Average degree', '34.4'],
-    ['Diameter', '7'],
+    ['Core nodes', f'{TOTAL_CORE_NODES:,}'],
+    ['Core edges', f'{TOTAL_CORE_EDGES:,}'],
+    ['Node types (core)', str(len(NODE_COUNTS))],
+    ['Relationship types (core)', str(len(REL_COUNTS))],
+    ['Connected components', str(_T['connected_components'])],
+    ['Average degree', f"{_T['average_degree']:.1f}"],
+    ['Diameter', str(_T['diameter'])],
     ['Degree distribution', 'heavy-tailed; power law rejected'],
-    ['Power-law α (xmin = 34)', '2.65 (95% CI: 2.52–2.78)'],
-    ['Preferred model', 'lognormal (R = −21.0, p = 1.3×10⁻⁴)'],
-    ['Louvain modularity Q', '0.51'],
-    ['Louvain modules', '9'],
-    ['Total nodes (extended)', '6,475'],
-    ['Total edges (extended)', '37,177'],
-    ['Node types (extended)', '32'],
-    ['Relationship types (extended)', '26'],
+    [f"Power-law \u03b1 (xmin = {int(_T['power_law_xmin'])})",
+     f"{_T['power_law_alpha']:.2f} (95% CI: {_T['power_law_95CI'][0]:.2f}\u2013{_T['power_law_95CI'][1]:.2f})"],
+    ['Preferred model', _PREF.replace('likelihood ratio ', '')],
+    ['Louvain modularity Q', f"{_T['louvain_modularity']:.2f}"],
+    ['Louvain modules', str(_T['louvain_modules'])],
+    ['Whole-graph nodes (core + extended)', f'{TOTAL_NODES:,}'],
+    ['Whole-graph edges (core + extended)', f'{TOTAL_EDGES:,}'],
+    ['Node types (extended)', str(EXT_NODE_TYPES)],
+    ['Relationship types (extended)', str(EXT_REL_TYPES)],
 ]
+
 cell_colors = []
 for i in range(len(stats_table)):
     if i == 0:
@@ -111,7 +121,7 @@ for i in range(len(stats_table)):
 table = axD.table(cellText=stats_table, cellLoc='center', loc='center',
                   cellColours=cell_colors)
 table.auto_set_font_size(False)
-table.set_fontsize(9)
+table.set_fontsize(8)
 table.scale(1, 1.6)
 for j in range(2):
     table[0, j].set_text_props(fontweight='bold', color='white')
