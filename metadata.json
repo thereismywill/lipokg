@@ -170,6 +170,10 @@
     {
       "filename": "data/LICENSE.md",
       "description": "Per-file and per-source layered licence for the deposited data"
+    },
+    {
+      "filename": "metadata.json",
+      "description": "Dataset metadata (this file): version, creators, licence and the file manifest"
     }
   ],
   "version": "1.2.1",

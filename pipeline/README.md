@@ -1,6 +1,6 @@
 # LipoKG Integration Pipeline
 
-Scripts that build the LipoKG knowledge graph (v1.2.0). The graph was constructed in
+Scripts that build the LipoKG knowledge graph (v1.2.1). The graph was constructed in
 Python using the Neo4j Python driver and Cypher `CREATE` statements (not `LOAD CSV`).
 
 ## Run order
@@ -35,7 +35,10 @@ Neo4j connection is configured in `pipeline/shared/neo4j_utils.py` (bolt://local
 
 ## Note
 
-The ETL run reports (STRING / pathway / ClinVar-DrugBank import results) are archived in the
-project repository under `data/raw/<source>/<source>_report.md` and record the authoritative
-per-step counts (e.g. 1,852 proteins, 31,878 interactions, 8,394 nodes / 38,865 edges in the
-full in-database graph). The deposited CSV package (v1.2.0) exports a curated subset of this graph.
+The ETL run reports of 2026-06-22 are archived under `data/raw/` (`string/string_v12_import_report.md`, `pathways/pathway_import_report.md`,
+`clinvar_drugbank/clinvar_drugbank_report.md`). They record the per-step counts of that first
+loading — 1,852 proteins and 31,878 interactions, but also 8,394 nodes / 38,865 edges for the
+full in-database graph, in which the ClinVar layer held 6,050 variant nodes and the KEGG layer the
+then-current 52 genes. Those counts are **superseded** by the deposited package (v1.2.1), which
+exports a curated subset: 6,214 core nodes / 36,568 core edges after the KEGG, Reactome and
+WikiPathways re-retrievals. See the graph-size convention in the accompanying manuscript.

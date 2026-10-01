@@ -1,6 +1,6 @@
 # LipoKG BioLinkML Schema Definition
 # Draft schema for future RDF migration
-# Version: 1.0.0 (draft)
+# Version: 1.2.1
 # Date: 2026-07-15
 
 id: https://w3id.org/lipokg/schema
@@ -430,4 +430,4 @@ classes:
 settings:
   license_url: https://creativecommons.org/licenses/by/4.0/
   repository: https://github.com/thereismywill/lipokg
-  documentation: https://zenodo.org/records/21318100
+  documentation: https://doi.org/10.5281/zenodo.23074632

@@ -317,31 +317,40 @@ ORDER BY gene_count DESC
 If you use this dataset in your research, please cite:
 
 ```bibtex
-@article{lipoKG2024,
-  title={LipoKG: A Comprehensive Knowledge Graph for Lipoprotein Metabolism Research},
-  author={[Author Names]},
-  journal={Scientific Data},
-  year={2024},
-  doi={10.5281/zenodo.21318099}
+@dataset{lipokg2026,
+  author    = {Zhang, Ke and Zhao, Junyi and Yu, Yang},
+  title     = {LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research},
+  year      = {2026},
+  version   = {1.2.1},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23074632},
+  url       = {https://doi.org/10.5281/zenodo.23074632}
 }
 ```
 
+The version DOI above always resolves to v1.2.1. To cite the latest version at any time, use the
+concept DOI `10.5281/zenodo.21318099`.
+
 ## License
 
-This dataset is released under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+The dataset is released under a **layered licence**. LipoKG aggregates sources whose terms of use
+differ, so components that can be released under CC0 are released under CC0, while layers derived
+from sources with more restrictive terms (CC BY-NC-SA, academic-use-only or proprietary) retain
+those terms. The licence applicable to each file — and, for the disease layer, to each source within
+it — is set out in [`data/LICENSE.md`](data/LICENSE.md), and the upstream licence of every source is
+listed in Table 2 of the manuscript.
 
-You are free to:
-- **Share:** Copy and redistribute the material in any medium or format
-- **Adapt:** Remix, transform, and build upon the material for any purpose, even commercially
+The repository-level CC BY 4.0 label that appears in the dataset metadata and on the Zenodo record
+is a convenient default and **does not override** the per-layer terms.
 
-Under the following terms:
-- **Attribution:** You must give appropriate credit, provide a link to the license, and indicate if changes were made
+Code in this repository — the pipeline, the figure and analysis scripts, and the browser query
+interface — is licensed under the MIT licence ([`LICENSE`](LICENSE)).
 
 ## Contact
 
 For questions or feedback about this dataset:
-- **Email:** [corresponding author email]
-- **GitHub:** [repository URL]
+- **Email:** yyu@sdfmu.edu.cn
+- **GitHub:** https://github.com/thereismywill/lipokg
 
 ## Changelog
 
@@ -357,7 +366,7 @@ For questions or feedback about this dataset:
 - **Added `data/LICENSE.md`**: a per-file and per-source **layered licence**. Components whose sources permit
   it are released under CC0; layers derived from sources with more restrictive terms (CC BY-NC-SA,
   academic-use-only, custom) retain those terms. The repository-level CC BY 4.0 label does not override them.
-- Documentation (README, SCHEMA, USAGE_TUTORIAL, CYPHER_EXAMPLES, metadata) resynchronised with the counts above.
+- Documentation (README, SCHEMA, USAGE_TUTORIAL, CYPHER_EXAMPLES, metadata) resynchronised with the counts above. The deposited documentation is written throughout in English, the query examples were corrected to the current schema (KEGG filtered by `pathway_id = 'hsa05417'`; `Drug`/`TARGETS` from the extended schema rather than `Molecule {{type: 'drug'}}`; string-interaction scores read from the relationship), and the citation block, licence statement and contact details were brought up to date.
 
 ### Version 1.2.0 (2026-07)
 
