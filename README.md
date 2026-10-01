@@ -345,6 +345,51 @@ For questions or feedback about this dataset:
 
 ## Changelog
 
+### Version 1.2.1 (2026-10)
+
+- **KEGG layer re-retrieved** as `hsa05417` "Lipid and atherosclerosis" (216 genes), replacing `hsa04979`
+  "Cholesterol metabolism" (52 genes). The two gene sets overlap in only 6 genes, so coverage figures change.
+- **Reactome layer rebuilt** from the Content Service API: 282 reactions imported, with 12 plasma lipoprotein
+  pathways (71 genes) retained as an independent reference set.
+- **WikiPathways reference set constructed** from the official 2026-09-10 GMT release — 4 lipoprotein/lipid
+  pathways (WP3965, WP430, WP554, WP206; 92 genes). Still a reference set only; no WikiPathways nodes are
+  imported, and none ever were.
+- **Added `data/LICENSE.md`**: a per-file and per-source **layered licence**. Components whose sources permit
+  it are released under CC0; layers derived from sources with more restrictive terms (CC BY-NC-SA,
+  academic-use-only, custom) retain those terms. The repository-level CC BY 4.0 label does not override them.
+- Documentation (README, SCHEMA, USAGE_TUTORIAL, CYPHER_EXAMPLES, metadata) resynchronised with the counts above.
+
+### Version 1.2.0 (2026-07)
+
+- **Added `data/extended/`** with the six extended-schema CSV exports (drug_targets, drug_diseases,
+  enzyme_substrates, affects_gene, particle_all_links, isoform_links). Earlier releases described this
+  directory but did not include it.
+- **Added a gene-level annotation coverage matrix** (`Table_S24_gene_level_coverage.csv`, also distributed
+  with the manuscript as Supplementary Table S24). It records, for each of the 1,910 genes in the dataset,
+  membership in each core layer (particle, pathway, disease/GWAS, ClinVar variant), the STRING interaction
+  degree, and the number of non-STRING layers.
+- **Added a per-file inventory** with byte sizes and row counts (`Table_S25_Deposited_File_Inventory.csv`),
+  so that the counts reported in the manuscript can be checked file by file.
+- **Corrected the disease layer per-source counts** to match the deposited `data/disease_associations.csv`:
+  DisGeNET 35, OMIM 20, GLGC 2021 111, Orphanet 50, expert curation 22 (238 total).
+- Gene symbols were normalised to HGNC nomenclature; query by HGNC symbol or Ensembl ID.
+
+#### Gene-level annotation coverage at a glance
+
+| Layer (denominator = 1,852 proteins in the interaction graph) | Genes | Share |
+|---|---|---|
+| Pathway membership | 211 | 11.4% |
+| Disease / GWAS association | 62 | 3.3% |
+| ClinVar variant annotation | 43 | 2.3% |
+| Particle membership | 31 | 1.7% |
+| **Any non-STRING layer** | **252** | **13.6%** |
+| **Two or more non-STRING layers** | **48** | **2.6%** |
+| **STRING connectivity only** | **1,600** | **86.4%** |
+
+Multi-layer annotation is concentrated in the curated 82-gene lipoprotein core (64.6% carry at least one
+additional layer). Proteins reachable only through 1-hop interaction expansion should be read as interaction
+context rather than as multi-layer annotations.
+
 ### Version 1.1.0 (2026-06)
 - Updated ClinVar variant filtering (Pathogenic/Likely pathogenic only, 4,042 variants)
 - Populated protein descriptions for all STRINGProtein nodes
@@ -389,36 +434,3 @@ This dataset follows FAIR principles:
 This work was supported by [funding information].
 
 We thank the maintainers of STRING, ClinVar, KEGG, Reactome, and WikiPathways for making their data publicly available.
-
----
-
-## Version 1.2.0 changes
-
-- **Added `data/extended/`** with the six extended-schema CSV exports (drug_targets, drug_diseases,
-  enzyme_substrates, affects_gene, particle_all_links, isoform_links). Earlier releases described this
-  directory but did not include it.
-- **Added a gene-level annotation coverage matrix** (`Table_S24_gene_level_coverage.csv`, also distributed
-  with the manuscript as Supplementary Table S24). It records, for each of the 1,910 genes in the dataset,
-  membership in each core layer (particle, pathway, disease/GWAS, ClinVar variant), the STRING interaction
-  degree, and the number of non-STRING layers.
-- **Added a per-file inventory** with byte sizes and row counts (`Table_S25_Deposited_File_Inventory.csv`),
-  so that the counts reported in the manuscript can be checked file by file.
-- **Corrected the disease layer per-source counts** to match the deposited `data/disease_associations.csv`:
-  DisGeNET 35, OMIM 20, GLGC 2021 111, Orphanet 50, expert curation 22 (238 total).
-- Gene symbols were normalised to HGNC nomenclature; query by HGNC symbol or Ensembl ID.
-
-### Gene-level annotation coverage at a glance
-
-| Layer (denominator = 1,852 proteins in the interaction graph) | Genes | Share |
-|---|---|---|
-| Pathway membership | 211 | 11.4% |
-| Disease / GWAS association | 62 | 3.3% |
-| ClinVar variant annotation | 43 | 2.3% |
-| Particle membership | 31 | 1.7% |
-| **Any non-STRING layer** | **252** | **13.6%** |
-| **Two or more non-STRING layers** | **48** | **2.6%** |
-| **STRING connectivity only** | **1,600** | **86.4%** |
-
-Multi-layer annotation is concentrated in the curated 82-gene lipoprotein core (64.6% carry at least one
-additional layer). Proteins reachable only through 1-hop interaction expansion should be read as interaction
-context rather than as multi-layer annotations.

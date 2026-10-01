@@ -2,22 +2,22 @@
   "metadata": {
     "title": "LipoKG: A Knowledge Graph Dataset for Lipoprotein Metabolism Research",
     "upload_type": "dataset",
-    "description": "A comprehensive FAIR-compliant knowledge graph integrating multi-source data for lipoprotein metabolism research. This dataset combines protein-protein interactions (STRING v12.0), genetic variants (ClinVar), disease associations (DisGeNET, OMIM, GLGC 2021, Orphanet), and pathway information (KEGG, Reactome, WikiPathways) into a unified graph structure. The knowledge graph contains 6,214 core nodes and 36,568 core edges (whole graph: 6,639 nodes, 41,497 edges), with 74.9% coverage of reference lipoprotein metabolism genes across three pathway databases. Independent validation achieves 92.3% coverage of GO:0042157 (lipoprotein metabolic process). This dataset is designed to support systematic knowledge gap discovery, drug repurposing research, and precision medicine applications in cardiovascular disease. This version (1.2.0) additionally includes the six extended-schema CSV exports under data/extended/, a per-file inventory with byte sizes and row counts (Table S25), and a gene-level annotation coverage matrix (Table S24) characterising how many genes carry annotation in each layer beyond STRING connectivity: of the 1,852 proteins in the interaction graph, 252 (13.6%) carry at least one additional layer and 1,600 (86.4%) are represented by STRING edges only.",
+    "description": "A comprehensive FAIR-compliant knowledge graph integrating multi-source data for lipoprotein metabolism research. This dataset combines protein-protein interactions (STRING v12.0), genetic variants (ClinVar), disease associations (DisGeNET, OMIM, GLGC 2021, Orphanet), and pathway information (KEGG, Reactome, WikiPathways) into a unified graph structure. The knowledge graph contains 6,214 core nodes and 36,568 core edges (whole graph: 6,639 nodes, 41,497 edges), with 74.9% coverage of reference lipoprotein metabolism genes across three pathway databases. Independent validation achieves 92.3% coverage of GO:0042157 (lipoprotein metabolic process). This dataset is designed to support systematic annotation-gap discovery, drug repurposing research, and precision medicine applications in cardiovascular disease. Version 1.2.0 added the six extended-schema CSV exports under data/extended/, a per-file inventory with byte sizes and row counts (Table S25), and a gene-level annotation coverage matrix (Table S24) characterising how many genes carry annotation in each layer beyond STRING connectivity: of the 1,852 proteins in the interaction graph, 252 (13.6%) carry at least one additional layer and 1,600 (86.4%) are represented by STRING edges only. Version 1.2.1 re-retrieves the KEGG layer (hsa05417, 216 genes) and the Reactome and WikiPathways reference sets, and adds data/LICENSE.md, a per-file and per-source layered licence that sits alongside the repository-level CC BY 4.0 label.",
     "creators": [
       {
         "name": "Ke Zhang",
         "affiliation": "Shandong Provincial Hospital Affiliated to Shandong First Medical University, Jinan, Shandong, China",
-        "orcid": ""
+        "orcid": "0000-0002-2760-2787"
       },
       {
         "name": "Junyi Zhao",
         "affiliation": "School of Laboratory Animal & Shandong Laboratory Animal Center, Shandong First Medical University & Shandong Academy of Medical Sciences, Jinan, Shandong, China",
-        "orcid": ""
+        "orcid": "0009-0001-8495-4703"
       },
       {
         "name": "Yang Yu",
         "affiliation": "Shandong Provincial Hospital Affiliated to Shandong First Medical University, Jinan, Shandong, China",
-        "orcid": ""
+        "orcid": "0009-0004-4855-5168"
       }
     ],
     "keywords": [
@@ -35,7 +35,7 @@
     "language": "eng",
     "access_right": "open",
     "license": "cc-by-4.0",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "publication_date": "2026-07-01",
     "related_identifiers": [
       {
@@ -77,7 +77,7 @@
     },
     {
       "filename": "docs/USAGE_TUTORIAL.md",
-      "description": "Tutorial demonstrating four real-world use cases"
+      "description": "Tutorial demonstrating six real-world use cases"
     },
     {
       "filename": "data/string_proteins.csv",
@@ -162,8 +162,16 @@
     {
       "filename": "data/extended/isoform_links.csv",
       "description": "Protein isoform relationships (12 ISOFORM_OF edges)"
+    },
+    {
+      "filename": "LICENSE",
+      "description": "MIT licence covering the analysis code and documentation"
+    },
+    {
+      "filename": "data/LICENSE.md",
+      "description": "Per-file and per-source layered licence for the deposited data"
     }
   ],
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publication_date": "2026-10-01"
 }

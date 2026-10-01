@@ -1,4 +1,4 @@
-# LipoKG v1.2.0 — Layered Licensing
+# LipoKG v1.2.1 — Layered Licensing
 
 LipoKG is an **integrated knowledge graph** that aggregates data from multiple public
 resources whose terms of use differ. Following guidance from the GigaScience editorial
