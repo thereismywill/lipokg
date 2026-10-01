@@ -197,6 +197,16 @@ def load_kegg_pathway():
 KEGG_PATHWAY_ID, KEGG_PATHWAY_NAME = load_kegg_pathway()
 
 
+def load_clinvar_gene_count():
+    """ClinVar 变异所覆盖的基因数（从沉积的 clinvar_relationships.csv 实算）。"""
+    with open(os.path.join(resolve_data_dir(), 'clinvar_relationships.csv'),
+              encoding='utf-8-sig') as f:
+        return len({r['gene'] for r in _csv.DictReader(f)})
+
+
+CLINVAR_GENES = load_clinvar_gene_count()
+
+
 def load_coverage_table():
     """读 Table_S2_Coverage_Analysis.csv，返回 {Database: {字段: 值}}。"""
     p = os.path.join(resolve_supp_dir(), 'Table_S2_Coverage_Analysis.csv')

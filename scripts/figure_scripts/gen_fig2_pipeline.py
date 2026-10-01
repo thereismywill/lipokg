@@ -41,8 +41,8 @@ axA.text(0, 7.0, 'B', fontsize=18, fontweight='bold', ha='left', va='top', color
 # --- Layer 1: Data Sources ---
 axA.text(0, 6.0, 'Data Sources', ha='center', fontsize=12, fontweight='bold', color='#4C72B0')
 sources = [
-    ('STRING\nv12.0', -4.5), (f'KEGG\n{KEGG_PATHWAY_ID}', -2.7), ('Reactome\nv87', -0.9),
-    ('UniProt\n2024_01', 0.9), ('ClinVar\n2024-01', 2.7), ('OMIM /\nDrugBank', 4.5)
+    ('STRING\nv12.0', -4.5), (f'KEGG\n{KEGG_PATHWAY_ID}', -2.7), ('Reactome\n2026-06', -0.9),
+    ('UniProt\n2026-06', 0.9), ('ClinVar\n2026-06', 2.7), ('OMIM /\nDrugBank', 4.5)
 ]
 for name, x in sources:
     draw_box(axA, x, 5.0, 1.6, 0.75, name, fc='#FFF3E0', ec='#E65100', fontsize=7.5)
@@ -133,10 +133,6 @@ for i, (x, y, w, h, text, fc, ec, sub) in enumerate(prisma):
         draw_arrow(axB, x, y - h/2, x, next_y + prisma[i+1][3]/2, color='#888', lw=1.2)
 
 # Side exclusion boxes —— 三级筛除的下降量（156→134→98→67）
-for _y, _txt in ((-0.0, 'Excluded: n = 22\n(no pathway membership)'),
-                 (-1.4, 'Excluded: n = 36\n(no ClinVar evidence)'),
-                 (-2.8, 'Excluded: n = 31\n(failed intersection)')):
-    pass
 _side = [
     (3.05, 3.45, 'Excluded: n = 22\n(no pathway membership)', 3.6),
     (1.65, 2.05, 'Excluded: n = 36\n(no ClinVar evidence)', 2.2),
