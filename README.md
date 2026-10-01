@@ -426,9 +426,10 @@ This dataset follows FAIR principles:
 - Indexed in Zenodo search
 
 ### Accessible
-- Open access under CC BY 4.0 license
-- Data available in standard formats (CSV, JSON)
-- No authentication required
+- Open access, with a version DOI that resolves to the exact release and a concept DOI that
+  resolves to the latest one
+- Layered licensing, stated per file in [`data/LICENSE.md`](data/LICENSE.md)
+- Data available in standard formats (CSV, JSON); no authentication required
 
 ### Interoperable
 - Uses standard vocabularies and ontologies
@@ -436,13 +437,15 @@ This dataset follows FAIR principles:
 - Includes schema documentation
 
 ### Reusable
-- Clear licensing (CC BY 4.0)
+- Per-file licensing with upstream terms carried through
 - Comprehensive documentation
 - Quality control and validation performed
 - Provenance information included
 
 ## Acknowledgments
 
-This work was supported by [funding information].
+This work was supported by the National Natural Science Foundation of China (grant no. 81970385;
+Principal Investigator: Yang Yu). The funder had no role in the design of the study; in the
+collection, analysis or interpretation of data; or in the writing of the manuscript.
 
 We thank the maintainers of STRING, ClinVar, KEGG, Reactome, and WikiPathways for making their data publicly available.
