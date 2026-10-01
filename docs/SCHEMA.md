@@ -202,15 +202,15 @@ The full Neo4j database includes 25 additional node types and 19 additional rela
 
 | Source | Version | Access Date | License | Coverage |
 |--------|---------|-------------|---------|----------|
-| STRING | v12.0 | 2024-01-15 | CC BY 4.0 | 1,852 proteins, 31,878 interactions |
-| ClinVar | 2024-01 | 2024-01-20 | Public domain | 4,042 pathogenic/likely pathogenic variants |
-| KEGG | 2024-01 | 2024-01-10 | Academic use | hsa04979, 52 genes |
+| STRING | v12.0 | 2026-06-22 | CC BY 4.0 | 1,852 proteins, 31,878 interactions |
+| ClinVar | 2026-06 | 2026-06-22 | Public domain | 4,042 pathogenic/likely pathogenic variants |
+| KEGG | 2026-10 | 2026-10-01 | Academic use | hsa05417, 216 genes |
 | Reactome | v87 | 2026-06-13 | CC BY 4.0 | 12 pathways, 115 gene memberships |
 | WikiPathways | GMT 2026-09-10 | 2026-10-01 | CC BY 4.0 | 4 reference pathways (WP3965/WP430/WP554/WP206), 92 genes — reference set only (NOT imported) |
-| DisGeNET | v7.0 (≥0.3) | 2024-01-08 | CC BY-NC-SA 4.0 | 35 gene-disease associations |
-| OMIM | 2024-01 | 2024-01-05 | Custom | 20 gene-disease associations |
-| GLGC 2021 (Graham et al.) | 2024-01 | 2024-01-25 | CC0 | 111 gene-trait associations |
-| Orphanet | 2024-01 | 2024-01-22 | CC BY 4.0 | 50 gene-disease associations (7 disorders) |
+| DisGeNET | expert-curated, no bulk download | not retained | CC BY-NC-SA 4.0 | 35 gene-disease associations |
+| OMIM | expert-curated, no bulk download | not retained | Custom | 20 gene-disease associations |
+| GLGC 2021 (Graham et al.) | re-derived from trans-ancestry summary statistics | 2026-09-30 | CC0 | 111 gene-trait associations |
+| Orphanet | expert-curated, no bulk download | not retained | CC BY 4.0 | 50 gene-disease associations (7 disorders) |
 
 ## Statistics Summary
 
@@ -219,15 +219,15 @@ The full Neo4j database includes 25 additional node types and 19 additional rela
 | **Core Schema (CSV)** | |
 | Core node types | 7 |
 | Core relationship types | 7 |
-| Core total nodes | 6,054 |
-| Core total edges | 36,483 |
+| Core total nodes | 6,214 |
+| Core total edges | 36,568 |
 | **Extended Schema (Neo4j)** | |
-| Additional node types | 24 |
-| Additional relationship types | 18 |
+| Additional node types | 25 |
+| Additional relationship types | 19 |
 | Total node types | 31 |
 | Total relationship types | 25 |
-| Total nodes | 6,475 |
-| Total edges | 37,177 |
+| Total nodes | 6,639 |
+| Total edges | 41,497 |
 
 ## Coverage Validation
 
@@ -241,4 +241,4 @@ The full Neo4j database includes 25 additional node types and 19 additional rela
 
 - **Version:** 1.1.0
 - **Release date:** 2026-06-22
-- **Data collection date:** 2024-01
+- **Data collection date:** 2026-06

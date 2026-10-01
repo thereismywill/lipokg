@@ -26,7 +26,7 @@ restrictive terms retain their respective licences. **The licence applicable to 
 | `string_interactions.csv` | Protein–protein interactions | STRING v12.0 | **CC BY 4.0** |
 | `clinvar_variants.csv` | Variant nodes | ClinVar | Public domain (CC0-equivalent) |
 | `clinvar_relationships.csv` | Variant–gene edges | ClinVar | Public domain (CC0-equivalent) |
-| `kegg_genes.csv` | KEGG genes (hsa04979) | KEGG | **Academic use only** (see §3) |
+| `kegg_genes.csv` | KEGG genes (hsa05417) | KEGG | **Academic use only** (see §3) |
 | `pathways.csv` | Pathway nodes | KEGG (1) / Reactome (12) | KEGG: academic use; Reactome & WikiPathways: CC BY 4.0 |
 | `pathway_memberships.csv` | Gene–pathway edges | KEGG / Reactome | per source (see above) |
 | `molecules.csv` | Molecule nodes | UniProt (56) / LIPID MAPS (1) | UniProt: CC BY 4.0; LIPID MAPS: CC BY 4.0 |

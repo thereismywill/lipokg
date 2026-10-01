@@ -9,14 +9,15 @@ LipoKG is a comprehensive knowledge graph integrating multi-source data for lipo
 ### Scope
 - **Domain:** Lipoprotein metabolism and cardiovascular disease
 - **Organism:** Homo sapiens
-- **Data sources:** STRING v12.0, ClinVar, KEGG, Reactome, WikiPathways, DisGeNET, OMIM, GLGC 2021 (Graham et al.), Orphanet
-- **Release date:** 2024
+- **Data sources:** STRING v12.0, ClinVar, KEGG, Reactome, DisGeNET, OMIM, GLGC 2021 (Graham et al.), Orphanet
+- **External reference set (not imported):** WikiPathways lipid pathways (Table S29)
+- **Release date:** 2026
 
 ### Statistics
-- **Core schema total nodes:** 6,054
-- **Core schema total edges:** 36,483
-- **Extended schema total nodes:** 6,475 (Neo4j dump)
-- **Extended schema total edges:** 37,177 (Neo4j dump)
+- **Core schema total nodes:** 6,214
+- **Core schema total edges:** 36,568
+- **Whole-graph total nodes:** 6,639 (6,214 core + 425 extended types)
+- **Whole-graph total edges:** 41,497 (36,568 core + 4,929 extended types)
 - **Core node types:** 7 (STRINGProtein, Particle, Molecule, Disease, ClinVarVariant, KEGGGene, Pathway)
 - **Core edge types:** 7 (STRING_INTERACTS, COMPONENT_OF, MODIFIES, ASSEMBLED_BY, DISEASE_ASSOCIATION, VARIANT_OF, MEMBER_OF)
 - **Extended schema:** 32 node types (25 additional), 26 relationship types (19 additional) (Neo4j only)
@@ -80,7 +81,7 @@ Genes from KEGG database
 #### `data/pathways.csv`
 Biological pathways (13 nodes: 1 KEGG, 12 Reactome)
 - `name`: Pathway name
-- `source`: Data source (e.g., "KEGG", "Reactome", "WikiPathways")
+- `source`: Data source ("KEGG" or "Reactome")
 - `pathway_id`: Pathway identifier
 
 ### Relationship Data
@@ -149,7 +150,7 @@ Comprehensive graph statistics including:
 
 ### ClinVar
 - **Description:** Archive of reports of relationships among variations and phenotypes
-- **Coverage:** 4,042 pathogenic/likely pathogenic variants across 48 genes (top genes: LDLR 2,267; DHCR7 315; APOB 256; MTTP 191; LPL 168)
+- **Coverage:** 4,042 pathogenic/likely pathogenic variants across 61 genes (top genes: LDLR 2,267; DHCR7 315; APOB 256; MTTP 191; LPL 168)
 - **Filters:** Clinical significance: pathogenic/likely pathogenic; minimum review status: criteria provided, single submitter
 - **URL:** https://www.ncbi.nlm.nih.gov/clinvar/
 - **License:** Public domain
@@ -177,7 +178,7 @@ Comprehensive graph statistics including:
 
 ### DisGeNET v7.0
 - **Description:** Disease-gene association knowledge platform
-- **Coverage:** 35 gene-disease associations (score ≥ 0.3)
+- **Coverage:** 35 gene-disease associations (expert-curated; deposited rows carry no association score)
 - **URL:** https://www.disgenet.org
 - **License:** CC BY-NC-SA 4.0
 
@@ -351,11 +352,11 @@ For questions or feedback about this dataset:
 - Added Gene Ontology independent validation (GO:0042157, 92.3%)
 - Reconciled schema documentation (core CSV vs. extended Neo4j)
 
-### Version 1.0.0 (2024-01)
+### Version 1.0.0 (2026-06)
 - Initial release
 - Integrated STRING v12.0 protein interactions
 - Added ClinVar pathogenic variants
-- Included KEGG, Reactome, and WikiPathways pathways
+- Included KEGG and Reactome pathways (WikiPathways was used as an external reference set only)
 - Coverage validation against reference databases
 
 ## FAIR Compliance

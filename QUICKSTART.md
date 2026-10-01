@@ -133,8 +133,8 @@ print(f"Edges: {G.number_of_edges()}")
 
 ## 关键统计
 
-- **核心节点总数**: 6,214（扩展schema: 6,475）
-- **核心边总数**: 36,568（扩展schema: 37,177）
+- **核心节点总数**: 6,214（全图: 6,639）
+- **核心边总数**: 36,568（全图: 41,497）
 - **核心节点类型**: 7 (STRINGProtein, Particle, Molecule, Disease, ClinVarVariant, KEGGGene, Pathway)
 - **核心边类型**: 7 (STRING_INTERACTS, COMPONENT_OF, MODIFIES, ASSEMBLED_BY, VARIANT_OF, MEMBER_OF, DISEASE_ASSOCIATION)
 - **蛋白数**: 1,852 (STRING v12.0)

@@ -55,15 +55,16 @@ for ntype, (cx, cy) in positions.items():
             path_effects=[path_effects.withStroke(linewidth=2, foreground=color)])
 
 # ── Relationship edges (arrows with labels) ──
+# 边上的计数**从 REL_COUNTS 取**（= graph_statistics.json），不写字面量。
 relationships = [
     # (from_type, to_type, rel_name, edge_count, curve)
-    ('STRINGProtein', 'Particle',       'COMPONENT_OF',        48,    0.0),
-    ('Molecule',      'Particle',       'MODIFIES',            23,    0.0),
-    ('Particle',      'Molecule',       'ASSEMBLED_BY',         8,    0.3),
-    ('STRINGProtein', 'STRINGProtein',  'STRING_INTERACTS', 31878,    0.0),  # self-loop
-    ('STRINGProtein', 'Disease',        'DISEASE_ASSOCIATION', 238,   0.0),
-    ('ClinVarVariant','KEGGGene',       'VARIANT_OF',        4042,    0.0),
-    ('STRINGProtein', 'Pathway',        'MEMBER_OF',          242,    0.0),
+    ('STRINGProtein', 'Particle',       'COMPONENT_OF',        REL_COUNTS['COMPONENT_OF'],        0.0),
+    ('Molecule',      'Particle',       'MODIFIES',            REL_COUNTS['MODIFIES'],            0.0),
+    ('Particle',      'Molecule',       'ASSEMBLED_BY',        REL_COUNTS['ASSEMBLED_BY'],        0.3),
+    ('STRINGProtein', 'STRINGProtein',  'STRING_INTERACTS',    REL_COUNTS['STRING_INTERACTS'],    0.0),  # self-loop
+    ('STRINGProtein', 'Disease',        'DISEASE_ASSOCIATION', REL_COUNTS['DISEASE_ASSOCIATION'], 0.0),
+    ('ClinVarVariant','KEGGGene',       'VARIANT_OF',          REL_COUNTS['VARIANT_OF'],          0.0),
+    ('STRINGProtein', 'Pathway',        'MEMBER_OF',           REL_COUNTS['MEMBER_OF'],           0.0),
 ]
 
 def draw_edge(ax, p1, p2, label, count, color, curve=0.0, self_loop=False):
@@ -134,7 +135,8 @@ for from_t, to_t, rel_name, count, curve in relationships:
 # ── Title and summary box ──
 ax.text(0, 5.6, "LipoKG Core Schema", ha='center', va='center',
         fontsize=18, fontweight='bold', color='#222222')
-ax.text(0, 5.2, "7 Node Types  ·  7 Relationship Types  ·  6,054 Nodes  ·  36,483 Edges",
+ax.text(0, 5.2, f"{len(NODE_COUNTS)} Node Types  ·  {len(REL_COUNTS)} Relationship Types  "
+        f"·  {TOTAL_CORE_NODES:,} Nodes  ·  {TOTAL_CORE_EDGES:,} Edges",
         ha='center', va='center', fontsize=10, color='#555555')
 
 # ── Legend: Particles as first-class entities ──
@@ -158,7 +160,7 @@ ext_box = FancyBboxPatch(
 ax.add_patch(ext_box)
 ax.text(4.8, -4.45, "Extended Schema (Neo4j)", fontsize=9,
         fontweight='bold', color='#4C72B0', ha='center')
-ax.text(4.8, -4.8, "31 node types · 25 relationship types",
+ax.text(4.8, -4.8, f"{EXT_NODE_TYPES} node types · {EXT_REL_TYPES} relationship types",
         fontsize=7.5, color='#555555', ha='center')
 ax.text(4.8, -5.05, f"Total: {TOTAL_NODES:,} nodes · {TOTAL_EDGES:,} edges",
         fontsize=7.5, color='#555555', ha='center')

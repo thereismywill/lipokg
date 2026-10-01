@@ -1,0 +1,83 @@
+﻿symbol,uniprot_id,category,description
+LDLR,P01130,receptor,Low-density lipoprotein receptor
+PCSK9,Q8NBP7,regulator,Proprotein convertase subtilisin/kexin type 9
+APOB,P04114,apolipoprotein,Apolipoprotein B-100
+APOA1,P02647,apolipoprotein,Apolipoprotein A-I
+APOE,P02649,apolipoprotein,Apolipoprotein E
+LPL,P06858,enzyme,Lipoprotein lipase
+APOC3,P02656,apolipoprotein,Apolipoprotein C-III
+APOC2,P02655,apolipoprotein,Apolipoprotein C-II
+APOC1,P02654,apolipoprotein,Apolipoprotein C-I
+ABCA1,O95477,transporter,ATP-binding cassette transporter A1
+CETP,P11597,regulator,Cholesteryl ester transfer protein
+LCAT,P04180,enzyme,Lecithin-cholesterol acyltransferase
+MTTP,P55157,transporter,Microsomal triglyceride transfer protein
+HMGCR,P04035,enzyme,3-hydroxy-3-methylglutaryl-CoA reductase
+NPC1L1,Q9UHC9,transporter,Niemann-Pick C1-like 1 protein
+SCARB1,Q8WTV0,receptor,Scavenger receptor class B type 1 (SR-BI)
+LRP1,Q07954,receptor,LDL receptor-related protein 1
+VLDLR,P98155,receptor,Very low-density lipoprotein receptor
+APOA2,P02652,apolipoprotein,Apolipoprotein A-II
+APOA4,P06727,apolipoprotein,Apolipoprotein A-IV
+APOA5,Q8WWU8,apolipoprotein,Apolipoprotein A-V
+APOH,P02749,apolipoprotein,Apolipoprotein H (beta-2-glycoprotein I)
+APOM,O95445,apolipoprotein,Apolipoprotein M
+LPA,P42731,apolipoprotein,Apolipoprotein(a)
+ANGPTL3,Q9Y5C1,regulator,Angiopoietin-like protein 3
+ANGPTL4,Q9BY76,regulator,Angiopoietin-like protein 4
+ANGPTL8,Q86XK6,regulator,Angiopoietin-like protein 8
+LIPC,P11150,enzyme,Hepatic lipase
+LIPE,P28038,enzyme,Hormone-sensitive lipase
+GPIHBP1,Q8IV16,lipase_regulator,GPI-anchored HDL-binding protein 1
+LMF1,Q96S42,lipase_regulator,Lipase maturation factor 1
+SEL1L,Q8WV00,lipase_regulator,SEL1 homolog
+LDLRAP1,Q8SWB1,receptor,LDL receptor adaptor protein 1
+SORT1,Q99590,receptor,Sortilin 1
+MYLIP,Q96CV9,regulator,Inducible degrader of LDLR
+ABCG1,P45844,transporter,ATP-binding cassette transporter G1
+ABCG5,Q9H222,transporter,ATP-binding cassette transporter G5
+ABCG8,Q9H221,transporter,ATP-binding cassette transporter G8
+NPC1,O15118,transporter,Niemann-Pick disease type C1 protein
+NPC2,P61916,transporter,Niemann-Pick disease type C2 protein
+PLTP,P55058,enzyme,Phospholipid transfer protein
+PLA2G7,Q13093,enzyme,Lipoprotein-associated phospholipase A2
+SREBF2,P36957,regulator,Sterol regulatory element-binding protein 2
+SREBF1,P36956,regulator,Sterol regulatory element-binding protein 1
+SCAP,Q12770,regulator,SREBP cleavage-activating protein
+INSIG1,O15503,regulator,Insulin-induced gene 1 protein
+INSIG2,Q9Y5U4,regulator,Insulin-induced gene 2 protein
+NR1H3,Q13133,nuclear_receptor,Liver X receptor alpha (LXRα)
+NR1H2,P55055,nuclear_receptor,Liver X receptor beta (LXRβ)
+PPARA,Q07869,nuclear_receptor,Peroxisome proliferator-activated receptor alpha
+PPARG,P37231,nuclear_receptor,Peroxisome proliferator-activated receptor gamma
+NR1H4,Q96RI1,nuclear_receptor,Farnesoid X receptor (FXR)
+RXRA,P19793,nuclear_receptor,Retinoid X receptor alpha
+CYP7A1,P22680,bile_acid,Cholesterol 7-alpha-hydroxylase
+CYP27A1,Q02313,bile_acid,Sterol 27-hydroxylase
+ABCB11,O75362,bile_acid,Bile salt export pump
+HMGCS1,Q01581,synthesis,HMG-CoA synthase
+SQLE,Q14534,synthesis,Squalene epoxidase
+FABP2,P12104,intestinal,Intestinal fatty acid-binding protein
+DGAT1,O75907,intestinal,Diacylglycerol O-acyltransferase 1
+DGAT2,Q9H3M4,intestinal,Diacylglycerol O-acyltransferase 2
+ACSL5,Q9NR30,intestinal,Long-chain-fatty-acid-CoA ligase 5
+OLR1,P78380,immune,Lectin-like oxidized LDL receptor 1
+CD36,Q08345,immune,CD36 (fatty acid translocase)
+MSR1,P14898,immune,Macrophage scavenger receptor types I and II
+TNF,P01375,cytokine,Tumor necrosis factor
+IL1B,P01584,cytokine,Interleukin-1 beta
+IL6,P05231,cytokine,Interleukin-6
+NLRP3,Q96P20,immune,NACHT LRR PYD domains-containing protein 3
+MPO,P05164,ptm_enzyme,Myeloperoxidase
+EPX,P42127,ptm_enzyme,Eosinophil peroxidase
+PON1,P27169,ptm_enzyme,Serum paraoxonase/arylesterase 1
+PLA2G2A,P14555,ptm_enzyme,Group IIA secretory phospholipase A2
+ACACA,Q13085,ptm_enzyme,Acetyl-CoA carboxylase 1
+APOBR,P06207,clearance,Apolipoprotein B receptor
+STAB1,Q9NY15,clearance,Stabilin-1
+STAB2,Q8WWQ8,clearance,Stabilin-2
+PRKAA1,Q13131,signaling,AMP-activated protein kinase catalytic subunit alpha-1
+PRKAA2,P54646,signaling,AMP-activated protein kinase catalytic subunit alpha-2
+MTOR,P42345,signaling,Serine/threonine-protein kinase mTOR
+AKT1,P31749,signaling,RAC-alpha serine/threonine-protein kinase
+STK11,Q15831,signaling,Serine/threonine-protein kinase STK11 (LKB1)

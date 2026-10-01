@@ -73,8 +73,8 @@
    "ISOFORM_OF": 12
   }
  },
- "total_nodes": 6475,
- "total_edges": 37177,
+ "total_nodes": 6639,
+ "total_edges": 41497,
  "node_type_count": 32,
  "edge_type_count": 26,
  "etl_completeness": {
@@ -107,5 +107,6 @@
   "data_collection_date": "2024-01",
   "release_date": "2026-06-22",
   "description": "Core schema distributed as CSV (7 node types, 7 relationship types); extended schema available in Neo4j dump (32 node types, 26 relationship types). ClinVar variants filtered to Pathogenic/Likely pathogenic only. Lipoprotein particles represented as first-class entities."
- }
+ },
+ "total_nodes_definition": "Sum of all declared core and extended node types (previously a Neo4j count(*) that did not reconcile with the extended type sums; see V9 registry §AD)"
 }

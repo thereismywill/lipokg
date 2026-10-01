@@ -1,0 +1,5 @@
+﻿Database,Total_Genes,Covered_Genes,Coverage_Percent,Missing_Genes,Data_Source,Access_Date
+KEGG,216,157,72.7,59,KEGG REST API (hsa05417 Lipid and atherosclerosis),2026-10-01
+Reactome,71,61,85.9,10,Reactome Content Service API,2026-09-30
+WikiPathways,92,73,79.3,19,WikiPathways GMT release 2026-09-10 (reference set; not imported),2026-10-01
+Overall,346,259,74.9,87,Combined (unique genes),2026-10-01

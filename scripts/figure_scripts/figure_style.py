@@ -148,32 +148,60 @@ PARTICLE_COLORS = {
 }
 
 # ============================================================
-# CORE DATA VALUES (from V5 / graph_statistics.json)
+# CORE DATA VALUES —— **从沉积数据实算**（2026-10-01 改造）
+#
+#   这里原本是手写常量，每次改数据都得记得手改；实测已因此漏改 8 处，
+#   把旧数字（MEMBER_OF 242、6,054 Nodes、31 node types …）印进了
+#   Figure 1 与 Figure 2 的图面，而稿件和数据都是对的 —— 错的只有图。
+#   现在一律读 `data/graph_statistics.json`，任何口径变更都不再需要动这个文件。
+#
+#   键顺序沿用 NODE_COLORS / REL_COLORS，保证图例与配色一一对应。
 # ============================================================
-NODE_COUNTS = {
-    'STRINGProtein':  1852,
-    'Particle':       7,
-    'Molecule':       57,
-    'Disease':        27,
-    'ClinVarVariant': 4042,
-    'KEGGGene':       216,
-    'Pathway':        13,
-}
+import json as _json
+import csv as _csv
 
-REL_COUNTS = {
-    'STRING_INTERACTS':    31878,
-    'COMPONENT_OF':        48,
-    'MODIFIES':            23,
-    'ASSEMBLED_BY':        8,
-    'DISEASE_ASSOCIATION': 238,
-    'VARIANT_OF':          4042,
-    'MEMBER_OF':           331,
-}
 
-TOTAL_CORE_NODES = 6214
-TOTAL_CORE_EDGES = 36568
-TOTAL_NODES = 6475
-TOTAL_EDGES = 37177
+def load_graph_statistics():
+    with open(os.path.join(resolve_data_dir(), 'graph_statistics.json'), encoding='utf-8') as f:
+        return _json.load(f)
+
+
+GS = load_graph_statistics()
+_CORE = GS['core_schema']
+_EXT = GS['extended_schema']
+
+NODE_COUNTS = {k: _CORE['node_types'][k] for k in NODE_COLORS}
+REL_COUNTS = {k: _CORE['relationship_types'][k] for k in REL_COLORS}
+
+TOTAL_CORE_NODES = _CORE['total_core_nodes']
+TOTAL_CORE_EDGES = _CORE['total_core_edges']
+
+# 全图规模 = 全部核心类型 + 全部扩展类型之和。
+#   ⚠️ 旧值是 Neo4j `MATCH (n) RETURN count(n)` / `count(r)` 的实测数，与「扩展类型之和」
+#      对不上（实测差 −4,320 条边），且改 core 时不会自动跟 ⇒ 已改为可复算的口径。
+TOTAL_NODES = TOTAL_CORE_NODES + sum(_EXT['node_types_additional'].values())
+TOTAL_EDGES = TOTAL_CORE_EDGES + sum(_EXT['relationship_types_additional'].values())
+EXT_NODE_TYPES = GS['node_type_count']
+EXT_REL_TYPES = GS['edge_type_count']
+
+
+def load_kegg_pathway():
+    """返回 (pathway_id, name) —— 取 pathways.csv 里唯一的 KEGG 行。"""
+    with open(os.path.join(resolve_data_dir(), 'pathways.csv'), encoding='utf-8-sig') as f:
+        for r in _csv.DictReader(f):
+            if (r.get('source') or '').strip() == 'KEGG':
+                return r.get('pathway_id', ''), r.get('name', '')
+    return '', ''
+
+
+KEGG_PATHWAY_ID, KEGG_PATHWAY_NAME = load_kegg_pathway()
+
+
+def load_coverage_table():
+    """读 Table_S2_Coverage_Analysis.csv，返回 {Database: {字段: 值}}。"""
+    p = os.path.join(resolve_supp_dir(), 'Table_S2_Coverage_Analysis.csv')
+    with open(p, encoding='utf-8-sig') as f:
+        return {r['Database']: r for r in _csv.DictReader(f)}
 
 # Validation benchmarks
 VALIDATION = {

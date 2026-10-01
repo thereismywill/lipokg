@@ -14,14 +14,24 @@ fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(21, 7),
 # ═══════════════════════════════════════════════════════
 # PANEL A: Validation benchmarks (horizontal bar chart)
 # ═══════════════════════════════════════════════════════
+# 三条通路覆盖度**从 Table_S2 读**（分子/分母都不写字面量）；
+# 其余四条是文献/专家基准，不属于沉积数据，保持字面量。
+_COV = load_coverage_table()
+
+
+def _cov(db):
+    r = _COV[db]
+    return int(r['Covered_Genes']), int(r['Total_Genes'])
+
+
 benchmarks = [
-    ('Expert 54-gene set',      54,  54,  '#2E7D32'),
-    ('ClinGen dosage genes',    25,  25,  '#2E7D32'),
-    ('GO lipoprotein process', 132, 143,  '#1565C0'),
-    ('Reactome pathways',       61,  71,  '#1565C0'),
-    ('KEGG hsa05417',          157, 216,  '#1565C0'),
-    ('WikiPathways lipid',      73,  92,  '#1565C0'),
-    ('GLGC 2021 GWAS loci',   244, 376,  '#E65100'),
+    ('Expert 54-gene set',        54,  54,  '#2E7D32'),
+    ('ClinGen dosage genes',      25,  25,  '#2E7D32'),
+    ('GO lipoprotein process',   132, 143,  '#1565C0'),
+    ('Reactome pathways',        *_cov('Reactome'),   '#1565C0'),
+    ('KEGG ' + KEGG_PATHWAY_ID,  *_cov('KEGG'),       '#1565C0'),
+    ('WikiPathways lipid',       *_cov('WikiPathways'), '#1565C0'),
+    ('GLGC 2021 GWAS loci',     244, 376,  '#E65100'),
 ]
 
 def wilson_ci(num, den, z=1.96):
